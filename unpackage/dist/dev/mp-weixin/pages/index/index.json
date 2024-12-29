@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "LinkCareer",
+  "navigationStyle": "custom",
+  "pageOrientation": "landscape",
   "usingComponents": {}
 }

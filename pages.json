@@ -2,12 +2,14 @@
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
-			"navigationBarTitleText": "LinkCareer"
+			"navigationStyle": "custom",
+			"pageOrientation": "landscape"
 		}
 	}, {
 		"path": "pages/webview/webview",
 		"style": {
-			"navigationBarTitleText": "伯乐学苑"
+			"navigationBarTitleText": "伯乐学园",
+			"pageOrientation": "landscape"
 		}
 	}],
 	"globalStyle": {
@@ -15,6 +17,7 @@
 		"navigationBarTitleText": "LinkCareer",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "landscape",
 		"app-plus": {
 			"background": "#efeff4"
 		}

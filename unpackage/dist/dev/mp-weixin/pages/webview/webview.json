@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "伯乐学苑",
+  "navigationBarTitleText": "伯乐学园",
+  "pageOrientation": "landscape",
   "usingComponents": {}
 }
