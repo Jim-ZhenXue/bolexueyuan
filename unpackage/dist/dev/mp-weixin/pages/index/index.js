@@ -6,7 +6,7 @@ const _sfc_main = {
       current: 0,
       slides: [
         {
-          url: "https://jiaoderenshi.netlify.app",
+          url: "https://mobilejiaoderenshi.netlify.app",
           image: "/static/images/角的认识.jpg"
         },
         {
@@ -14,7 +14,7 @@ const _sfc_main = {
           image: "/static/images/三角形的认识.jpg"
         },
         {
-          url: "https://dianxiansiwei.netlify.app",
+          url: "https://mobiledianxiansiwei.netlify.app",
           image: "/static/images/点线思维.jpg"
         },
         {
