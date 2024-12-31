@@ -3,7 +3,7 @@
 		<view class="header" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="nav-bar">
 				<view class="back-btn" @click="goBack">
-					<text class="back-icon">&#xe600;</text>
+					<text class="back-icon">〈</text>
 				</view>
 				<text class="title">关于我们</text>
 			</view>
@@ -76,16 +76,19 @@ export default {
 
 .back-btn {
 	position: absolute;
-	left: 30rpx;
+	left: 0;
 	height: 88rpx;
+	width: 88rpx;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .back-icon {
-	font-family: "iconfont";
-	font-size: 36rpx;
-	color: #333333;
+	font-size: 38rpx;
+	color: #000000;
+	font-weight: normal;
+	transform: scale(1.3, 1);
 }
 
 .title {
