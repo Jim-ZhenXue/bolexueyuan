@@ -3,7 +3,7 @@
 		<view class="top-area" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="header">
 				<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
-				<text class="title">伯乐园</text>
+				<text class="title">多元思维</text>
 			</view>
 		</view>
 		<scroll-view class="scroll-container" scroll-y>
