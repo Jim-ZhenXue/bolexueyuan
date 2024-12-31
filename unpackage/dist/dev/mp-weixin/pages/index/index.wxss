@@ -23,22 +23,33 @@ page {
 		align-items: center;
 		padding: 0 30rpx;
 		background: #FFFFFF;
-		/* box-shadow: 0 2rpx 10rpx rgba(73, 198, 111, 0.05); */
+}
+.title-container {
+		display: flex;
+		align-items: center;
+		background: linear-gradient(135deg, #FF2442, #FF1E6E);
+		padding: 6rpx 24rpx 6rpx 6rpx;
+		border-radius: 28rpx;
+		box-shadow: 0 2px 8px rgba(255, 36, 66, 0.3);
 }
 .logo {
-		height: 56rpx;
-		width: 56rpx;
-		margin-right: 16rpx;
+		height: 44rpx;
+		width: 44rpx;
+		margin-right: 8rpx;
 }
 .title {
-		font-size: 36rpx;
-		font-weight: 600;
-		color: #333333;
+		font-size: 32rpx;
+		font-weight: 500;
+		color: #FFFFFF;
+		font-family: -apple-system-font, "PingFang SC", "Microsoft YaHei", sans-serif;
+		letter-spacing: 4px;
+		text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+		transform: scale(1, 1.05);
 }
 .scroll-container {
 		flex: 1;
 		width: 100%;
-		background: #FFFFFF;
+		background: #050505dc;
 		overflow: hidden;
 }
 .image-list {

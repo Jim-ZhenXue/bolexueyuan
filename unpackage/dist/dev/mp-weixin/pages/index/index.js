@@ -50,9 +50,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_assets._imports_0,
     b: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
-    c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
-    d: $data.statusBarHeight + "px",
-    e: common_vendor.f($data.items, (item, index, i0) => {
+    c: $data.statusBarHeight + "px",
+    d: common_vendor.f($data.items, (item, index, i0) => {
       return {
         a: item.image,
         b: index,

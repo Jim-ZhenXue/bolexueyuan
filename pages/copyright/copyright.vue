@@ -16,18 +16,17 @@
 			
 			<view class="info-section">
 				<text class="section-title">简介</text>
-				<text class="description">多元思维，是由链接生涯教育科技有限公司伯乐学院推出的数字化产品，致力于提供优质的思维训练。我们运用现代科技手段，让知识变得更加有趣和高效。</text>
+				<text class="description">多元思维，是由链接生涯教育科技有限公司伯乐学院推出的数字化产品，致力于提供优质的思维训练。我们运用现代科技手段，让知识的吸收更加高效</text>
 			</view>
 			
 			<view class="info-section">
 				<text class="section-title">联系我们</text>
-				<text class="contact-item">邮箱：contact@linkcareer.com</text>
+				<text class="contact-item">微信：xuezhenscript</text>
 				<text class="contact-item">地址：上海市杨浦区丰达商务广场8号楼810室</text>
 			</view>
 			
 			<view class="copyright-text">
-				<text>© 2024 LinkCareer</text>
-				<text>All Rights Reserved</text>
+				<text>© 2024 LinkCareer. All Rights Reserved</text>
 			</view>
 		</view>
 	</view>
