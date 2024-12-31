@@ -2,8 +2,8 @@
 	<view class="container">
 		<view class="top-area" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="header">
-				<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
-				<text class="title">多元思维</text>
+				<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit" @click="navigateToCopyright"></image>
+				<text class="title" @click="navigateToCopyright">多元思维</text>
 			</view>
 		</view>
 		<scroll-view class="scroll-container" scroll-y>
@@ -15,9 +15,6 @@
 				</view>
 			</view>
 		</scroll-view>
-		<view class="copyright">
-			© 2024 LinkCareer. All rights reserved
-		</view>
 	</view>
 </template>
 
@@ -59,6 +56,11 @@
 				uni.navigateTo({
 					url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
 				})
+			},
+			navigateToCopyright() {
+				uni.navigateTo({
+					url: '/pages/copyright/copyright'
+				})
 			}
 		}
 	}
@@ -66,7 +68,7 @@
 
 <style>
 	page {
-		background: #4CAF50;
+		background: #FFFFFF;
 		height: 100%;
 		overflow: hidden;
 	}
@@ -77,12 +79,12 @@
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		background: #4CAF50;
+		background: #FFFFFF;
 		overflow: hidden;
 	}
 
 	.top-area {
-		background: #51d168;
+		background: #FFFFFF;
 	}
 
 	.header {
@@ -91,7 +93,7 @@
 		display: flex;
 		align-items: center;
 		padding: 0 30rpx;
-		background: #49cb4e;
+		background: #FFFFFF;
 		/* box-shadow: 0 2rpx 10rpx rgba(73, 198, 111, 0.05); */
 	}
 
@@ -110,7 +112,7 @@
 	.scroll-container {
 		flex: 1;
 		width: 100%;
-		background: #4CAF50;
+		background: #FFFFFF;
 		overflow: hidden;
 	}
 
@@ -134,22 +136,5 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-	}
-
-	.copyright {
-		position: fixed;
-		bottom: 20rpx;
-		right: 20rpx;
-		text-align: right;
-		padding: 2rpx 10rpx;
-		color: rgba(255, 255, 255, 0.6);
-		font-size: 20rpx;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		min-width: 120rpx;
-		background: none;
-		border: none;
-		box-shadow: none;
 	}
 </style>

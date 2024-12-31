@@ -9,6 +9,11 @@
 		"style": {
 			"navigationBarTitleText": "伯乐学园"
 		}
+	}, {
+		"path": "pages/copyright/copyright",
+		"style": {
+			"navigationStyle": "custom"
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
