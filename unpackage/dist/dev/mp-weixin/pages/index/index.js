@@ -1,10 +1,11 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   data() {
     return {
-      current: 0,
-      slides: [
+      statusBarHeight: 0,
+      items: [
         {
           url: "https://mobilejiaoderenshi.netlify.app",
           image: "/static/images/角的认识.jpg"
@@ -28,28 +29,29 @@ const _sfc_main = {
       ]
     };
   },
+  onLoad() {
+    const sysInfo = common_vendor.index.getSystemInfoSync();
+    this.statusBarHeight = sysInfo.statusBarHeight;
+  },
   methods: {
     openWebView(url) {
       common_vendor.index.navigateTo({
         url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
       });
-    },
-    onSwiperChange(e) {
-      this.current = e.detail.current;
     }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.slides, (item, index, i0) => {
+    a: common_assets._imports_0,
+    b: $data.statusBarHeight + "px",
+    c: common_vendor.f($data.items, (item, index, i0) => {
       return {
         a: item.image,
-        b: common_vendor.o(($event) => $options.openWebView(item.url), index),
-        c: $data.current === index ? 1 : "",
-        d: index
+        b: index,
+        c: common_vendor.o(($event) => $options.openWebView(item.url), index)
       };
-    }),
-    b: common_vendor.o((...args) => $options.onSwiperChange && $options.onSwiperChange(...args))
+    })
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
