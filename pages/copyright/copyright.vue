@@ -16,7 +16,7 @@
 			
 			<view class="info-section">
 				<text class="section-title">简介</text>
-				<text class="description">多元思维，是由链接生涯教育科技有限公司伯乐学院推出的数字化产品，致力于提供优质的思维训练。我们运用现代科技手段，让知识的吸收更加高效</text>
+				<text class="description">本产品由链接生涯教育科技有限公司伯乐学院推出，致力于提供优质的思维训练。我们运用现代科技手段，让知识的吸收更加高效</text>
 			</view>
 			
 			<view class="info-section">
