@@ -11,7 +11,7 @@ const _sfc_main = {
           image: "/static/images/角的认识.jpg"
         },
         {
-          url: "https://sanjiaoxingderenshi.netlify.app",
+          url: "https://mobilesanjiaoxingderenshi.netlify.app",
           image: "/static/images/三角形的认识.jpg"
         },
         {
@@ -19,11 +19,11 @@ const _sfc_main = {
           image: "/static/images/点线思维.jpg"
         },
         {
-          url: "https://sibianxingderenshi.netlify.app",
+          url: "https://mobilesibianxingderenshi.netlify.app",
           image: "/static/images/四边形的认识.jpg"
         },
         {
-          url: "https://xianjiaomiansiwei.netlify.app",
+          url: "https://mobilexianjiaomiansiwei.netlify.app",
           image: "/static/images/线角面思维.jpg"
         }
       ]

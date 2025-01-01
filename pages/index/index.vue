@@ -31,7 +31,7 @@
 						image: '/static/images/角的认识.jpg'
 					},
 					{
-						url: 'https://sanjiaoxingderenshi.netlify.app',
+						url: 'https://mobilesanjiaoxingderenshi.netlify.app',
 						image: '/static/images/三角形的认识.jpg'
 					},
 					{
@@ -39,11 +39,11 @@
 						image: '/static/images/点线思维.jpg'
 					},
 					{
-						url: 'https://sibianxingderenshi.netlify.app',
+						url: 'https://mobilesibianxingderenshi.netlify.app',
 						image: '/static/images/四边形的认识.jpg'
 					},
 					{
-						url: 'https://xianjiaomiansiwei.netlify.app',
+						url: 'https://mobilexianjiaomiansiwei.netlify.app',
 						image: '/static/images/线角面思维.jpg'
 					}
 				]
@@ -91,10 +91,10 @@
 
 	.header {
 		width: 100%;
-		height: 88rpx;
+		height: 66rpx;
 		display: flex;
-		align-items: center;
-		padding: 0 30rpx;
+		align-items: flex-end;
+		padding: 0;
 		background: #FFFFFF;
 	}
 
@@ -102,14 +102,25 @@
 		display: flex;
 		align-items: center;
 		background: linear-gradient(135deg, #FF2442, #FF1E6E);
-		padding: 6rpx 24rpx 6rpx 6rpx;
-		border-radius: 28rpx;
-		box-shadow: 0 2px 8px rgba(255, 36, 66, 0.3);
+		padding: 12rpx 20rpx 12rpx 8rpx;
+		position: relative;
+		width: fit-content;
+		border-radius: 0 32rpx 0 0;
+	}
+
+	.title-container::after {
+		content: '';
+		position: absolute;
+		bottom: -20rpx;
+		left: 0;
+		width: 100%;
+		height: 20rpx;
+		background: linear-gradient(135deg, #FF2442, #FF1E6E);
 	}
 
 	.logo {
-		height: 44rpx;
-		width: 44rpx;
+		height: 40rpx;
+		width: 40rpx;
 		margin-right: 8rpx;
 	}
 
@@ -118,7 +129,7 @@
 		font-weight: 500;
 		color: #FFFFFF;
 		font-family: -apple-system-font, "PingFang SC", "Microsoft YaHei", sans-serif;
-		letter-spacing: 4px;
+		letter-spacing: 2px;
 		text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 		transform: scale(1, 1.05);
 	}
@@ -128,6 +139,8 @@
 		width: 100%;
 		background: #050505dc;
 		overflow: hidden;
+		position: relative;
+		z-index: 0;
 	}
 
 	.image-list {
