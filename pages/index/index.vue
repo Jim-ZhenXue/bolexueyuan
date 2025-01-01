@@ -35,7 +35,7 @@
 						image: '/static/images/三角形的认识.jpg'
 					},
 					{
-						url: 'https://mobiledianxiansiwei.netlify.app',
+						url: 'https://mdianxiansiwei.netlify.app',
 						image: '/static/images/点线思维.jpg'
 					},
 					{
