@@ -59,11 +59,6 @@ const _sfc_main = {
         url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
       });
     },
-    navigateToCopyright() {
-      common_vendor.index.navigateTo({
-        url: "/pages/copyright/copyright"
-      });
-    },
     toggleFavorite(index) {
       this.items[index].favorite = !this.items[index].favorite;
     },
@@ -75,9 +70,8 @@ const _sfc_main = {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_assets._imports_0,
-    b: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
-    c: $data.statusBarHeight + "px",
-    d: common_vendor.f($data.items, (item, index, i0) => {
+    b: $data.statusBarHeight + "px",
+    c: common_vendor.f($data.items, (item, index, i0) => {
       return common_vendor.e({
         a: item.image,
         b: common_vendor.t(item.title),
