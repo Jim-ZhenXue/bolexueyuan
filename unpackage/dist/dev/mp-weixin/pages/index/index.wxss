@@ -32,7 +32,7 @@ page {
 		position: relative;
 		width: -webkit-fit-content;
 		width: fit-content;
-		border-radius: 0 32rpx 0 0;
+		border-radius: 0 32rpx 32rpx 0;
 }
 .title-container::after {
 		content: '';

@@ -105,7 +105,7 @@
 		padding: 12rpx 20rpx 12rpx 8rpx;
 		position: relative;
 		width: fit-content;
-		border-radius: 0 32rpx 0 0;
+		border-radius: 0 32rpx 32rpx 0;
 	}
 
 	.title-container::after {
