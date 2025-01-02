@@ -9,11 +9,19 @@
 			</view>
 		</view>
 		<scroll-view class="scroll-container" scroll-y>
-			<view class="image-list">
-				<view v-for="(item, index) in items" :key="index" 
-					class="image-item" 
-					@click="openWebView(item.url)">
-					<image :src="item.image" mode="aspectFit" class="item-image"></image>
+			<view class="item-list">
+				<view v-for="(item, index) in items" :key="index" class="list-item">
+					<view class="item-content" @click="openWebView(item.url)">
+						<image :src="item.image" mode="aspectFit" class="item-image"></image>
+						<text class="item-title">{{item.title}}</text>
+						<view class="item-actions">
+							<text class="heart-icon" @click.stop="toggleFavorite(index)">❤</text>
+							<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
+						</view>
+					</view>
+					<view v-if="item.showInfo" class="info-tooltip">
+						{{item.info}}
+					</view>
 				</view>
 			</view>
 		</scroll-view>
@@ -28,23 +36,43 @@
 				items: [
 					{
 						url: 'https://mobilejiaoderenshi.netlify.app',
-						image: '/static/images/角的认识.png'
+						image: '/static/images/角的认识.png',
+						title: '角的认识',
+						info: '通过互动方式学习角的基本概念和性质',
+						favorite: false,
+						showInfo: false
 					},
 					{
-						url: 'https://mobilesanjiaoxingderenshi.netlify.app',
-						image: '/static/images/三角形的认识.png'
+						url: 'https://msanjiaoxingderenshi.netlify.app',
+						image: '/static/images/三角形的认识.png',
+						title: '三角形的认识',
+						info: '探索三角形的特性和分类',
+						favorite: false,
+						showInfo: false
 					},
 					{
 						url: 'https://mdianxiansiwei.netlify.app',
-						image: '/static/images/点线思维.png'
+						image: '/static/images/点线思维.png',
+						title: '点线思维',
+						info: '学习点和线的基本概念',
+						favorite: false,
+						showInfo: false
 					},
 					{
-						url: 'https://mobilesibianxingderenshi.netlify.app',
-						image: '/static/images/四边形的认识.png'
+						url: 'https://msibianxingderenshi.netlify.app',
+						image: '/static/images/四边形的认识.png',
+						title: '四边形的认识',
+						info: '了解各种四边形的特征',
+						favorite: false,
+						showInfo: false
 					},
 					{
-						url: 'https://mobilexianjiaomiansiwei.netlify.app',
-						image: '/static/images/线角面思维.png'
+						url: 'https://mxianjiaomiansiwei.netlify.app',
+						image: '/static/images/线角面思维.png',
+						title: '线角面思维',
+						info: '深入理解几何中的线、角、面概念',
+						favorite: false,
+						showInfo: false
 					}
 				]
 			}
@@ -63,6 +91,12 @@
 				uni.navigateTo({
 					url: '/pages/copyright/copyright'
 				})
+			},
+			toggleFavorite(index) {
+				this.items[index].favorite = !this.items[index].favorite;
+			},
+			showInfo(index) {
+				this.items[index].showInfo = !this.items[index].showInfo;
 			}
 		}
 	}
@@ -101,67 +135,81 @@
 	.title-container {
 		display: flex;
 		align-items: center;
-		background: linear-gradient(135deg, #FF2442, #FF1E6E);
-		padding: 12rpx 20rpx 12rpx 8rpx;
-		position: relative;
-		width: fit-content;
-		border-radius: 0 32rpx 32rpx 0;
-	}
-
-	.title-container::after {
-		content: '';
-		position: absolute;
-		bottom: -20rpx;
-		left: 0;
-		width: 100%;
-		height: 20rpx;
-		background: linear-gradient(135deg, #FF2442, #FF1E6E);
+		padding: 0 20rpx;
 	}
 
 	.logo {
-		height: 40rpx;
-		width: 40rpx;
-		margin-right: 8rpx;
+		height: 50rpx;
+		width: auto;
+		margin-right: 10rpx;
 	}
 
 	.title {
 		font-size: 32rpx;
-		font-weight: 500;
-		color: #FFFFFF;
-		font-family: -apple-system-font, "PingFang SC", "Microsoft YaHei", sans-serif;
-		letter-spacing: 2px;
-		text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-		transform: scale(1, 1.05);
+		color: #333;
 	}
 
 	.scroll-container {
 		flex: 1;
 		width: 100%;
-		background: #050505dc;
-		overflow: hidden;
+	}
+
+	.item-list {
+		padding: 20rpx;
+	}
+
+	.list-item {
+		margin-bottom: 20rpx;
 		position: relative;
-		z-index: 0;
 	}
 
-	.image-list {
-		padding: 30rpx;
+	.item-content {
 		display: flex;
-		flex-direction: column;
-		gap: 60rpx;
-		padding-bottom: 100rpx;
-	}
-
-	.image-item {
-		width: 100%;
-		height: 720rpx;
-		border-radius: 24rpx;
-		overflow: hidden;
-		box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+		align-items: center;
+		background: #f8f8f8;
+		padding: 20rpx;
+		border-radius: 12rpx;
 	}
 
 	.item-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		width: 160rpx;
+		height: 120rpx;
+		border-radius: 8rpx;
+	}
+
+	.item-title {
+		flex: 1;
+		font-size: 32rpx;
+		color: #333;
+		margin-left: 20rpx;
+	}
+
+	.item-actions {
+		display: flex;
+		align-items: center;
+		gap: 20rpx;
+	}
+
+	.heart-icon, .info-icon {
+		font-size: 40rpx;
+		color: #999;
+	}
+
+	.heart-icon.active {
+		color: #ff4d4f;
+	}
+
+	.info-tooltip {
+		position: absolute;
+		right: 20rpx;
+		top: 100%;
+		background: rgba(0, 0, 0, 0.7);
+		color: white;
+		padding: 10rpx 20rpx;
+		border-radius: 8rpx;
+		font-size: 24rpx;
+		margin-top: 10rpx;
+		z-index: 100;
+		max-width: 400rpx;
 	}
 </style>
