@@ -28,23 +28,23 @@
 				items: [
 					{
 						url: 'https://mobilejiaoderenshi.netlify.app',
-						image: '/static/images/角的认识.jpg'
+						image: '/static/images/角的认识.png'
 					},
 					{
 						url: 'https://mobilesanjiaoxingderenshi.netlify.app',
-						image: '/static/images/三角形的认识.jpg'
+						image: '/static/images/三角形的认识.png'
 					},
 					{
 						url: 'https://mdianxiansiwei.netlify.app',
-						image: '/static/images/点线思维.jpg'
+						image: '/static/images/点线思维.png'
 					},
 					{
 						url: 'https://mobilesibianxingderenshi.netlify.app',
-						image: '/static/images/四边形的认识.jpg'
+						image: '/static/images/四边形的认识.png'
 					},
 					{
 						url: 'https://mobilexianjiaomiansiwei.netlify.app',
-						image: '/static/images/线角面思维.jpg'
+						image: '/static/images/线角面思维.png'
 					}
 				]
 			}
