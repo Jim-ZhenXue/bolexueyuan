@@ -13,7 +13,7 @@
 				<view v-for="(item, index) in items" :key="index" 
 					class="image-item" 
 					@click="openWebView(item.url)">
-					<image :src="item.image" mode="aspectFill" class="item-image"></image>
+					<image :src="item.image" mode="aspectFit" class="item-image"></image>
 				</view>
 			</view>
 		</scroll-view>
@@ -147,13 +147,13 @@
 		padding: 30rpx;
 		display: flex;
 		flex-direction: column;
-		gap: 30rpx;
+		gap: 60rpx;
 		padding-bottom: 100rpx;
 	}
 
 	.image-item {
 		width: 100%;
-		height: 360rpx;
+		height: 720rpx;
 		border-radius: 24rpx;
 		overflow: hidden;
 		box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
