@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="top-area" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="header">
-				<view class="title-container">
+				<view class="title-container" @click="navigateToCopyright">
 					<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
 					<text class="title">多元思维</text>
 				</view>
@@ -87,6 +87,11 @@
 					url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
 				})
 			},
+			navigateToCopyright() {
+				uni.navigateTo({
+					url: '/pages/copyright/copyright'
+				})
+			},
 			toggleFavorite(index) {
 				this.items[index].favorite = !this.items[index].favorite;
 			},
@@ -130,7 +135,11 @@
 	.title-container {
 		display: flex;
 		align-items: center;
-		padding: 0 20rpx;
+		padding: 8rpx 34rpx 8rpx 24rpx;
+		background-color: #ff4444;
+		border-radius: 50rpx;
+		max-width: fit-content;
+		cursor: pointer;
 	}
 
 	.logo {
@@ -141,7 +150,7 @@
 
 	.title {
 		font-size: 32rpx;
-		color: #333;
+		color: #ffffff;
 	}
 
 	.scroll-container {
