@@ -68,7 +68,15 @@ const _sfc_main = {
       this.items[index].favorite = !this.items[index].favorite;
     },
     showInfo(index) {
-      this.items[index].showInfo = !this.items[index].showInfo;
+      const item = this.items[index];
+      const info = {
+        title: item.title,
+        info: item.info,
+        image: item.image
+      };
+      common_vendor.index.navigateTo({
+        url: `/pages/info/info?info=${encodeURIComponent(JSON.stringify(info))}`
+      });
     }
   }
 };
@@ -78,19 +86,15 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
     c: $data.statusBarHeight + "px",
     d: common_vendor.f($data.items, (item, index, i0) => {
-      return common_vendor.e({
+      return {
         a: item.image,
         b: common_vendor.t(item.title),
         c: common_vendor.t(item.favorite ? "♥" : "♡"),
         d: common_vendor.o(($event) => $options.toggleFavorite(index), index),
         e: common_vendor.o(($event) => $options.showInfo(index), index),
         f: common_vendor.o(($event) => $options.openWebView(item.url), index),
-        g: item.showInfo
-      }, item.showInfo ? {
-        h: common_vendor.t(item.info)
-      } : {}, {
-        i: index
-      });
+        g: index
+      };
     })
   };
 }

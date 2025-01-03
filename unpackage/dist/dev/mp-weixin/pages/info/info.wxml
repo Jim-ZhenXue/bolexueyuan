@@ -1,0 +1,1 @@
+<view class="info-container"><view class="top-bar" style="{{'padding-top:' + b}}"><view class="back-button" bindtap="{{a}}"><text class="back-icon">←</text></view><text class="page-title">详细信息</text></view><view class="content"><image src="{{c}}" mode="aspectFit" class="info-image"></image><text class="info-title">{{d}}</text><text class="info-text">{{e}}</text></view></view>

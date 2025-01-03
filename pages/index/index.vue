@@ -21,9 +21,6 @@
 							<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
 						</view>
 					</view>
-					<view v-if="item.showInfo" class="info-tooltip">
-						{{item.info}}
-					</view>
 				</view>
 			</view>
 		</scroll-view>
@@ -98,7 +95,15 @@
 				this.items[index].favorite = !this.items[index].favorite;
 			},
 			showInfo(index) {
-				this.items[index].showInfo = !this.items[index].showInfo;
+				const item = this.items[index];
+				const info = {
+					title: item.title,
+					info: item.info,
+					image: item.image
+				};
+				uni.navigateTo({
+					url: `/pages/info/info?info=${encodeURIComponent(JSON.stringify(info))}`
+				});
 			}
 		}
 	}

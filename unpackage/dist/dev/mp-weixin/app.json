@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/webview/webview",
-    "pages/copyright/copyright"
+    "pages/copyright/copyright",
+    "pages/info/info"
   ],
   "window": {
     "navigationBarTextStyle": "black",
