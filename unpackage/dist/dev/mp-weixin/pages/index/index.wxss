@@ -46,6 +46,19 @@ page {
 .scroll-container {
 		flex: 1;
 		width: 100%;
+		overflow-y: scroll;
+}
+.scroll-container::-webkit-scrollbar {
+		width: 8rpx;
+		background-color: #f5f5f5;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+		background-color: #888;
+		border-radius: 4rpx;
+}
+.scroll-container::-webkit-scrollbar-track {
+		background-color: #f5f5f5;
+		border-radius: 4rpx;
 }
 .item-list {
 		padding: 0;
@@ -58,25 +71,40 @@ page {
 		display: flex;
 		align-items: center;
 		background: #f8f8f8;
-		padding: 20rpx 20rpx 20rpx 0;
-		border-radius: 0 12rpx 12rpx 0;
+		padding: 20rpx;
+		border-radius: 12rpx;
+		margin: 0 20rpx;
+		position: relative;
+		width: auto;
+		box-sizing: border-box;
+}
+.item-left {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		min-width: 0;
 }
 .item-image {
-		width: 160rpx;
-		height: 120rpx;
-		border-radius: 0;
-		margin-right: 20rpx;
+		width: 320rpx;
+		height: 240rpx;
+		border-radius: 8rpx;
+		margin-right: 40rpx;
+		flex-shrink: 0;
 }
 .item-title {
-		flex: 1;
 		font-size: 32rpx;
 		color: #333;
-		margin-left: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		flex: 1;
 }
 .item-actions {
 		display: flex;
 		align-items: center;
 		gap: 20rpx;
+		margin-left: 20rpx;
+		flex-shrink: 0;
 }
 .item-content .item-actions .heart-icon {
 		font-size: 44rpx;
