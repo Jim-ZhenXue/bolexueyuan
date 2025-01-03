@@ -15,7 +15,7 @@
 						<image :src="item.image" mode="aspectFit" class="item-image"></image>
 						<text class="item-title">{{item.title}}</text>
 						<view class="item-actions">
-							<text class="heart-icon" @click.stop="toggleFavorite(index)">❤</text>
+							<text class="heart-icon" @click.stop="toggleFavorite(index)">{{item.favorite ? '♥' : '♡'}}</text>
 							<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
 						</view>
 					</view>
@@ -194,13 +194,15 @@
 		gap: 20rpx;
 	}
 
-	.heart-icon, .info-icon {
-		font-size: 40rpx;
-		color: #999;
+	.item-content .item-actions .heart-icon {
+		font-size: 44rpx;
+		color: #ff4d4f;
+		transition: color 0.3s ease;
 	}
 
-	.heart-icon.active {
-		color: #ff4d4f;
+	.item-content .item-actions .info-icon {
+		font-size: 40rpx;
+		color: #999;
 	}
 
 	.info-tooltip {

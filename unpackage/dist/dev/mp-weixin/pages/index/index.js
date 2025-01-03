@@ -81,14 +81,15 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return common_vendor.e({
         a: item.image,
         b: common_vendor.t(item.title),
-        c: common_vendor.o(($event) => $options.toggleFavorite(index), index),
-        d: common_vendor.o(($event) => $options.showInfo(index), index),
-        e: common_vendor.o(($event) => $options.openWebView(item.url), index),
-        f: item.showInfo
+        c: common_vendor.t(item.favorite ? "♥" : "♡"),
+        d: common_vendor.o(($event) => $options.toggleFavorite(index), index),
+        e: common_vendor.o(($event) => $options.showInfo(index), index),
+        f: common_vendor.o(($event) => $options.openWebView(item.url), index),
+        g: item.showInfo
       }, item.showInfo ? {
-        g: common_vendor.t(item.info)
+        h: common_vendor.t(item.info)
       } : {}, {
-        h: index
+        i: index
       });
     })
   };

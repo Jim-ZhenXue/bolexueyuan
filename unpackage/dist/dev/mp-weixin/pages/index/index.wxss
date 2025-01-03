@@ -77,12 +77,14 @@ page {
 		align-items: center;
 		gap: 20rpx;
 }
-.heart-icon, .info-icon {
+.item-content .item-actions .heart-icon {
+		font-size: 44rpx;
+		color: #ff4d4f;
+		transition: color 0.3s ease;
+}
+.item-content .item-actions .info-icon {
 		font-size: 40rpx;
 		color: #999;
-}
-.heart-icon.active {
-		color: #ff4d4f;
 }
 .info-tooltip {
 		position: absolute;
