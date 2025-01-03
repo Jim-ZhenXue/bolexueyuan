@@ -159,7 +159,7 @@
 	}
 
 	.item-list {
-		padding: 20rpx;
+		padding: 0;
 	}
 
 	.list-item {
@@ -171,21 +171,22 @@
 		display: flex;
 		align-items: center;
 		background: #f8f8f8;
-		padding: 20rpx;
-		border-radius: 12rpx;
+		padding: 20rpx 20rpx 20rpx 0;
+		border-radius: 0 12rpx 12rpx 0;
 	}
 
 	.item-image {
 		width: 160rpx;
 		height: 120rpx;
-		border-radius: 8rpx;
+		border-radius: 0;
+		margin-right: 20rpx;
 	}
 
 	.item-title {
 		flex: 1;
 		font-size: 32rpx;
 		color: #333;
-		margin-left: 20rpx;
+		margin-left: 0;
 	}
 
 	.item-actions {
