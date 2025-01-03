@@ -96,13 +96,28 @@
 			},
 			showInfo(index) {
 				const item = this.items[index];
-				const info = {
-					title: item.title,
-					info: item.info,
-					image: item.image
-				};
+				let pagePath = '';
+				
+				switch(item.title) {
+					case '角的认识':
+						pagePath = '/pages/jiaoderenshi/jiaoderenshi';
+						break;
+					case '三角形的认识':
+						pagePath = '/pages/sanjiaoxingderenshi/sanjiaoxingderenshi';
+						break;
+					case '点线思维':
+						pagePath = '/pages/dianxiansiwei/dianxiansiwei';
+						break;
+					case '四边形的认识':
+						pagePath = '/pages/sibianxingderenshi/sibianxingderenshi';
+						break;
+					case '线角面思维':
+						pagePath = '/pages/xianjiaomiansiwei/xianjiaomiansiwei';
+						break;
+				}
+				
 				uni.navigateTo({
-					url: `/pages/info/info?info=${encodeURIComponent(JSON.stringify(info))}`
+					url: pagePath
 				});
 			}
 		}

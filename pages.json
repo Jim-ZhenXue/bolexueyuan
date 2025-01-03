@@ -15,7 +15,27 @@
 			"navigationStyle": "custom"
 		}
 	}, {
-		"path": "pages/info/info",
+		"path": "pages/jiaoderenshi/jiaoderenshi",
+		"style": {
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
+		"style": {
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/dianxiansiwei/dianxiansiwei",
+		"style": {
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/sibianxingderenshi/sibianxingderenshi",
+		"style": {
+			"navigationStyle": "custom"
+		}
+	}, {
+		"path": "pages/xianjiaomiansiwei/xianjiaomiansiwei",
 		"style": {
 			"navigationStyle": "custom"
 		}

@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/webview/webview",
     "pages/copyright/copyright",
-    "pages/info/info"
+    "pages/jiaoderenshi/jiaoderenshi",
+    "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
+    "pages/dianxiansiwei/dianxiansiwei",
+    "pages/sibianxingderenshi/sibianxingderenshi",
+    "pages/xianjiaomiansiwei/xianjiaomiansiwei"
   ],
   "window": {
     "navigationBarTextStyle": "black",
