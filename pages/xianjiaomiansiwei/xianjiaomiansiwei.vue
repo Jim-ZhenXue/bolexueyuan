@@ -1,112 +1,232 @@
 <template>
-	<view class="detail-container">
-		<view class="top-bar" :style="{ paddingTop: statusBarHeight + 'px' }">
-			<view class="back-button" @click="goBack">
-				<text class="back-icon">←</text>
-			</view>
-			<text class="page-title">线角面思维</text>
-		</view>
-		<view class="content">
-			<image src="/static/images/线角面思维.png" mode="aspectFit" class="detail-image"></image>
-			<view class="detail-content">
-				<text class="description">深入理解几何中的线、角、面概念</text>
-				<view class="features">
-					<text class="feature-item">• 掌握线、角、面的基本概念</text>
-					<text class="feature-item">• 理解三者之间的关系和转化</text>
-					<text class="feature-item">• 学习空间几何思维方法</text>
-					<text class="feature-item">• 培养立体空间想象能力</text>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
-
-<script>
-export default {
-	data() {
-		return {
-			statusBarHeight: 0
-		}
-	},
-	onLoad() {
-		const sysInfo = uni.getSystemInfoSync();
-		this.statusBarHeight = sysInfo.statusBarHeight;
-	},
-	methods: {
-		goBack() {
-			uni.navigateBack();
-		}
-	}
-}
-</script>
-
-<style>
-.detail-container {
-	flex: 1;
-	background-color: #ffffff;
-	min-height: 100vh;
-}
-
-.top-bar {
-	background-color: #ffffff;
-	padding: 10px 15px;
-	display: flex;
-	align-items: center;
-	border-bottom: 1px solid #eee;
-}
-
-.back-button {
-	padding: 5px 10px;
-}
-
-.back-icon {
-	font-size: 24px;
-	color: #333;
-}
-
-.page-title {
-	flex: 1;
-	text-align: center;
-	font-size: 18px;
-	margin-right: 40px;
-	color: #333;
-}
-
-.content {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.detail-image {
-	width: 200px;
-	height: 150px;
-	margin-bottom: 30px;
-}
-
-.detail-content {
+	<div class="game-description">
+	  <!-- 顶部留空区域 -->
+	  <div class="top-space"></div>
+	  
+	  <!-- 主要内容区域 -->
+	  <div class="content">
+		<h1 class="title">面向思维训练游戏</h1>
+		
+		<!-- 游戏介绍卡片 -->
+		<div class="intro-card">
+		  <div class="card-content">
+			<h2>游戏简介</h2>
+			<p>这是一款独特的思维训练游戏，通过图形创作来培养多元智能。在游戏中，您将通过操作三角形来创建各种形状，每个关卡都针对不同的思维能力进行训练。</p>
+		  </div>
+		</div>
+  
+		<!-- 关卡说明列表 -->
+		<div class="levels-container">
+		  <div class="level-card">
+			<div class="level-header">
+			  <div class="level-badge">Level 1</div>
+			  <h3>描边大师</h3>
+			</div>
+			<div class="level-content">
+			  <p>训练空间感知能力和形状认知：</p>
+			  <ul>
+				<li>通过创建完整的图形轮廓来提高空间想象力</li>
+				<li>锻炼形状识别和空间关系理解</li>
+				<li>培养几何直觉和视觉思维能力</li>
+			  </ul>
+			</div>
+		  </div>
+  
+		  <div class="level-card">
+			<div class="level-header">
+			  <div class="level-badge">Level 2</div>
+			  <h3>面积探索</h3>
+			</div>
+			<div class="level-content">
+			  <p>训练数学思维和逻辑推理：</p>
+			  <ul>
+				<li>理解面积概念和计算方法</li>
+				<li>发展问题解决策略</li>
+				<li>强化空间规划能力</li>
+			  </ul>
+			</div>
+		  </div>
+  
+		  <div class="level-card">
+			<div class="level-header">
+			  <div class="level-badge">Level 3</div>
+			  <h3>周长挑战</h3>
+			</div>
+			<div class="level-content">
+			  <p>训练计算能力和策略思维：</p>
+			  <ul>
+				<li>优化图形设计以达到目标周长</li>
+				<li>培养数学思维和估算能力</li>
+				<li>发展策略规划技能</li>
+			  </ul>
+			</div>
+		  </div>
+  
+		  <div class="level-card">
+			<div class="level-header">
+			  <div class="level-badge">Level 4</div>
+			  <h3>角度魔法</h3>
+			</div>
+			<div class="level-content">
+			  <p>训练创造力和几何思维：</p>
+			  <ul>
+				<li>探索不同角度组合的可能性</li>
+				<li>提升创意思维和想象力</li>
+				<li>加强空间推理能力</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+  
+		<!-- 技能提升总结 -->
+		<div class="skills-summary">
+		  <h2>多元智能提升</h2>
+		  <div class="skills-grid">
+			<div class="skill-item">
+			  <i class="fas fa-brain"></i>
+			  <h4>逻辑数学智能</h4>
+			  <p>通过面积计算和周长优化提升数学思维</p>
+			</div>
+			<div class="skill-item">
+			  <i class="fas fa-cube"></i>
+			  <h4>空间智能</h4>
+			  <p>培养空间想象力和形状操作能力</p>
+			</div>
+			<div class="skill-item">
+			  <i class="fas fa-lightbulb"></i>
+			  <h4>创造力</h4>
+			  <p>激发创意思维和问题解决能力</p>
+			</div>
+			<div class="skill-item">
+			  <i class="fas fa-chess"></i>
+			  <h4>策略思维</h4>
+			  <p>培养规划能力和决策技巧</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </template>
+  
+  <style scoped>
+  .game-description {
 	width: 100%;
-	padding: 0 20px;
-}
-
-.description {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #666;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	padding-bottom: 2rem;
+  }
+  
+  .top-space {
+	height: calc(100vh / 7);
+  }
+  
+  .content {
+	padding: 0 1rem;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .title {
 	text-align: center;
-	margin-bottom: 30px;
-}
-
-.features {
+	color: #2c3e50;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: bold;
+  }
+  
+  .intro-card {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .level-card {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+  }
+  
+  .level-card:hover {
+	transform: translateY(-5px);
+  }
+  
+  .level-header {
 	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.feature-item {
-	font-size: 14px;
-	color: #333;
-	line-height: 1.4;
-}
-</style> 
+	align-items: center;
+	margin-bottom: 1rem;
+  }
+  
+  .level-badge {
+	background: #4CAF50;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	margin-right: 1rem;
+	font-weight: bold;
+  }
+  
+  .level-content ul {
+	padding-left: 1.5rem;
+	margin-top: 0.5rem;
+  }
+  
+  .level-content li {
+	margin-bottom: 0.5rem;
+	color: #666;
+  }
+  
+  .skills-summary {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-top: 2rem;
+  }
+  
+  .skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+  }
+  
+  .skill-item {
+	text-align: center;
+	padding: 1rem;
+  }
+  
+  .skill-item i {
+	font-size: 2rem;
+	color: #4CAF50;
+	margin-bottom: 0.5rem;
+  }
+  
+  .skill-item h4 {
+	color: #2c3e50;
+	margin: 0.5rem 0;
+  }
+  
+  .skill-item p {
+	color: #666;
+	font-size: 0.9rem;
+  }
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+	.title {
+	  font-size: 1.5rem;
+	}
+  
+	.content {
+	  padding: 0 1rem;
+	}
+  
+	.skills-grid {
+	  grid-template-columns: 1fr;
+	}
+  }
+  </style>

@@ -1,112 +1,159 @@
 <template>
-	<view class="detail-container">
-		<view class="top-bar" :style="{ paddingTop: statusBarHeight + 'px' }">
-			<view class="back-button" @click="goBack">
-				<text class="back-icon">←</text>
-			</view>
-			<text class="page-title">四边形的认识</text>
-		</view>
-		<view class="content">
-			<image src="/static/images/四边形的认识.png" mode="aspectFit" class="detail-image"></image>
-			<view class="detail-content">
-				<text class="description">了解各种四边形的特征</text>
-				<view class="features">
-					<text class="feature-item">• 认识四边形的基本要素：边、角、对角线</text>
-					<text class="feature-item">• 学习特殊四边形：平行四边形、矩形、正方形、梯形</text>
-					<text class="feature-item">• 理解四边形的性质和特征</text>
-					<text class="feature-item">• 探索四边形在生活中的应用</text>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
-
-<script>
-export default {
-	data() {
-		return {
-			statusBarHeight: 0
-		}
-	},
-	onLoad() {
-		const sysInfo = uni.getSystemInfoSync();
-		this.statusBarHeight = sysInfo.statusBarHeight;
-	},
-	methods: {
-		goBack() {
-			uni.navigateBack();
-		}
-	}
-}
-</script>
-
-<style>
-.detail-container {
-	flex: 1;
-	background-color: #ffffff;
-	min-height: 100vh;
-}
-
-.top-bar {
-	background-color: #ffffff;
-	padding: 10px 15px;
-	display: flex;
-	align-items: center;
-	border-bottom: 1px solid #eee;
-}
-
-.back-button {
-	padding: 5px 10px;
-}
-
-.back-icon {
-	font-size: 24px;
-	color: #333;
-}
-
-.page-title {
-	flex: 1;
-	text-align: center;
-	font-size: 18px;
-	margin-right: 40px;
-	color: #333;
-}
-
-.content {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.detail-image {
-	width: 200px;
-	height: 150px;
-	margin-bottom: 30px;
-}
-
-.detail-content {
-	width: 100%;
-	padding: 0 20px;
-}
-
-.description {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #666;
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-.features {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.feature-item {
-	font-size: 14px;
-	color: #333;
-	line-height: 1.4;
-}
-</style> 
+    <div class="game-guide">
+      <!-- 顶部留空区域 -->
+      <div class="top-space"></div>
+      
+      <!-- 主要内容区域 -->
+      <div class="content">
+        <h1 class="title">变形记：思维训练之旅</h1>
+        
+        <div class="level-container">
+          <!-- 第一关：空间思维训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <h2>第一关：空间变形</h2>
+              <div class="skill-tag">空间思维</div>
+            </div>
+            <p>通过操控方块的旋转和变形，培养：</p>
+            <ul>
+              <li>空间想象能力</li>
+              <li>几何思维能力</li>
+              <li>形状识别能力</li>
+            </ul>
+          </div>
+  
+          <!-- 第二关：逻辑思维训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <h2>第二关：逻辑推理</h2>
+              <div class="skill-tag">逻辑思维</div>
+            </div>
+            <p>通过解决变形序列问题，提升：</p>
+            <ul>
+              <li>推理分析能力</li>
+              <li>模式识别能力</li>
+              <li>决策判断能力</li>
+            </ul>
+          </div>
+  
+          <!-- 第三关：创造力训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <h2>第三关：创意突破</h2>
+              <div class="skill-tag">创造思维</div>
+            </div>
+            <p>通过自由组合变形，激发：</p>
+            <ul>
+              <li>创新思维能力</li>
+              <li>问题解决能力</li>
+              <li>灵活应变能力</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'GameGuide'
+  }
+  </script>
+  
+  <style scoped>
+  .game-guide {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  
+  .top-space {
+    height: calc(100vh / 7);
+  }
+  
+  .content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .level-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .level-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .level-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .level-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .level-header h2 {
+    color: #34495e;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .skill-tag {
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .level-header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .content {
+      padding: 15px;
+    }
+  }
+  </style>

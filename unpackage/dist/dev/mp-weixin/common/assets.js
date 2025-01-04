@@ -1,13 +1,3 @@
 "use strict";
-const _imports_0$5 = "/static/images/伯乐园商标.png";
-const _imports_0$4 = "/static/images/角的认识.png";
-const _imports_0$3 = "/static/images/三角形的认识.png";
-const _imports_0$2 = "/static/images/点线思维.png";
-const _imports_0$1 = "/static/images/四边形的认识.png";
-const _imports_0 = "/static/images/线角面思维.png";
-exports._imports_0 = _imports_0$5;
-exports._imports_0$1 = _imports_0$4;
-exports._imports_0$2 = _imports_0$3;
-exports._imports_0$3 = _imports_0$2;
-exports._imports_0$4 = _imports_0$1;
-exports._imports_0$5 = _imports_0;
+const _imports_0 = "/static/images/伯乐园商标.png";
+exports._imports_0 = _imports_0;

@@ -1,112 +1,228 @@
 <template>
-	<view class="detail-container">
-		<view class="top-bar" :style="{ paddingTop: statusBarHeight + 'px' }">
-			<view class="back-button" @click="goBack">
-				<text class="back-icon">←</text>
-			</view>
-			<text class="page-title">角的认识</text>
-		</view>
-		<view class="content">
-			<image src="/static/images/角的认识.png" mode="aspectFit" class="detail-image"></image>
-			<view class="detail-content">
-				<text class="description">通过互动方式学习角的基本概念和性质</text>
-				<view class="features">
-					<text class="feature-item">• 认识角的组成部分：顶点和边</text>
-					<text class="feature-item">• 学习不同类型的角：锐角、直角、钝角</text>
-					<text class="feature-item">• 理解角的度量和比较</text>
-					<text class="feature-item">• 探索日常生活中的角</text>
-				</view>
-			</view>
-		</view>
-	</view>
-</template>
-
-<script>
-export default {
-	data() {
-		return {
-			statusBarHeight: 0
-		}
-	},
-	onLoad() {
-		const sysInfo = uni.getSystemInfoSync();
-		this.statusBarHeight = sysInfo.statusBarHeight;
-	},
-	methods: {
-		goBack() {
-			uni.navigateBack();
-		}
-	}
-}
-</script>
-
-<style>
-.detail-container {
-	flex: 1;
-	background-color: #ffffff;
-	min-height: 100vh;
-}
-
-.top-bar {
-	background-color: #ffffff;
-	padding: 10px 15px;
-	display: flex;
-	align-items: center;
-	border-bottom: 1px solid #eee;
-}
-
-.back-button {
-	padding: 5px 10px;
-}
-
-.back-icon {
-	font-size: 24px;
-	color: #333;
-}
-
-.page-title {
-	flex: 1;
-	text-align: center;
-	font-size: 18px;
-	margin-right: 40px;
-	color: #333;
-}
-
-.content {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.detail-image {
-	width: 200px;
-	height: 150px;
-	margin-bottom: 30px;
-}
-
-.detail-content {
-	width: 100%;
-	padding: 0 20px;
-}
-
-.description {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #666;
-	text-align: center;
-	margin-bottom: 30px;
-}
-
-.features {
-	display: flex;
-	flex-direction: column;
-	gap: 15px;
-}
-
-.feature-item {
-	font-size: 14px;
-	color: #333;
-	line-height: 1.4;
-}
-</style> 
+    <div class="instructions-container">
+      <!-- 顶部留空区域 - 1/7高度 -->
+      <div class="top-space"></div>
+      
+      <!-- 主要内容区域 -->
+      <div class="content-wrapper">
+        <h1 class="title">转转乐角度探险：智能训练之旅</h1>
+        
+        <div class="level-cards">
+          <!-- 第1关：直角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第1关</span>
+              <span class="level-name">直角大师</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>🧮 数学空间智能：识别和创建90度角</p>
+                <p>👁️ 视觉空间智能：培养角度的直观认知</p>
+                <p>🎯 精确控制能力：精准调整到90度位置</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 第2关：45度角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第2关</span>
+              <span class="level-name">一半的艺术</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>🔄 逻辑推理能力：理解角度分割概念</p>
+                <p>📐 空间分析能力：掌握角度比例关系</p>
+                <p>🎨 艺术审美能力：体验对称之美</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 第3关：145度角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第3关</span>
+              <span class="level-name">精确掌控</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>🔍 观察力训练：细致识别刻度</p>
+                <p>🧠 数学计算能力：综合角度运算</p>
+                <p>✋ 精细动作控制：准确定位特定角度</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 第4关：平角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第4关</span>
+              <span class="level-name">平角探索</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>📏 几何概念理解：掌握平角特性</p>
+                <p>👀 视觉判断能力：识别直线对齐</p>
+                <p>🤔 抽象思维能力：理解180度概念</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 第5关：270度角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第5关</span>
+              <span class="level-name">优角挑战</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>🔄 空间旋转认知：理解大角度概念</p>
+                <p>🧮 数学思维能力：掌握角度叠加</p>
+                <p>🎯 目标定位能力：准确找到目标角度</p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- 第6关：周角训练 -->
+          <div class="level-card">
+            <div class="level-header">
+              <span class="level-number">第6关</span>
+              <span class="level-name">圆满一周</span>
+            </div>
+            <div class="level-content">
+              <div class="training-points">
+                <p>🌟 整体思维能力：理解角度周期性</p>
+                <p>🎨 空间完整认知：把握圆周概念</p>
+                <p>🏆 成就感培养：完成最终挑战</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <style scoped>
+  .instructions-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%);
+    padding: 0 1rem;
+  }
+  
+  .top-space {
+    height: calc(100vh / 7);
+  }
+  
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1a237e;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #7c4dff, #448aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .level-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .level-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .level-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .level-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .level-number {
+    background: linear-gradient(45deg, #7c4dff, #448aff);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .level-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a237e;
+  }
+  
+  .training-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .training-points p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #37474f;
+    font-size: 0.95rem;
+  }
+  
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.25rem;
+    }
+    
+    .level-card {
+      padding: 1rem;
+    }
+    
+    .level-name {
+      font-size: 1.1rem;
+    }
+    
+    .training-points p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* 动画效果 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .level-card {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .level-card:nth-child(1) { animation-delay: 0.1s; }
+  .level-card:nth-child(2) { animation-delay: 0.2s; }
+  .level-card:nth-child(3) { animation-delay: 0.3s; }
+  .level-card:nth-child(4) { animation-delay: 0.4s; }
+  .level-card:nth-child(5) { animation-delay: 0.5s; }
+  .level-card:nth-child(6) { animation-delay: 0.6s; }
+  </style>

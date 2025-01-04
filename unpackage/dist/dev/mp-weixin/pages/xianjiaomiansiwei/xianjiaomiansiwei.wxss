@@ -1,59 +1,104 @@
 
-.detail-container {
-	flex: 1;
-	background-color: #ffffff;
-	min-height: 100vh;
-}
-.top-bar {
-	background-color: #ffffff;
-	padding: 10px 15px;
-	display: flex;
-	align-items: center;
-	border-bottom: 1px solid #eee;
-}
-.back-button {
-	padding: 5px 10px;
-}
-.back-icon {
-	font-size: 24px;
-	color: #333;
-}
-.page-title {
-	flex: 1;
-	text-align: center;
-	font-size: 18px;
-	margin-right: 40px;
-	color: #333;
-}
-.content {
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.detail-image {
-	width: 200px;
-	height: 150px;
-	margin-bottom: 30px;
-}
-.detail-content {
+.game-description.data-v-18b62e8f {
 	width: 100%;
-	padding: 0 20px;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	padding-bottom: 2rem;
 }
-.description {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #666;
+.top-space.data-v-18b62e8f {
+	height: calc(100vh / 7);
+}
+.content.data-v-18b62e8f {
+	padding: 0 1rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.title.data-v-18b62e8f {
 	text-align: center;
-	margin-bottom: 30px;
+	color: #2c3e50;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: bold;
 }
-.features {
+.intro-card.data-v-18b62e8f {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.level-card.data-v-18b62e8f {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+.level-card.data-v-18b62e8f:hover {
+	transform: translateY(-5px);
+}
+.level-header.data-v-18b62e8f {
 	display: flex;
-	flex-direction: column;
-	gap: 15px;
+	align-items: center;
+	margin-bottom: 1rem;
 }
-.feature-item {
-	font-size: 14px;
-	color: #333;
-	line-height: 1.4;
+.level-badge.data-v-18b62e8f {
+	background: #4CAF50;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	margin-right: 1rem;
+	font-weight: bold;
 }
+.level-content ul.data-v-18b62e8f {
+	padding-left: 1.5rem;
+	margin-top: 0.5rem;
+}
+.level-content li.data-v-18b62e8f {
+	margin-bottom: 0.5rem;
+	color: #666;
+}
+.skills-summary.data-v-18b62e8f {
+	background: white;
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-top: 2rem;
+}
+.skills-grid.data-v-18b62e8f {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+.skill-item.data-v-18b62e8f {
+	text-align: center;
+	padding: 1rem;
+}
+.skill-item i.data-v-18b62e8f {
+	font-size: 2rem;
+	color: #4CAF50;
+	margin-bottom: 0.5rem;
+}
+.skill-item h4.data-v-18b62e8f {
+	color: #2c3e50;
+	margin: 0.5rem 0;
+}
+.skill-item p.data-v-18b62e8f {
+	color: #666;
+	font-size: 0.9rem;
+}
+  
+  /* 移动端适配 */
+@media (max-width: 768px) {
+.title.data-v-18b62e8f {
+	  font-size: 1.5rem;
+}
+.content.data-v-18b62e8f {
+	  padding: 0 1rem;
+}
+.skills-grid.data-v-18b62e8f {
+	  grid-template-columns: 1fr;
+}
+}
+  
