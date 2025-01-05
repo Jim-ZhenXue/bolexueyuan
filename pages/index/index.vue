@@ -126,7 +126,7 @@
 
 <style>
 	page {
-		background: #FFFFFF;
+		background: #000000;
 		height: 100%;
 		overflow: hidden;
 	}
@@ -137,12 +137,12 @@
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
-		background: #FFFFFF;
+		background: #000000;
 		overflow: hidden;
 	}
 
 	.top-area {
-		background: #FFFFFF;
+		background: #000000;
 	}
 
 	.header {
@@ -151,7 +151,7 @@
 		display: flex;
 		align-items: center;
 		padding: 0 20rpx;
-		background: #FFFFFF;
+		background: #000000;
 	}
 
 	.title-container {

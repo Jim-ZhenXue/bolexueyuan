@@ -1,7 +1,7 @@
 
 .instructions-container.data-v-f79c297e {
     min-height: 100vh;
-    background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%);
+    background: #000000;
     padding: 0 1rem;
 }
 .top-space.data-v-f79c297e {

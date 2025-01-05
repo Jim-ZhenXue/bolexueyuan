@@ -1,5 +1,5 @@
 <template>
-    <div class="game-instructions">
+    <div class="game-instructions" style="background: #000000;">
       <!-- 顶部留空区域 - 1/7高度 -->
       <div class="top-space"></div>
       
@@ -83,7 +83,7 @@
   .game-instructions {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #000000;
   }
   
   .top-space {

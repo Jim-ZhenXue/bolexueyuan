@@ -1,7 +1,7 @@
 <template>
-    <div class="game-guide">
+    <div class="game-guide" style="background: #000000;">
       <!-- 顶部留空区域 -->
-      <div class="top-space"></div>
+      <div class="top-space" style="background: #000000;"></div>
       
       <!-- 主要内容区域 -->
       <div class="content">

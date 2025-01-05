@@ -1,7 +1,7 @@
 <template>
-    <div class="game-description">
+    <div class="game-description" style="background: #000000;">
       <!-- 顶部留空区域 - 1/7高度 -->
-      <div class="top-space"></div>
+      <div class="top-space" style="background: #000000;"></div>
       
       <!-- 主要内容区域 -->
       <div class="content-container">
@@ -60,7 +60,7 @@
   .game-description {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #000000;
   }
   
   .top-space {

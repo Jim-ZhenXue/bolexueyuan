@@ -1,6 +1,6 @@
 <template>
-	<view class="info-container">
-		<view class="top-bar" :style="{ paddingTop: statusBarHeight + 'px' }">
+	<view class="info-container" style="background: #000000;">
+		<view class="top-bar" :style="{ paddingTop: statusBarHeight + 'px', background: '#000000' }">
 			<view class="back-button" @click="goBack">
 				<text class="back-icon">←</text>
 			</view>
@@ -45,16 +45,16 @@ export default {
 <style>
 .info-container {
 	flex: 1;
-	background-color: #ffffff;
+	background-color: #000000;
 	min-height: 100vh;
 }
 
 .top-bar {
-	background-color: #ffffff;
+	background-color: #000000;
 	padding: 10px 15px;
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #333;
 }
 
 .back-button {
@@ -63,7 +63,7 @@ export default {
 
 .back-icon {
 	font-size: 24px;
-	color: #333;
+	color: #ffffff;
 }
 
 .page-title {
@@ -71,7 +71,7 @@ export default {
 	text-align: center;
 	font-size: 18px;
 	margin-right: 40px;
-	color: #333;
+	color: #ffffff;
 }
 
 .content {
@@ -79,6 +79,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #000000;
 }
 
 .info-image {
@@ -91,13 +92,23 @@ export default {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 15px;
-	color: #333;
+	color: #ffffff;
 }
 
 .info-text {
 	font-size: 16px;
 	line-height: 1.6;
-	color: #666;
+	color: #cccccc;
 	text-align: center;
+}
+
+page {
+	background: #000000;
+	min-height: 100vh;
+}
+
+.container {
+	background: #000000;
+	min-height: 100vh;
 }
 </style> 

@@ -2,7 +2,7 @@
 .game-description.data-v-18b62e8f {
 	width: 100%;
 	min-height: 100vh;
-	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	background: #000000;
 	padding-bottom: 2rem;
 }
 .top-space.data-v-18b62e8f {

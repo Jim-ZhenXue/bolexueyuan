@@ -1,5 +1,5 @@
 <template>
-    <div class="instructions-container">
+    <div class="instructions-container" style="background: #000000;">
       <!-- 顶部留空区域 - 1/7高度 -->
       <div class="top-space"></div>
       
@@ -105,7 +105,7 @@
   <style scoped>
   .instructions-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #e0f7fa 0%, #e8eaf6 100%);
+    background: #000000;
     padding: 0 1rem;
   }
   

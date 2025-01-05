@@ -2,7 +2,7 @@
 .game-description.data-v-2bc8081a {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #000000;
 }
 .top-space.data-v-2bc8081a {
     height: calc(100vh / 7);
