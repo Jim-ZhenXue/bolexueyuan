@@ -1,0 +1,41 @@
+
+page {
+	background-color: #000000;
+}
+.container {
+	min-height: 100vh;
+	background-color: #000000;
+}
+.header {
+	background: #000000;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+.nav-bar {
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.back-btn {
+	position: absolute;
+	left: 0;
+	height: 88rpx;
+	width: 88rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.back-icon {
+	font-size: 38rpx;
+	color: #ffffff;
+	font-weight: normal;
+	transform: scale(1.3, 1);
+}
+uni-page-body {
+	background-color: #000000;
+}
+uni-page-wrapper {
+	background-color: #000000;
+}

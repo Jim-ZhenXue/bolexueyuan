@@ -7,7 +7,10 @@
 	}, {
 		"path": "pages/webview/webview",
 		"style": {
-			"navigationBarTitleText": ""
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#000000",
+			"backgroundColor": "#000000"
 		}
 	}, {
 		"path": "pages/copyright/copyright",
@@ -41,12 +44,10 @@
 		}
 	}],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "LinkCareer",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#000000",
+		"backgroundColor": "#000000",
 		"app-plus": {
-			"background": "#efeff4"
+			"background": "#000000"
 		}
 	}
 }

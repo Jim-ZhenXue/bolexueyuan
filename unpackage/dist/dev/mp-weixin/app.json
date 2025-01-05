@@ -10,10 +10,8 @@
     "pages/xianjiaomiansiwei/xianjiaomiansiwei"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "LinkCareer",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#000000",
+    "backgroundColor": "#000000"
   },
   "usingComponents": {}
 }

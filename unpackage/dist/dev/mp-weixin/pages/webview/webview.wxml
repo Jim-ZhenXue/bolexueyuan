@@ -1,1 +1,1 @@
-<web-view src="{{a}}"></web-view>
+<view class="container"><view class="header" style="{{'padding-top:' + b}}"><view class="nav-bar"><view class="back-btn" bindtap="{{a}}"><text class="back-icon">〈</text></view></view></view><web-view src="{{c}}"></web-view></view>
