@@ -203,12 +203,18 @@
 	.list-item {
 		margin-bottom: 20rpx;
 		position: relative;
+		border-bottom: 1px solid #333333;
+		padding-bottom: 20rpx;
+	}
+
+	.list-item:last-child {
+		border-bottom: none;
 	}
 
 	.item-content {
 		display: flex;
 		align-items: center;
-		background: #f8f8f8;
+		background: #000000;
 		padding: 20rpx;
 		border-radius: 12rpx;
 		margin: 0 20rpx;
@@ -234,7 +240,7 @@
 
 	.item-title {
 		font-size: 32rpx;
-		color: #333;
+		color: #ffffff;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
