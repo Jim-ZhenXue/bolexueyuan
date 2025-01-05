@@ -99,7 +99,7 @@
   .title {
     text-align: center;
     font-size: 2rem;
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 2rem;
     font-weight: bold;
   }
@@ -112,10 +112,10 @@
   }
   
   .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
   }
   
@@ -130,14 +130,14 @@
   }
   
   .card h3 {
-    color: #2c3e50;
+    color: #1a1a1a;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
   }
   
   .card p {
-    color: #34495e;
+    color: #1f2937;
     margin-bottom: 1rem;
   }
   
@@ -147,7 +147,7 @@
   }
   
   .card ul li {
-    color: #7f8c8d;
+    color: #1f2937;
     margin-bottom: 0.5rem;
     padding-left: 20px;
     position: relative;
@@ -161,15 +161,15 @@
   }
   
   .progression-section {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
     margin-top: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
   
   .progression-section h2 {
-    color: #2c3e50;
+    color: #1a1a1a;
     text-align: center;
     margin-bottom: 1.5rem;
   }
@@ -196,6 +196,10 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+  }
+  
+  .step p {
+    color: #1f2937;
   }
   
   /* 移动端适配 */

@@ -63,7 +63,7 @@
   <style scoped>
   .game-guide {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #000000;
   }
   
   .top-space {
@@ -78,7 +78,7 @@
   
   .title {
     text-align: center;
-    color: #2c3e50;
+    color: #ffffff;
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -91,10 +91,10 @@
   }
   
   .level-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
   }
   
@@ -110,7 +110,7 @@
   }
   
   .level-header h2 {
-    color: #34495e;
+    color: #1a1a1a;
     font-size: 1.5rem;
     margin: 0;
   }
@@ -132,6 +132,7 @@
     margin: 10px 0;
     padding-left: 20px;
     position: relative;
+    color: #1f2937;
   }
   
   li::before {
@@ -155,5 +156,9 @@
     .content {
       padding: 15px;
     }
+  }
+  
+  p {
+    color: #1f2937;
   }
   </style>

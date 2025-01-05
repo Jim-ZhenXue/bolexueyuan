@@ -75,17 +75,17 @@
   
   .title {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
   }
   
   .section {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
   
   .learning-path {
@@ -99,10 +99,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
   .step-number {
@@ -129,10 +129,10 @@
   }
   
   .feature-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
   }
   
@@ -152,12 +152,12 @@
   }
   
   h2, h3 {
-    color: #2c3e50;
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
   }
   
   p {
-    color: #34495e;
+    color: #1f2937;
     line-height: 1.6;
   }
   </style>

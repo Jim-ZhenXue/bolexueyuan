@@ -16,9 +16,9 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    color: #1a237e;
     margin-bottom: 2rem;
-    background: linear-gradient(45deg, #7c4dff, #448aff);
+    color: #ffffff;
+    background: linear-gradient(45deg, #9d6eff, #66a3ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -28,10 +28,10 @@
     gap: 1.5rem;
 }
 .level-card.data-v-f79c297e {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 1rem;
     padding: 1.25rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
 .level-card.data-v-f79c297e:hover {
@@ -54,7 +54,7 @@
 .level-name.data-v-f79c297e {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #1a237e;
+    color: #3f51b5;
 }
 .training-points.data-v-f79c297e {
     display: flex;
@@ -65,7 +65,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #37474f;
+    color: #1f2937;
     font-size: 0.95rem;
 }
   

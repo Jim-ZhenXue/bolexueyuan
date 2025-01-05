@@ -128,26 +128,26 @@
   
   .title {
 	text-align: center;
-	color: #2c3e50;
+	color: #ffffff;
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	font-weight: bold;
   }
   
   .intro-card {
-	background: white;
+	background: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 	padding: 1.5rem;
 	margin-bottom: 2rem;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   }
   
   .level-card {
-	background: white;
+	background: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 	padding: 1.5rem;
 	margin-bottom: 1.5rem;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 	transition: transform 0.3s ease;
   }
   
@@ -177,11 +177,11 @@
   
   .level-content li {
 	margin-bottom: 0.5rem;
-	color: #666;
+	color: #1f2937;
   }
   
   .skills-summary {
-	background: white;
+	background: rgba(255, 255, 255, 0.9);
 	border-radius: 15px;
 	padding: 1.5rem;
 	margin-top: 2rem;
@@ -206,12 +206,12 @@
   }
   
   .skill-item h4 {
-	color: #2c3e50;
+	color: #1a1a1a;
 	margin: 0.5rem 0;
   }
   
   .skill-item p {
-	color: #666;
+	color: #1f2937;
 	font-size: 0.9rem;
   }
   

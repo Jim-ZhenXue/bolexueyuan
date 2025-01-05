@@ -14,16 +14,16 @@
 }
 .title.data-v-2bc8081a {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
 }
 .section.data-v-2bc8081a {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 .learning-path.data-v-2bc8081a {
     display: flex;
@@ -35,10 +35,10 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .step-number.data-v-2bc8081a {
     width: 40px;
@@ -61,10 +61,10 @@
     gap: 1.5rem;
 }
 .feature-card.data-v-2bc8081a {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
   
@@ -81,11 +81,11 @@
 }
 }
 h2.data-v-2bc8081a, h3.data-v-2bc8081a {
-    color: #2c3e50;
+    color: #1a1a1a;
     margin-bottom: 0.5rem;
 }
 p.data-v-2bc8081a {
-    color: #34495e;
+    color: #1f2937;
     line-height: 1.6;
 }
   
