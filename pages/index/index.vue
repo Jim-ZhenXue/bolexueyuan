@@ -197,7 +197,7 @@
 	}
 
 	.item-list {
-		padding: 0;
+		padding: 60rpx 0 0 0;
 	}
 
 	.list-item {

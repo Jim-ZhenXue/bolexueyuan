@@ -118,7 +118,7 @@ export default {
 .app-name {
 	font-size: 40rpx;
 	font-weight: 600;
-	color: #098ff2;
+	color: #E0E0E0;
 	margin-bottom: 16rpx;
 	text-shadow: 0 0 10rpx rgba(9, 143, 242, 0.3);
 }
@@ -141,7 +141,7 @@ export default {
 .section-title {
 	font-size: 32rpx;
 	font-weight: 600;
-	color: #098ff2;
+	color: #E0E0E0;
 	margin-bottom: 20rpx;
 	display: block;
 }
