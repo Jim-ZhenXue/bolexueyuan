@@ -54,7 +54,7 @@ export default {
 	padding: 10px 15px;
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .back-button {
@@ -63,7 +63,12 @@ export default {
 
 .back-icon {
 	font-size: 24px;
-	color: #ffffff;
+	color: #4CAF50;
+	transition: color 0.3s ease;
+}
+
+.back-button:active .back-icon {
+	color: #2196F3;
 }
 
 .page-title {
@@ -71,7 +76,10 @@ export default {
 	text-align: center;
 	font-size: 18px;
 	margin-right: 40px;
-	color: #ffffff;
+	background: linear-gradient(45deg, #4CAF50, #2196F3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
 }
 
 .content {
@@ -86,20 +94,29 @@ export default {
 	width: 120px;
 	height: 120px;
 	margin-bottom: 20px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
 }
 
 .info-title {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 15px;
-	color: #ffffff;
+	background: linear-gradient(45deg, #4CAF50, #2196F3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 .info-text {
 	font-size: 16px;
 	line-height: 1.6;
-	color: #cccccc;
+	color: #E0E0E0;
 	text-align: center;
+	padding: 15px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 10px;
+	border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
 page {

@@ -5,10 +5,10 @@
 }
 .container {
 	min-height: 100vh;
-	background-color: #FFFFFF;
+	background-color: #000000;
 }
 .header {
-	background: #FFFFFF;
+	background: #000000;
 }
 .nav-bar {
 	height: 88rpx;
@@ -27,7 +27,7 @@
 }
 .back-icon {
 	font-size: 38rpx;
-	color: #000000;
+	color: #4CAF50;
 	font-weight: normal;
 	transform: scale(1.3, 1);
 }
@@ -36,50 +36,60 @@
 	text-align: center;
 	font-size: 36rpx;
 	font-weight: 600;
-	color: #333333;
+	color: #ffffff;
+	background: linear-gradient(45deg, #4CAF50, #2196F3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .content {
 	padding: 60rpx 40rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: #000000;
 }
 .logo {
 	width: 160rpx;
 	height: 160rpx;
 	margin-bottom: 30rpx;
+	filter: drop-shadow(0 0 10rpx rgba(76, 175, 80, 0.3));
 }
 .app-name {
 	font-size: 40rpx;
 	font-weight: 600;
-	color: #333333;
+	color: #4CAF50;
 	margin-bottom: 16rpx;
+	text-shadow: 0 0 10rpx rgba(76, 175, 80, 0.3);
 }
 .version {
 	font-size: 28rpx;
-	color: #999999;
+	color: #03A9F4;
 	margin-bottom: 60rpx;
 }
 .info-section {
 	width: 100%;
 	margin-bottom: 40rpx;
+	background: rgba(255, 255, 255, 0.05);
+	padding: 30rpx;
+	border-radius: 20rpx;
+	border: 1px solid rgba(76, 175, 80, 0.2);
 }
 .section-title {
 	font-size: 32rpx;
 	font-weight: 600;
-	color: #333333;
+	color: #4CAF50;
 	margin-bottom: 20rpx;
 	display: block;
 }
 .description {
 	font-size: 28rpx;
-	color: #666666;
+	color: #E0E0E0;
 	line-height: 1.6;
 	display: block;
 }
 .contact-item {
 	font-size: 28rpx;
-	color: #666666;
+	color: #90CAF9;
 	line-height: 1.8;
 	display: block;
 }
@@ -89,7 +99,7 @@
 }
 .copyright-text text {
 	font-size: 24rpx;
-	color: #999999;
+	color: #757575;
 	display: block;
 	line-height: 1.6;
 }
