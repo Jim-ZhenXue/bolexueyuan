@@ -5,7 +5,6 @@
 				<view class="back-btn" @click="goBack">
 					<text class="back-icon">〈</text>
 				</view>
-				<text class="title">关于我们</text>
 			</view>
 		</view>
 		
@@ -119,14 +118,14 @@ export default {
 .app-name {
 	font-size: 40rpx;
 	font-weight: 600;
-	color: #4CAF50;
+	color: #098ff2;
 	margin-bottom: 16rpx;
-	text-shadow: 0 0 10rpx rgba(76, 175, 80, 0.3);
+	text-shadow: 0 0 10rpx rgba(9, 143, 242, 0.3);
 }
 
 .version {
 	font-size: 28rpx;
-	color: #03A9F4;
+	color: #E0E0E0;
 	margin-bottom: 60rpx;
 }
 
@@ -142,7 +141,7 @@ export default {
 .section-title {
 	font-size: 32rpx;
 	font-weight: 600;
-	color: #4CAF50;
+	color: #098ff2;
 	margin-bottom: 20rpx;
 	display: block;
 }
@@ -156,7 +155,7 @@ export default {
 
 .contact-item {
 	font-size: 28rpx;
-	color: #90CAF9;
+	color: #E0E0E0;
 	line-height: 1.8;
 	display: block;
 }
