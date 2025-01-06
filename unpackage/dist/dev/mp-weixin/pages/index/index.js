@@ -8,7 +8,7 @@ const _sfc_main = {
       items: [
         {
           url: "https://mobilejiaoderenshi.netlify.app",
-          image: "/static/images/角的认识.png",
+          image: "/static/images/角的认识.jpg",
           title: "角的认识",
           info: "通过互动方式学习角的基本概念和性质",
           favorite: false,
@@ -16,7 +16,7 @@ const _sfc_main = {
         },
         {
           url: "https://msanjiaoxingderenshi.netlify.app",
-          image: "/static/images/三角形的认识.png",
+          image: "/static/images/三角形的认识.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",
           favorite: false,
@@ -24,7 +24,7 @@ const _sfc_main = {
         },
         {
           url: "https://mdianxiansiwei.netlify.app",
-          image: "/static/images/点线思维.png",
+          image: "/static/images/点线思维.jpg",
           title: "点线思维",
           info: "学习点和线的基本概念",
           favorite: false,
@@ -32,7 +32,7 @@ const _sfc_main = {
         },
         {
           url: "https://msibianxingderenshi.netlify.app",
-          image: "/static/images/四边形的认识.png",
+          image: "/static/images/四边形的认识.jpg",
           title: "四边形的认识",
           info: "了解各种四边形的特征",
           favorite: false,
@@ -40,7 +40,7 @@ const _sfc_main = {
         },
         {
           url: "https://mxianjiaomiansiwei.netlify.app",
-          image: "/static/images/线角面思维.png",
+          image: "/static/images/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
