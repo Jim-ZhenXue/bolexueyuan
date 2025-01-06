@@ -84,7 +84,7 @@ export default {
 
 .back-icon {
 	font-size: 38rpx;
-	color: #4CAF50;
+	color: #FFFFFF;
 	font-weight: normal;
 	transform: scale(1.3, 1);
 }
@@ -95,7 +95,7 @@ export default {
 	font-size: 36rpx;
 	font-weight: 600;
 	color: #ffffff;
-	background: linear-gradient(45deg, #4CAF50, #2196F3);
+	background: linear-gradient(45deg, #FFFFFF, #2196F3);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -135,7 +135,7 @@ export default {
 	background: rgba(255, 255, 255, 0.05);
 	padding: 30rpx;
 	border-radius: 20rpx;
-	border: 1px solid rgba(76, 175, 80, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .section-title {
