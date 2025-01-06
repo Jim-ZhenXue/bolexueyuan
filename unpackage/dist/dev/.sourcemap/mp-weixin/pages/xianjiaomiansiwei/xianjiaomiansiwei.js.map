@@ -1,0 +1,1 @@
+{"version":3,"file":"xianjiaomiansiwei.js","sources":["pages/xianjiaomiansiwei/xianjiaomiansiwei.vue?type=page"],"sourcesContent":["import MiniProgramPage from '/Users/xz/Documents/HBuilderProjects/bolexueyuan/pages/xianjiaomiansiwei/xianjiaomiansiwei.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}

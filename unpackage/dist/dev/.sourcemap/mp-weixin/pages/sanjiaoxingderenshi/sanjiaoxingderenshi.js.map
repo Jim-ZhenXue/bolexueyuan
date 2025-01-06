@@ -1,0 +1,1 @@
+{"version":3,"file":"sanjiaoxingderenshi.js","sources":["pages/sanjiaoxingderenshi/sanjiaoxingderenshi.vue?type=page"],"sourcesContent":["import MiniProgramPage from '/Users/xz/Documents/HBuilderProjects/bolexueyuan/pages/sanjiaoxingderenshi/sanjiaoxingderenshi.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}

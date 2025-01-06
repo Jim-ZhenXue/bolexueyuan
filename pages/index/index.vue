@@ -4,7 +4,6 @@
 			<view class="header">
 				<view class="title-container" @click="navigateToCopyright">
 					<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
-					<text class="title">多元思维</text>
 				</view>
 			</view>
 		</view>
@@ -158,15 +157,14 @@
 		display: flex;
 		align-items: center;
 		padding: 8rpx 34rpx 8rpx 24rpx;
-		background-color: #ff4444;
 		border-radius: 50rpx;
 		max-width: fit-content;
 		cursor: pointer;
 	}
 
 	.logo {
-		height: 40rpx;
-		width: 40rpx;
+		height: 80rpx;
+		width: 80rpx;
 		margin-right: 10rpx;
 	}
 

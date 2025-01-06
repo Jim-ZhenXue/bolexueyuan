@@ -1,0 +1,1 @@
+{"version":3,"file":"jiaoderenshi.js","sources":["pages/jiaoderenshi/jiaoderenshi.vue?type=page"],"sourcesContent":["import MiniProgramPage from '/Users/xz/Documents/HBuilderProjects/bolexueyuan/pages/jiaoderenshi/jiaoderenshi.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}
