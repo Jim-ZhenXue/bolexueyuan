@@ -10,7 +10,7 @@
 		
 		<view class="content">
 			<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
-			<text class="app-name">多元思维</text>
+			<text class="app-name">多元智能思维</text>
 			<text class="version">Version 1.0.0</text>
 			
 			<view class="info-section">
