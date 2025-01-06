@@ -128,10 +128,12 @@
 		background: #000000;
 		height: 100%;
 		overflow: hidden;
+		position: fixed;
+		width: 100%;
 	}
 	
 	.container {
-		position: relative;
+		position: fixed;
 		width: 100%;
 		height: 100vh;
 		display: flex;
@@ -139,6 +141,7 @@
 		background: #000000;
 		overflow: hidden;
 		padding-top: 10px;
+		touch-action: none;
 	}
 
 	.top-area {
@@ -178,6 +181,7 @@
 		flex: 1;
 		width: 100%;
 		overflow-y: scroll;
+		-webkit-overflow-scrolling: none;
 	}
 
 	.scroll-container::-webkit-scrollbar {

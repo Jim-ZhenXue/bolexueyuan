@@ -69,6 +69,8 @@
 		"backgroundColor": "#FFFFFF",
 		"app-plus": {
 			"background": "#FFFFFF"
-		}
+		},
+		"disableScroll": true,
+		"enablePullDownRefresh": false
 	}
 }

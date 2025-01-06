@@ -13,7 +13,9 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#1a1a1a",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#FFFFFF",
+    "disableScroll": true,
+    "enablePullDownRefresh": false
   },
   "usingComponents": {}
 }
