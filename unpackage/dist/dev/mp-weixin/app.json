@@ -10,9 +10,9 @@
     "pages/xianjiaomiansiwei/xianjiaomiansiwei"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "",
-    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#1a1a1a",
     "backgroundColor": "#FFFFFF"
   },
   "usingComponents": {}

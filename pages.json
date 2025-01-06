@@ -3,7 +3,8 @@
 		"path": "pages/index/index",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black"
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a"
 		}
 	}, {
 		"path": "pages/webview/webview",
@@ -17,53 +18,54 @@
 		"path": "pages/copyright/copyright",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black"
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a"
 		}
 	}, {
 		"path": "pages/jiaoderenshi/jiaoderenshi",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black",
-			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
 			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black",
-			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
 			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/dianxiansiwei/dianxiansiwei",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black",
-			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
 			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/sibianxingderenshi/sibianxingderenshi",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black",
-			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
 			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/xianjiaomiansiwei/xianjiaomiansiwei",
 		"style": {
 			"navigationStyle": "custom",
-			"navigationBarTextStyle": "black",
-			"navigationBarBackgroundColor": "#FFFFFF",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
 			"backgroundColor": "#FFFFFF"
 		}
 	}],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "",
-		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarBackgroundColor": "#1a1a1a",
 		"backgroundColor": "#FFFFFF",
 		"app-plus": {
 			"background": "#FFFFFF"
