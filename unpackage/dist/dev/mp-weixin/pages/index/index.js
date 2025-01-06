@@ -51,7 +51,7 @@ const _sfc_main = {
   },
   onLoad() {
     const sysInfo = common_vendor.index.getSystemInfoSync();
-    this.statusBarHeight = sysInfo.statusBarHeight;
+    this.statusBarHeight = sysInfo.statusBarHeight + 10;
   },
   methods: {
     openWebView(url) {

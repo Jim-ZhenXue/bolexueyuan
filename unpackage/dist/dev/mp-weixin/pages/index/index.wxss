@@ -12,6 +12,7 @@ page {
 		flex-direction: column;
 		background: #000000;
 		overflow: hidden;
+		padding-top: 10px;
 }
 .top-area {
 		background: #000000;
@@ -60,7 +61,7 @@ page {
 		border-radius: 4rpx;
 }
 .item-list {
-		padding: 60rpx 0 0 0;
+		padding: 110rpx 0 0 0;
 }
 .list-item {
 		margin-bottom: 20rpx;

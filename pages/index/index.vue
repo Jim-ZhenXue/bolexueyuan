@@ -77,7 +77,7 @@
 		},
 		onLoad() {
 			const sysInfo = uni.getSystemInfoSync();
-			this.statusBarHeight = sysInfo.statusBarHeight;
+			this.statusBarHeight = sysInfo.statusBarHeight + 10;
 		},
 		methods: {
 			openWebView(url) {
@@ -138,6 +138,7 @@
 		flex-direction: column;
 		background: #000000;
 		overflow: hidden;
+		padding-top: 10px;
 	}
 
 	.top-area {
@@ -195,7 +196,7 @@
 	}
 
 	.item-list {
-		padding: 60rpx 0 0 0;
+		padding: 110rpx 0 0 0;
 	}
 
 	.list-item {
