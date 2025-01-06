@@ -2,7 +2,8 @@
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black"
 		}
 	}, {
 		"path": "pages/webview/webview",
@@ -15,39 +16,57 @@
 	}, {
 		"path": "pages/copyright/copyright",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black"
 		}
 	}, {
 		"path": "pages/jiaoderenshi/jiaoderenshi",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/dianxiansiwei/dianxiansiwei",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/sibianxingderenshi/sibianxingderenshi",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"backgroundColor": "#FFFFFF"
 		}
 	}, {
 		"path": "pages/xianjiaomiansiwei/xianjiaomiansiwei",
 		"style": {
-			"navigationStyle": "custom"
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#FFFFFF",
+			"backgroundColor": "#FFFFFF"
 		}
 	}],
 	"globalStyle": {
-		"navigationBarBackgroundColor": "#000000",
-		"backgroundColor": "#000000",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
 		"app-plus": {
-			"background": "#000000"
+			"background": "#FFFFFF"
 		}
 	}
 }
