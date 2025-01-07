@@ -1,6 +1,7 @@
 <template>
 	<view class="container">
 		<view class="top-area" :style="{ paddingTop: statusBarHeight + 'px' }">
+			<image class="status-bar-bg" src="/static/images/状态栏.jpg" mode="aspectFill"></image>
 			<view class="header">
 				<view class="title-container" @click="navigateToCopyright">
 					<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
@@ -140,12 +141,24 @@
 		flex-direction: column;
 		background: #000000;
 		overflow: hidden;
-		padding-top: 10px;
 		touch-action: none;
 	}
 
 	.top-area {
-		background: #000000;
+		background: transparent;
+		position: relative;
+		z-index: 100;
+		height: 200rpx;
+		overflow: visible;
+	}
+
+	.status-bar-bg {
+		position: absolute;
+		top: -40rpx;
+		left: 0;
+		width: 100%;
+		height: 300rpx;
+		z-index: 99;
 	}
 
 	.header {
@@ -154,7 +167,9 @@
 		display: flex;
 		align-items: center;
 		padding: 0 20rpx;
-		background: #000000;
+		background: transparent;
+		position: relative;
+		z-index: 101;
 	}
 
 	.title-container {
@@ -200,7 +215,7 @@
 	}
 
 	.item-list {
-		padding: 110rpx 0 0 0;
+		padding: 20rpx 0 0 0;
 	}
 
 	.list-item {

@@ -21,7 +21,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.o((...args) => $options.goBack && $options.goBack(...args)),
     b: $data.statusBarHeight + "px",
-    c: common_assets._imports_0
+    c: common_assets._imports_0$1
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
