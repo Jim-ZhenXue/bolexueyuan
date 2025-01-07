@@ -154,12 +154,12 @@
 
 	.status-bar-bg {
 		position: fixed;
-		top: -120rpx;
+		top: -92rpx;
 		left: 0;
 		width: 100%;
 		height: 400rpx;
 		z-index: 99;
-		transform: scale(1, 0.5);
+		transform: scale(1, 0.55);
 		transform-origin: center;
 	}
 
