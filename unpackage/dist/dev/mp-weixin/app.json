@@ -15,7 +15,8 @@
     "navigationBarBackgroundColor": "#1a1a1a",
     "backgroundColor": "#FFFFFF",
     "disableScroll": true,
-    "enablePullDownRefresh": false
+    "enablePullDownRefresh": false,
+    "pageOrientation": "landscape"
   },
   "usingComponents": {}
 }

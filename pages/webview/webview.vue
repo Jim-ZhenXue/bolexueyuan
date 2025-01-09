@@ -42,6 +42,10 @@ page {
 .container {
 	min-height: 100vh;
 	background-color: #000000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .header {
@@ -77,9 +81,17 @@ page {
 
 uni-page-body {
 	background-color: #000000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 uni-page-wrapper {
 	background-color: #000000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 </style> 

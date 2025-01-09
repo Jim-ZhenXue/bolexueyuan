@@ -45,6 +45,14 @@ const _sfc_main = {
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
           showInfo: false
+        },
+        {
+          url: "https://dengshi.netlify.app",
+          image: "/static/images/线角面思维.jpg",
+          title: "线角面思维",
+          info: "深入理解几何中的线、角、面概念",
+          favorite: false,
+          showInfo: false
         }
       ]
     };
