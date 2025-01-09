@@ -4,7 +4,6 @@ const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   data() {
     return {
-      statusBarHeight: 0,
       items: [
         {
           url: "https://mobilejiaoderenshi.netlify.app",
@@ -57,10 +56,6 @@ const _sfc_main = {
       ]
     };
   },
-  onLoad() {
-    const sysInfo = common_vendor.index.getSystemInfoSync();
-    this.statusBarHeight = sysInfo.statusBarHeight + 10;
-  },
   methods: {
     openWebView(url) {
       common_vendor.index.navigateTo({
@@ -106,8 +101,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_assets._imports_0,
     b: common_assets._imports_0$1,
     c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
-    d: $data.statusBarHeight + "px",
-    e: common_vendor.f($data.items, (item, index, i0) => {
+    d: common_vendor.f($data.items.slice(0, 5), (item, index, i0) => {
       return {
         a: item.image,
         b: common_vendor.t(item.title),
@@ -117,7 +111,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         f: common_vendor.o(($event) => $options.openWebView(item.url), index),
         g: index
       };
-    })
+    }),
+    e: $data.items.length - 1
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);

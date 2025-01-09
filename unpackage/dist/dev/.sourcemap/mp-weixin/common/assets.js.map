@@ -1,1 +1,1 @@
-{"version":3,"file":"assets.js","sources":["static/images/状态栏.jpg","static/images/伯乐园商标.png"],"sourcesContent":["export default \"__VITE_ASSET__32d261af__\"","export default \"__VITE_ASSET__f80a9409__\""],"names":[],"mappings":";AAAA,MAAe,eAAA;ACAf,MAAe,aAAA;;;"}
+{"version":3,"file":"assets.js","sources":["static/images/背景.jpg","static/images/伯乐园商标.png"],"sourcesContent":["export default \"__VITE_ASSET__3f33a4e8__\"","export default \"__VITE_ASSET__f80a9409__\""],"names":[],"mappings":";AAAA,MAAe,eAAA;ACAf,MAAe,aAAA;;;"}
