@@ -107,16 +107,20 @@
     min-height: 100vh;
     background: #000000;
     padding: 0 1rem;
+    position: relative;
+    overflow-y: auto;
   }
   
   .top-space {
     height: calc(100vh / 7);
+    min-height: 60px;
   }
   
   .content-wrapper {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
+    padding-bottom: 2rem;
   }
   
   .title {

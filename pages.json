@@ -27,7 +27,8 @@
 			"navigationStyle": "custom",
 			"navigationBarTextStyle": "white",
 			"navigationBarBackgroundColor": "#1a1a1a",
-			"backgroundColor": "#FFFFFF"
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
 		}
 	}, {
 		"path": "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
@@ -35,7 +36,8 @@
 			"navigationStyle": "custom",
 			"navigationBarTextStyle": "white",
 			"navigationBarBackgroundColor": "#1a1a1a",
-			"backgroundColor": "#FFFFFF"
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
 		}
 	}, {
 		"path": "pages/dianxiansiwei/dianxiansiwei",
@@ -43,7 +45,8 @@
 			"navigationStyle": "custom",
 			"navigationBarTextStyle": "white",
 			"navigationBarBackgroundColor": "#1a1a1a",
-			"backgroundColor": "#FFFFFF"
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
 		}
 	}, {
 		"path": "pages/sibianxingderenshi/sibianxingderenshi",
@@ -51,7 +54,8 @@
 			"navigationStyle": "custom",
 			"navigationBarTextStyle": "white",
 			"navigationBarBackgroundColor": "#1a1a1a",
-			"backgroundColor": "#FFFFFF"
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
 		}
 	}, {
 		"path": "pages/xianjiaomiansiwei/xianjiaomiansiwei",
@@ -59,7 +63,8 @@
 			"navigationStyle": "custom",
 			"navigationBarTextStyle": "white",
 			"navigationBarBackgroundColor": "#1a1a1a",
-			"backgroundColor": "#FFFFFF"
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
 		}
 	}],
 	"globalStyle": {

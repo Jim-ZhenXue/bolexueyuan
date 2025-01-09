@@ -15,7 +15,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://msanjiaoxingderenshi.netlify.app",
+          url: "https://minisanjiaoxingderenshi.netlify.app",
           image: "/static/images/三角形的认识.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",
@@ -23,7 +23,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://mdianxiansiwei.netlify.app",
+          url: "https://minidianxiansiwei.netlify.app",
           image: "/static/images/点线思维.jpg",
           title: "点线思维",
           info: "学习点和线的基本概念",
@@ -31,7 +31,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://msibianxingderenshi.netlify.app",
+          url: "https://minisibianxingderenshi.netlify.app",
           image: "/static/images/四边形的认识.jpg",
           title: "四边形的认识",
           info: "了解各种四边形的特征",
@@ -39,7 +39,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://mxianjiaomiansiwei.netlify.app",
+          url: "https://minixianjiaomiansiwei.netlify.app",
           image: "/static/images/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",

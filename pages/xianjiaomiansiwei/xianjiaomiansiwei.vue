@@ -113,17 +113,21 @@
 	width: 100%;
 	min-height: 100vh;
 	background: #000000;
+	position: relative;
+	overflow-y: auto;
 	padding-bottom: 2rem;
   }
   
   .top-space {
 	height: calc(100vh / 7);
+	min-height: 60px;
   }
   
   .content {
 	padding: 0 1rem;
 	max-width: 800px;
 	margin: 0 auto;
+	padding-bottom: 2rem;
   }
   
   .title {
