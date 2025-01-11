@@ -191,8 +191,8 @@
 	}
 
 	.logo {
-		height: 80rpx;
-		width: 80rpx;
+		height: 40rpx;
+		width: 40rpx;
 		margin-right: 10rpx;
 	}
 
