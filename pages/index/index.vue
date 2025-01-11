@@ -6,7 +6,14 @@
 				<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
 			</view>
 		</view>
-		<swiper class="swiper-container" :indicator-dots="true" :autoplay="false" :circular="true" previous-margin="100rpx" next-margin="100rpx" :current="items.length - 1">
+		<swiper class="swiper-container" 
+			:indicator-dots="true" 
+			:autoplay="true" 
+			:interval="3000"
+			:duration="500"
+			:circular="true" 
+			previous-margin="100rpx" 
+			next-margin="100rpx">
 			<swiper-item v-for="(item, index) in items.slice(0, 5)" :key="index" class="swiper-item">
 				<view class="swiper-content" @click="openWebView(item.url)">
 					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
