@@ -53,6 +53,8 @@ page {
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+	left: 0;
+	top: 0;
 }
 
 .nav-bar {
@@ -70,6 +72,9 @@ page {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 101;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 0 8rpx 8rpx 0;
 }
 
 .back-icon {
@@ -93,5 +98,23 @@ uni-page-wrapper {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+}
+
+@media screen and (orientation: landscape) {
+	.header {
+		width: auto;
+		height: 100%;
+		max-width: 88rpx;
+	}
+	
+	.nav-bar {
+		height: 100%;
+	}
+	
+	.back-btn {
+		position: fixed;
+		height: 88rpx;
+		top: 20rpx;
+	}
 }
 </style> 

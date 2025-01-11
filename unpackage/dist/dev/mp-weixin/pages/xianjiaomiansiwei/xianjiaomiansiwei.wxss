@@ -92,17 +92,29 @@
 	color: #1f2937;
 	font-size: 0.9rem;
 }
-  
-  /* 移动端适配 */
+
+/* 移动端适配 */
 @media (max-width: 768px) {
 .title.data-v-18b62e8f {
-	  font-size: 1.5rem;
+		font-size: 1.5rem;
 }
 .content.data-v-18b62e8f {
-	  padding: 0 1rem;
+		padding: 0 1rem;
 }
 .skills-grid.data-v-18b62e8f {
-	  grid-template-columns: 1fr;
+		grid-template-columns: 1fr;
 }
 }
-  
+.back-button.data-v-18b62e8f {
+	position: fixed;
+	top: 44px;
+	left: 15px;
+	z-index: 999;
+	padding: 8px 15px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+.back-text.data-v-18b62e8f {
+	color: #ffffff;
+	font-size: 16px;
+}

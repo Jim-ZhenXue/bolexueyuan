@@ -14,7 +14,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://minisanjiaoxingderenshi.netlify.app",
+          url: "https://sanjiaoxingderenshi.netlify.app",
           image: "/static/images/三角形的认识.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",

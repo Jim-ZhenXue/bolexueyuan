@@ -106,20 +106,32 @@
 .step p.data-v-5309ab5e {
     color: #1f2937;
 }
-  
-  /* 移动端适配 */
+
+/* 移动端适配 */
 @media (max-width: 768px) {
 .content-container.data-v-5309ab5e {
-      padding: 15px;
+        padding: 15px;
 }
 .title.data-v-5309ab5e {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
 }
 .card.data-v-5309ab5e {
-      padding: 15px;
+        padding: 15px;
 }
 .card h3.data-v-5309ab5e {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
 }
 }
-  
+.back-button.data-v-5309ab5e {
+    position: fixed;
+    top: 44px;
+    left: 15px;
+    z-index: 999;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.back-text.data-v-5309ab5e {
+    color: #ffffff;
+    font-size: 16px;
+}

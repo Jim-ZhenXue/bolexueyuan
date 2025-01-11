@@ -73,20 +73,32 @@ li.data-v-e3b339e7::before {
     left: 0;
     font-weight: bold;
 }
-  
-  /* 移动端适配 */
+
+/* 移动端适配 */
 @media (max-width: 768px) {
 .title.data-v-e3b339e7 {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
 }
 .level-header h2.data-v-e3b339e7 {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
 }
 .content.data-v-e3b339e7 {
-      padding: 15px;
+        padding: 15px;
 }
 }
 p.data-v-e3b339e7 {
     color: #1f2937;
 }
-  
+.back-button.data-v-e3b339e7 {
+    position: fixed;
+    top: 44px;
+    left: 15px;
+    z-index: 999;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.back-text.data-v-e3b339e7 {
+    color: #ffffff;
+    font-size: 16px;
+}

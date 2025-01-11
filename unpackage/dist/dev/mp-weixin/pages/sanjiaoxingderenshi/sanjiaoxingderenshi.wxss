@@ -71,17 +71,17 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-  
-  /* 移动端适配 */
+
+/* 移动端适配 */
 @media (max-width: 768px) {
 .title.data-v-2bc8081a {
-      font-size: 2rem;
+        font-size: 2rem;
 }
 .content-container.data-v-2bc8081a {
-      padding: 15px;
+        padding: 15px;
 }
 .features.data-v-2bc8081a {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 }
 }
 h2.data-v-2bc8081a, h3.data-v-2bc8081a {
@@ -92,4 +92,16 @@ p.data-v-2bc8081a {
     color: #1f2937;
     line-height: 1.6;
 }
-  
+.back-button.data-v-2bc8081a {
+    position: fixed;
+    top: 44px;
+    left: 15px;
+    z-index: 999;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+.back-text.data-v-2bc8081a {
+    color: #ffffff;
+    font-size: 16px;
+}
