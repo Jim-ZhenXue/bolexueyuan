@@ -25,7 +25,7 @@
 			</view>
 			
 			<view class="copyright-text">
-				<text>© 2024 LinkCareer. All Rights Reserved</text>
+				<text>© 2025 LinkCareer. All Rights Reserved</text>
 			</view>
 		</view>
 	</view>
@@ -168,7 +168,7 @@ export default {
 }
 
 .copyright-text {
-	margin-top: 20rpx;
+	margin-top: 0;
 	text-align: center;
 }
 

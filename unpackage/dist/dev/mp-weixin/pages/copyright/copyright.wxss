@@ -100,7 +100,7 @@
 	display: block;
 }
 .copyright-text {
-	margin-top: 20rpx;
+	margin-top: 0;
 	text-align: center;
 }
 .copyright-text text {
