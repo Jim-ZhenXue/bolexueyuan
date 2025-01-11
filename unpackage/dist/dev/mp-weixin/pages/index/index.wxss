@@ -57,7 +57,6 @@ page {
 		flex: 1;
 		width: 100%;
 		height: 100%;
-		position: relative;
 		z-index: 2;
 }
 .swiper-item {
@@ -65,9 +64,11 @@ page {
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		will-change: transform;
+		transform-style: preserve-3d;
 }
 .swiper-content {
-		width: 90%;
+		width: 100%;
 		height: 90%;
 		display: flex;
 		flex-direction: column;
@@ -77,11 +78,16 @@ page {
 		border-radius: 20rpx;
 		padding: 20rpx;
 		position: relative;
+		will-change: transform;
+		transform-style: preserve-3d;
 }
 .swiper-image {
 		width: 100%;
 		height: 70%;
 		border-radius: 12rpx;
+		will-change: transform;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
 }
 .swiper-title {
 		color: #ffffff;
@@ -99,4 +105,26 @@ page {
 		font-size: 18rpx;
 		padding: 0;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+	/* 非当前项的样式 */
+.swiper-item:not(.swiper-item-active) .swiper-content {
+		transform: scale(0.8);
+		opacity: 0.6;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.swiper-item:not(.swiper-item-active) .swiper-image {
+		filter: brightness(0.7);
+		transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+	/* 当前项的样式 */
+.swiper-item-active .swiper-content {
+		transform: scale(1);
+		opacity: 1;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.swiper-item-active .swiper-image {
+		filter: brightness(1);
+		transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

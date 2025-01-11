@@ -10,11 +10,15 @@
 			:indicator-dots="true" 
 			:autoplay="true" 
 			:interval="3000"
-			:duration="500"
+			:duration="300"
 			:circular="true" 
-			previous-margin="100rpx" 
-			next-margin="100rpx">
-			<swiper-item v-for="(item, index) in items.slice(0, 5)" :key="index" class="swiper-item">
+			:skip-hidden-item-layout="true"
+			previous-margin="150rpx" 
+			next-margin="150rpx"
+			:display-multiple-items="1"
+			@change="handleChange">
+			<swiper-item v-for="(item, index) in items.slice(0, 5)" :key="index" 
+				:class="['swiper-item', currentIndex === index ? 'swiper-item-active' : '']">
 				<view class="swiper-content" @click="openWebView(item.url)">
 					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
 					<view class="swiper-title">
@@ -32,6 +36,7 @@
 	export default {
 		data() {
 			return {
+				currentIndex: 0,
 				items: [
 					{
 						url: 'https://mobilejiaoderenshi.netlify.app',
@@ -126,6 +131,10 @@
 				uni.navigateTo({
 					url: pagePath
 				});
+			},
+			
+			handleChange(e) {
+				this.currentIndex = e.detail.current;
 			}
 		}
 	}
@@ -196,7 +205,6 @@
 		flex: 1;
 		width: 100%;
 		height: 100%;
-		position: relative;
 		z-index: 2;
 	}
 	
@@ -205,10 +213,12 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		will-change: transform;
+		transform-style: preserve-3d;
 	}
 	
 	.swiper-content {
-		width: 90%;
+		width: 100%;
 		height: 90%;
 		display: flex;
 		flex-direction: column;
@@ -218,12 +228,16 @@
 		border-radius: 20rpx;
 		padding: 20rpx;
 		position: relative;
+		will-change: transform;
+		transform-style: preserve-3d;
 	}
 	
 	.swiper-image {
 		width: 100%;
 		height: 70%;
 		border-radius: 12rpx;
+		will-change: transform;
+		backface-visibility: hidden;
 	}
 	
 	.swiper-title {
@@ -243,5 +257,29 @@
 		font-size: 18rpx;
 		padding: 0;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	}
+
+	/* 非当前项的样式 */
+	.swiper-item:not(.swiper-item-active) .swiper-content {
+		transform: scale(0.8);
+		opacity: 0.6;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.swiper-item:not(.swiper-item-active) .swiper-image {
+		filter: brightness(0.7);
+		transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	/* 当前项的样式 */
+	.swiper-item-active .swiper-content {
+		transform: scale(1);
+		opacity: 1;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.swiper-item-active .swiper-image {
+		filter: brightness(1);
+		transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 </style>

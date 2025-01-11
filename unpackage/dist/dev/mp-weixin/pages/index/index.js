@@ -4,6 +4,7 @@ const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   data() {
     return {
+      currentIndex: 0,
       items: [
         {
           url: "https://mobilejiaoderenshi.netlify.app",
@@ -93,6 +94,9 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url: pagePath
       });
+    },
+    handleChange(e) {
+      this.currentIndex = e.detail.current;
     }
   }
 };
@@ -109,9 +113,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: common_vendor.o(($event) => $options.toggleFavorite(index), index),
         e: common_vendor.o(($event) => $options.showInfo(index), index),
         f: common_vendor.o(($event) => $options.openWebView(item.url), index),
-        g: index
+        g: index,
+        h: common_vendor.n($data.currentIndex === index ? "swiper-item-active" : "")
       };
-    })
+    }),
+    e: common_vendor.o((...args) => $options.handleChange && $options.handleChange(...args))
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
