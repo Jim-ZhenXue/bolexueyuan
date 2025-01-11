@@ -10,8 +10,8 @@
 			<swiper-item v-for="(item, index) in items.slice(0, 5)" :key="index" class="swiper-item">
 				<view class="swiper-content" @click="openWebView(item.url)">
 					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
-					<text class="swiper-title">{{item.title}}</text>
-					<view class="item-actions">
+					<view class="swiper-title">
+						<text>{{item.title}}</text>
 						<text class="heart-icon" @click.stop="toggleFavorite(index)">{{item.favorite ? '♥' : '♡'}}</text>
 						<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
 					</view>
@@ -225,34 +225,16 @@
 		margin-top: 20rpx;
 		text-align: center;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	}
-	
-	.item-actions {
-		position: absolute;
-		bottom: 20rpx;
-		right: 20rpx;
 		display: flex;
-		gap: 20rpx;
+		align-items: center;
+		justify-content: center;
+		gap: 10rpx;
 	}
 	
 	.heart-icon, .info-icon {
 		color: #ffffff;
-		font-size: 20rpx;
-		padding: 10rpx;
+		font-size: 18rpx;
+		padding: 0;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	}
-
-	.info-tooltip {
-		position: absolute;
-		right: 20rpx;
-		top: 100%;
-		background: rgba(0, 0, 0, 0.7);
-		color: white;
-		padding: 10rpx 20rpx;
-		border-radius: 8rpx;
-		font-size: 24rpx;
-		margin-top: 10rpx;
-		z-index: 100;
-		max-width: 400rpx;
 	}
 </style>
