@@ -5,11 +5,11 @@
 				<view class="back-btn" @click="goBack">
 					<text class="back-icon">〈</text>
 				</view>
+				<image class="nav-logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
 			</view>
 		</view>
 		
 		<view class="content">
-			<image class="logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
 			<text class="app-name">多元智能思维</text>
 			<text class="version">Version 1.0.0</text>
 			
@@ -66,24 +66,31 @@ export default {
 }
 
 .nav-bar {
-	height: 88rpx;
+	height: 44rpx;
 	display: flex;
 	align-items: center;
 	position: relative;
+	justify-content: center;
+}
+
+.nav-logo {
+	width: 40rpx;
+	height: 40rpx;
+	filter: drop-shadow(0 0 5rpx rgba(76, 175, 80, 0.3));
 }
 
 .back-btn {
 	position: absolute;
 	left: 0;
-	height: 88rpx;
-	width: 88rpx;
+	height: 44rpx;
+	width: 44rpx;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 .back-icon {
-	font-size: 38rpx;
+	font-size: 19rpx;
 	color: #FFFFFF;
 	font-weight: normal;
 	transform: scale(1.3, 1);
@@ -92,7 +99,7 @@ export default {
 .title {
 	width: 100%;
 	text-align: center;
-	font-size: 36rpx;
+	font-size: 18rpx;
 	font-weight: 600;
 	color: #ffffff;
 	background: linear-gradient(45deg, #FFFFFF, #2196F3);
@@ -101,7 +108,7 @@ export default {
 }
 
 .content {
-	padding: 60rpx 40rpx;
+	padding: 30rpx 20rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -116,57 +123,57 @@ export default {
 }
 
 .app-name {
-	font-size: 40rpx;
+	font-size: 20rpx;
 	font-weight: 600;
 	color: #E0E0E0;
-	margin-bottom: 16rpx;
-	text-shadow: 0 0 10rpx rgba(9, 143, 242, 0.3);
+	margin-bottom: 8rpx;
+	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
 }
 
 .version {
-	font-size: 28rpx;
+	font-size: 14rpx;
 	color: #E0E0E0;
-	margin-bottom: 60rpx;
+	margin-bottom: 30rpx;
 }
 
 .info-section {
 	width: 100%;
-	margin-bottom: 40rpx;
+	margin-bottom: 20rpx;
 	background: rgba(255, 255, 255, 0.05);
-	padding: 30rpx;
-	border-radius: 20rpx;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 15rpx;
+	border-radius: 10rpx;
+	border: 1rpx solid rgba(255, 255, 255, 0.2);
 }
 
 .section-title {
-	font-size: 32rpx;
+	font-size: 16rpx;
 	font-weight: 600;
 	color: #E0E0E0;
-	margin-bottom: 20rpx;
+	margin-bottom: 10rpx;
 	display: block;
 }
 
 .description {
-	font-size: 28rpx;
+	font-size: 14rpx;
 	color: #E0E0E0;
 	line-height: 1.6;
 	display: block;
 }
 
 .contact-item {
-	font-size: 28rpx;
+	font-size: 14rpx;
 	color: #E0E0E0;
 	line-height: 1.8;
 	display: block;
 }
 
 .copyright-text {
-	margin-top: 80rpx;
+	margin-top: 40rpx;
 	text-align: center;
 }
 
 .copyright-text text {
-	font-size: 24rpx;
+	font-size: 12rpx;
 	color: #757575;
 	display: block;
 	line-height: 1.6;
