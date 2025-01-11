@@ -15,7 +15,7 @@
 			
 			<view class="info-section">
 				<text class="section-title">简介</text>
-				<text class="description">本产品由链接生涯教育科技有限公司伯乐学院推出，致力于提供优质的思维训练。我们运用现代科技手段，让知识的吸收更加高效</text>
+				<text class="description">链接生涯教育科技有限公司伯乐学院出品。我们致力于提供优质的思维训练，让知识的吸收更加高效</text>
 			</view>
 			
 			<view class="info-section">
@@ -108,7 +108,7 @@ export default {
 }
 
 .content {
-	padding: 30rpx 20rpx;
+	padding: 15rpx 20rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -126,21 +126,21 @@ export default {
 	font-size: 20rpx;
 	font-weight: 600;
 	color: #E0E0E0;
-	margin-bottom: 8rpx;
+	margin-bottom: 4rpx;
 	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
 }
 
 .version {
 	font-size: 14rpx;
 	color: #E0E0E0;
-	margin-bottom: 30rpx;
+	margin-bottom: 15rpx;
 }
 
 .info-section {
-	width: 100%;
-	margin-bottom: 20rpx;
+	width: calc(100% - 100rpx);
+	margin: 0 50rpx 12rpx 50rpx;
 	background: rgba(255, 255, 255, 0.05);
-	padding: 15rpx;
+	padding: 12rpx;
 	border-radius: 10rpx;
 	border: 1rpx solid rgba(255, 255, 255, 0.2);
 }
@@ -149,7 +149,7 @@ export default {
 	font-size: 16rpx;
 	font-weight: 600;
 	color: #E0E0E0;
-	margin-bottom: 10rpx;
+	margin-bottom: 6rpx;
 	display: block;
 }
 
@@ -168,7 +168,7 @@ export default {
 }
 
 .copyright-text {
-	margin-top: 40rpx;
+	margin-top: 20rpx;
 	text-align: center;
 }
 
