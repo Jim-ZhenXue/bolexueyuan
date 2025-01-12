@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container" @touchstart="touchStart" @touchend="touchEnd">
 		<image class="bg-image" src="/static/images/思维训练.jpg" mode="aspectFill"></image>
 		<view class="header" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="nav-bar">
@@ -32,7 +32,8 @@
 export default {
 	data() {
 		return {
-			statusBarHeight: 0
+			statusBarHeight: 0,
+			touchStartX: 0
 		}
 	},
 	onLoad() {
@@ -52,6 +53,18 @@ export default {
 		},
 		handleImageLoad() {
 			console.log('Image loaded successfully');
+		},
+		touchStart(e) {
+			this.touchStartX = e.touches[0].clientX;
+		},
+		touchEnd(e) {
+			const touchEndX = e.changedTouches[0].clientX;
+			const moveDistance = touchEndX - this.touchStartX;
+			
+			// 如果向右滑动超过50像素，则返回上一页
+			if (moveDistance > 50) {
+				this.goBack();
+			}
 		}
 	}
 }
