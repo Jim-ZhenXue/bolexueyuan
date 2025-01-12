@@ -5,13 +5,31 @@
 }
 .container {
 	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+	position: relative;
 	background-color: #000000;
 }
+.bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+	object-fit: cover;
+}
 .header {
-	background: #000000;
+	position: relative;
+	z-index: 1;
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .nav-bar {
 	height: 88rpx;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -44,21 +62,28 @@
 	content: "\e600";
 }
 .nav-title {
-	font-size: 52rpx;
+	font-size: 17rpx;
 	font-weight: 600;
-	color: #E0E0E0;
-	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
+	color: #000000;
+	text-shadow: none;
 }
 .nav-title .version-text {
-	font-size: 26rpx;
+	font-size: 9rpx;
 	font-weight: normal;
+	color: #000000;
 }
 .content {
-	padding: 75rpx 20rpx 15rpx 20rpx;
+	position: relative;
+	z-index: 1;
+	padding: 20rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: #000000;
+	background: transparent;
+	width: 100%;
+	margin-top: 140rpx;
+	justify-content: flex-end;
+	transform: translateX(-20rpx);
 }
 .logo {
 	width: 160rpx;
@@ -80,7 +105,7 @@
 }
 .info-section {
 	width: calc(100% - 100rpx);
-	margin: 0 50rpx 12rpx 50rpx;
+	margin: 0 50rpx 10rpx 50rpx;
 	background: rgba(255, 255, 255, 0.05);
 	padding: 12rpx;
 	border-radius: 10rpx;
@@ -89,7 +114,7 @@
 .section-title {
 	font-size: 16rpx;
 	font-weight: 600;
-	color: #E0E0E0;
+	color: #000000;
 	margin-bottom: 6rpx;
 	display: block;
 }
@@ -101,12 +126,13 @@
 }
 .contact-item {
 	font-size: 14rpx;
-	color: #E0E0E0;
+	color: #000000 !important;
 	line-height: 1.8;
-	display: block;
+	text-align: center;
 }
 .copyright-text {
-	margin-top: 0;
+	margin-top: -5rpx;
+	margin-bottom: 20rpx;
 	text-align: center;
 }
 .copyright-text text {
@@ -129,29 +155,38 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 50rpx;
+	margin-top: 1250rpx;
+	transform: translateX(-20rpx);
 }
 .nav-title {
-	font-size: 52rpx;
+	font-size: 17rpx;
 	font-weight: 600;
-	color: #E0E0E0;
+	color: #000000;
 	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
 }
 .nav-title .version-text {
-	font-size: 26rpx;
+	font-size: 9rpx;
 	font-weight: normal;
 }
 .contact-row {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 30rpx;
-	flex-wrap: wrap;
+	gap: 50rpx;
 	width: 100%;
+	flex-wrap: nowrap;
 }
 .contact-item {
 	font-size: 14rpx;
-	color: #E0E0E0;
+	color: #000000 !important;
 	line-height: 1.8;
 	text-align: center;
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+.training-img {
+	width: 250rpx;
+	height: 150rpx;
+	margin: 30rpx 0;
+	margin-top: -10rpx;
 }

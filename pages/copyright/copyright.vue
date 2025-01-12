@@ -1,5 +1,6 @@
 <template>
 	<view class="container">
+		<image class="bg-image" src="/static/images/思维训练.jpg" mode="aspectFill"></image>
 		<view class="header" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="nav-bar">
 				<view class="back-btn" @click="goBack">
@@ -13,6 +14,7 @@
 		
 		<view class="content">
 			<view class="info-section no-border">
+				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
 				<view class="contact-row">
 					<text class="contact-item">微信：xuezhenscript</text>
 					<text class="contact-item">地址：上海市杨浦区丰达商务广场8号楼810室</text>
@@ -40,6 +42,16 @@ export default {
 	methods: {
 		goBack() {
 			uni.navigateBack();
+		},
+		handleImageError(e) {
+			console.error('Image load error:', e);
+			uni.showToast({
+				title: '图片加载失败',
+				icon: 'none'
+			});
+		},
+		handleImageLoad() {
+			console.log('Image loaded successfully');
 		}
 	}
 }
@@ -53,15 +65,34 @@ export default {
 
 .container {
 	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+	position: relative;
 	background-color: #000000;
 }
 
+.bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+	object-fit: cover;
+}
+
 .header {
-	background: #000000;
+	position: relative;
+	z-index: 1;
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .nav-bar {
 	height: 88rpx;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -99,23 +130,30 @@ export default {
 }
 
 .nav-title {
-	font-size: 52rpx;
+	font-size: 17rpx;
 	font-weight: 600;
-	color: #E0E0E0;
-	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
+	color: #000000;
+	text-shadow: none;
 }
 
 .nav-title .version-text {
-	font-size: 26rpx;
+	font-size: 9rpx;
 	font-weight: normal;
+	color: #000000;
 }
 
 .content {
-	padding: 75rpx 20rpx 15rpx 20rpx;
+	position: relative;
+	z-index: 1;
+	padding: 20rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: #000000;
+	background: transparent;
+	width: 100%;
+	margin-top: 140rpx;
+	justify-content: flex-end;
+	transform: translateX(-20rpx);
 }
 
 .logo {
@@ -141,7 +179,7 @@ export default {
 
 .info-section {
 	width: calc(100% - 100rpx);
-	margin: 0 50rpx 12rpx 50rpx;
+	margin: 0 50rpx 10rpx 50rpx;
 	background: rgba(255, 255, 255, 0.05);
 	padding: 12rpx;
 	border-radius: 10rpx;
@@ -151,7 +189,7 @@ export default {
 .section-title {
 	font-size: 16rpx;
 	font-weight: 600;
-	color: #E0E0E0;
+	color: #000000;
 	margin-bottom: 6rpx;
 	display: block;
 }
@@ -165,13 +203,14 @@ export default {
 
 .contact-item {
 	font-size: 14rpx;
-	color: #E0E0E0;
+	color: #000000 !important;
 	line-height: 1.8;
-	display: block;
+	text-align: center;
 }
 
 .copyright-text {
-	margin-top: 0;
+	margin-top: -5rpx;
+	margin-bottom: 20rpx;
 	text-align: center;
 }
 
@@ -198,18 +237,19 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 50rpx;
+	margin-top: 1250rpx;
+	transform: translateX(-20rpx);
 }
 
 .nav-title {
-	font-size: 52rpx;
+	font-size: 17rpx;
 	font-weight: 600;
-	color: #E0E0E0;
+	color: #000000;
 	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
 }
 
 .nav-title .version-text {
-	font-size: 26rpx;
+	font-size: 9rpx;
 	font-weight: normal;
 }
 
@@ -217,15 +257,24 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 30rpx;
-	flex-wrap: wrap;
+	gap: 50rpx;
 	width: 100%;
+	flex-wrap: nowrap;
 }
 
 .contact-item {
 	font-size: 14rpx;
-	color: #E0E0E0;
+	color: #000000 !important;
 	line-height: 1.8;
 	text-align: center;
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+
+.training-img {
+	width: 250rpx;
+	height: 150rpx;
+	margin: 30rpx 0;
+	margin-top: -10rpx;
 }
 </style> 
