@@ -5,22 +5,24 @@
 				<view class="back-btn" @click="goBack">
 					<text class="back-icon">〈</text>
 				</view>
-				<image class="nav-logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
+				<view class="nav-content">
+					<image class="nav-logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
+					<text class="nav-title">多元智能思维 <text class="version-text">1.0.0</text></text>
+				</view>
 			</view>
 		</view>
 		
 		<view class="content">
-			<text class="app-name">多元智能思维 1.0.0</text>
-			
-			<view class="info-section">
+			<view class="info-section no-border">
 				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
 				<text class="description">思维训练，适应个体的知识加工模式</text>
 			</view>
 			
-			<view class="info-section">
-				<text class="section-title">联系我们</text>
-				<text class="contact-item">微信：xuezhenscript</text>
-				<text class="contact-item">地址：上海市杨浦区丰达商务广场8号楼810室</text>
+			<view class="info-section no-border">
+				<view class="contact-row">
+					<text class="contact-item">微信：xuezhenscript</text>
+					<text class="contact-item">地址：上海市杨浦区丰达商务广场8号楼810室</text>
+				</view>
 			</view>
 			
 			<view class="copyright-text">
@@ -65,7 +67,7 @@ export default {
 }
 
 .nav-bar {
-	height: 44rpx;
+	height: 88rpx;
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -73,14 +75,15 @@ export default {
 }
 
 .nav-logo {
-	width: 40rpx;
-	height: 40rpx;
-	filter: drop-shadow(0 0 5rpx rgba(76, 175, 80, 0.3));
+	width: 80rpx;
+	height: 80rpx;
+	filter: drop-shadow(0 0 5rpx rgba(49, 73, 50, 0.3));
 }
 
 .back-btn {
 	position: absolute;
-	left: 0;
+	left: 10rpx;
+	top: 10rpx;
 	height: 44rpx;
 	width: 44rpx;
 	display: flex;
@@ -89,25 +92,26 @@ export default {
 }
 
 .back-icon {
-	font-size: 19rpx;
+	font-size: 12rpx;
 	color: #FFFFFF;
 	font-weight: normal;
 	transform: scale(1.3, 1);
 }
 
-.title {
-	width: 100%;
-	text-align: center;
-	font-size: 18rpx;
+.nav-title {
+	font-size: 52rpx;
 	font-weight: 600;
-	color: #ffffff;
-	background: linear-gradient(45deg, #FFFFFF, #2196F3);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #E0E0E0;
+	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
+}
+
+.nav-title .version-text {
+	font-size: 26rpx;
+	font-weight: normal;
 }
 
 .content {
-	padding: 15rpx 20rpx;
+	padding: 75rpx 20rpx 15rpx 20rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -176,5 +180,52 @@ export default {
 	color: #757575;
 	display: block;
 	line-height: 1.6;
+}
+
+.info-section.no-border {
+	background: none;
+	border: none;
+	text-align: center;
+}
+
+.info-section.no-border .section-title,
+.info-section.no-border .description {
+	text-align: center;
+	width: 100%;
+}
+
+.nav-content {
+	display: flex;
+	align-items: center;
+	gap: 20rpx;
+	margin-top: 50rpx;
+}
+
+.nav-title {
+	font-size: 52rpx;
+	font-weight: 600;
+	color: #E0E0E0;
+	text-shadow: 0 0 5rpx rgba(9, 143, 242, 0.3);
+}
+
+.nav-title .version-text {
+	font-size: 26rpx;
+	font-weight: normal;
+}
+
+.contact-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30rpx;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.contact-item {
+	font-size: 14rpx;
+	color: #E0E0E0;
+	line-height: 1.8;
+	text-align: center;
 }
 </style> 
