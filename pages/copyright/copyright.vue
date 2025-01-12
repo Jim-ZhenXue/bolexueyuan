@@ -3,7 +3,7 @@
 		<view class="header" :style="{ paddingTop: statusBarHeight + 'px' }">
 			<view class="nav-bar">
 				<view class="back-btn" @click="goBack">
-					<text class="back-icon">〈</text>
+					<text class="iconfont icon-home"></text>
 				</view>
 				<view class="nav-content">
 					<image class="nav-logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
@@ -54,7 +54,7 @@ export default {
 <style>
 @font-face {
 	font-family: "iconfont";
-	src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAAKcAAsAAAAABlAAAAJPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACCcApcdgE2AiQDCAsGAAQgBYRnBzYbpQXIHpIkBQQKEABBBNk/H7t7X0iCJNWrR4gQhUThUCxULBYj4uG/9ev9mZn7RZNokSSaRBKNRIJEiJBIEBohQWg0XqK5vwKtgYHhKhx4UZwWGmh8kJwc6qjqpXoVhbpxuwRwgDzA+vN5+0NPk0wSQgPxf46ZLj0B+YHOMUcZ2hjvDeiNAQU6x6AoEiuQxA1jF7zAxxCgkU8Rod2ZvUcoZMxUgG5drg6FwqJQyMyVQrFiYQ4zVarSVOoC4EP4fvyHhUJBUmVm7uXOLQ1s/EZ/M+tGRQQB4RQQYBmQiJuVpgOKILpFo0U+qhYDX1XD36wqigX7VXvWBrCPVWR+PFUNkEMqsDvLy0DbhavqfDtV3b+8d/vl/cP1+9Hc3aPt+6ebL0+jfo8vbtwzp5LxkZGvXPtv377/9u3Xl3u/f/z8NjXc7Grg+s2+gcN7J2xvhZ2XAU4XAQD/zzO3AC75v0w7APDjnxgAeNWPvwA+VvyKP5h1qWJmXSxQKGWRiVWmQqWadVCoNYNG1fK7a7XiESQyAhZ8EQh6+ULS2Q9KvfyRif2HSjP8oVAfJTTaE+nKWq0EcsgRbIH+QBzkOM0tL5K9oXyeknJfkXlBEsYjquKCG3JGPGafscSJQo5jA16Cc6jrHFjKC1TrNSg3VxJ9nFJvKYuD3EGOgFqA9gHCgjgcLS88n98bJC9XScruNyTGE0TCjIdocbyCVZpVxXh9njKJRkTi4WgG2AJyHNJxHGCRj1CKqj4NSdNWknipR0l6K4X1+WXGZ24ANPI5ZYgUOUpUUaPVrKO8Zp1mjpzJEgAAAAA=') format('woff2');
+	src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAALkAAsAAAAABqQAAAKXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACCcAp4gQcBNgIkAwgLBgAEIAWEZwc2G7QFyB6SJAUECgAQBNkPD7Z7f0iCJNWrR4gQhUThUCxULBYj4uG/9ev9mZn7RZNokSSaRBKNRIJEiJBIEBohQWg0XqK5vwKtgYHhKhx4UZwWGmh8kJwc6qjqpXoVhbpxuwRwgDzA+vN5+0NPk0wSQgPxf46ZLj0B+YHOMUcZ2hjvDeiNAQU6x6AoEiuQxA1jF7zAxxCgkU8Rod2ZvUcoZMxUgG5drg6FwqJQyMyVQrFiYQ4zVarSVOoC4EP4fvyHhUJBUmVm7uXOLQ1s/EZ/M+tGRQQB4RQQYBmQiJuVpgOKILpFo0U+qhYDX1XD36wqigX7VXvWBrCPVWR+PFUNkEMqsDvLy0DbhavqfDtV3b+8d/vl/cP1+9Hc3aPt+6ebL0+jfo8vbtwzp5LxkZGvXPtv377/9u3Xl3u/f/z8NjXc7Grg+s2+gcN7J2xvhZ2XAU4XAQD/zzO3AC75v0w7APDjnxgAeNWPvwA+VvyKP5h1qWJmXSxQKGWRiVWmQqWadVCoNYNG1fK7a7XiESQyAhZ8EQh6+ULS2Q9KvfyRif2HSjP8oVAfJTTaE+nKWq0EcsgRbIH+QBzkOM0tL5K9oXyeknJfkXlBEsYjquKCG3JGPGafscSJQo5jA16Cc6jrHFjKC1TrNSg3VxJ9nFJvKYuD3EGOgFqA9gHCgjgcLS88n98bJC9XScruNyTGE0TCjIdocbyCVZpVxXh9njKJRkTi4WgG2AJyHNJxHGCRj1CKqj4NSdNWknipR0l6K4X1+WXGZ24ANPI5ZYgUOUpUUaPVrKO8Zp1mjpzJEgAAAAA=') format('woff2');
 }
 
 .container {
@@ -82,20 +82,26 @@ export default {
 
 .back-btn {
 	position: absolute;
-	left: 10rpx;
-	top: 10rpx;
-	height: 44rpx;
-	width: 44rpx;
+	left: 30rpx;
+	top: 15rpx;
+	height: 15rpx;
+	width: 22rpx;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.back-icon {
-	font-size: 12rpx;
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 15rpx;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: #FFFFFF;
-	font-weight: normal;
-	transform: scale(1.3, 1);
+}
+
+.icon-home:before {
+	content: "\e600";
 }
 
 .nav-title {
