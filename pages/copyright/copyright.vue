@@ -10,12 +10,11 @@
 		</view>
 		
 		<view class="content">
-			<text class="app-name">多元智能思维</text>
-			<text class="version">Version 1.0.0</text>
+			<text class="app-name">多元智能思维 1.0.0</text>
 			
 			<view class="info-section">
-				<text class="section-title">简介</text>
-				<text class="description">链接生涯教育科技有限公司伯乐学院出品。我们致力于提供优质的思维训练，让知识的吸收更加高效</text>
+				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
+				<text class="description">思维训练，适应个体的知识加工模式</text>
 			</view>
 			
 			<view class="info-section">
