@@ -103,7 +103,7 @@ const _sfc_main = {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_assets._imports_0,
-    b: common_assets._imports_0$1,
+    b: common_assets._imports_1,
     c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
     d: common_vendor.f($data.items.slice(0, 5), (item, index, i0) => {
       return {

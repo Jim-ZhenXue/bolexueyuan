@@ -6,18 +6,12 @@
 					<text class="iconfont icon-home"></text>
 				</view>
 				<view class="nav-content">
-					<image class="nav-logo" src="/static/images/伯乐园商标.png" mode="heightFit"></image>
 					<text class="nav-title">多元智能思维 <text class="version-text">1.0.0</text></text>
 				</view>
 			</view>
 		</view>
 		
 		<view class="content">
-			<view class="info-section no-border">
-				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
-				<text class="description">思维训练，适应个体的知识加工模式</text>
-			</view>
-			
 			<view class="info-section no-border">
 				<view class="contact-row">
 					<text class="contact-item">微信：xuezhenscript</text>
@@ -203,7 +197,7 @@ export default {
 .nav-content {
 	display: flex;
 	align-items: center;
-	gap: 20rpx;
+	justify-content: center;
 	margin-top: 50rpx;
 }
 
