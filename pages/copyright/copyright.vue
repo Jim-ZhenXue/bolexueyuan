@@ -134,7 +134,7 @@ export default {
 	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #FFFFFF;
+	color: rgba(128, 128, 128, 0.7);
 }
 
 .icon-home:before {
@@ -238,8 +238,9 @@ export default {
 }
 
 .copyright-text {
-	margin-top: -5rpx;
+	margin-top: 15px;
 	margin-bottom: 20rpx;
+	margin-left: 70px;
 	text-align: left;
 	width: 100%;
 }
