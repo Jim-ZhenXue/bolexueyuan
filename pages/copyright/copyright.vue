@@ -199,11 +199,28 @@ export default {
 }
 
 .section-title {
-	font-size: 16rpx;
+	font-size: 26rpx;
+	color: rgba(0,0,0,0.15);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5),
+				 0 -1px 0 rgba(0,0,0,0.3);
 	font-weight: 600;
-	color: #000000;
-	margin-bottom: 6rpx;
-	display: block;
+	letter-spacing: 3rpx;
+	text-align: center;
+	margin-bottom: 20rpx;
+	background: none;
+	-webkit-text-fill-color: initial;
+	position: relative;
+	padding: 2rpx 0;
+}
+
+.section-title::before {
+	content: "链接生涯教育科技有限公司伯乐学院 出品";
+	position: absolute;
+	left: 0;
+	top: 1px;
+	right: 0;
+	color: rgba(0,0,0,0.3);
+	z-index: -1;
 }
 
 .description {
