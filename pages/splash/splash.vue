@@ -8,15 +8,19 @@
 export default {
 	data() {
 		return {
-			splashImage: ''
+			splashImage: '',
+			images: ['/static/images/1.jpg', '/static/images/2.jpg', '/static/images/3.jpg']
 		}
 	},
-	onLoad() {
-		const images = ['/static/images/1.jpg', '/static/images/2.jpg', '/static/images/3.jpg'];
-		const randomIndex = Math.floor(Math.random() * images.length);
-		this.splashImage = images[randomIndex];
+	onShow() {
+		this.selectRandomImage();
 	},
 	methods: {
+		selectRandomImage() {
+			const randomIndex = Math.floor(Math.random() * this.images.length);
+			console.log('Selected image index:', randomIndex);
+			this.splashImage = this.images[randomIndex];
+		},
 		enterApp() {
 			uni.reLaunch({
 				url: '/pages/index/index'

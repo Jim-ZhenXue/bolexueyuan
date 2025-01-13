@@ -241,8 +241,8 @@ export default {
 .copyright-text {
 	margin-top: 15px;
 	margin-bottom: 20rpx;
-	margin-left: 100px;
-	text-align: left;
+	margin-right: 100px;
+	text-align: right;
 	width: 100%;
 }
 
@@ -251,7 +251,7 @@ export default {
 	color: rgba(117, 117, 117, 0.5);
 	display: block;
 	line-height: 1.6;
-	text-align: left;
+	text-align: right;
 }
 
 .info-section.no-border {
