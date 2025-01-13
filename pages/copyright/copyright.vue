@@ -246,7 +246,7 @@ export default {
 
 .copyright-text text {
 	font-size: 12rpx;
-	color: #757575;
+	color: rgba(117, 117, 117, 0.5);
 	display: block;
 	line-height: 1.6;
 	text-align: left;
