@@ -1,0 +1,1 @@
+<view class="splash-container" bindtap="{{b}}"><image src="{{a}}" mode="aspectFill" class="splash-image"></image></view>
