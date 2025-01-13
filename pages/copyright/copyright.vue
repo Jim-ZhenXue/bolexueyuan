@@ -16,8 +16,7 @@
 			<view class="info-section no-border">
 				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
 				<view class="contact-row">
-					<text class="contact-item">微信：xuezhenscript</text>
-					<text class="contact-item">地址：上海市杨浦区丰达商务广场8号楼810室</text>
+					<!-- <text class="contact-item">微信：xuezhenscript</text> -->
 				</view>
 			</view>
 			
@@ -224,7 +223,8 @@ export default {
 .copyright-text {
 	margin-top: -5rpx;
 	margin-bottom: 20rpx;
-	text-align: center;
+	text-align: left;
+	width: 100%;
 }
 
 .copyright-text text {
@@ -232,6 +232,7 @@ export default {
 	color: #757575;
 	display: block;
 	line-height: 1.6;
+	text-align: left;
 }
 
 .info-section.no-border {

@@ -17,14 +17,14 @@ const _sfc_main = {
       common_vendor.index.navigateBack();
     },
     handleImageError(e) {
-      common_vendor.index.__f__("error", "at pages/copyright/copyright.vue:48", "Image load error:", e);
+      common_vendor.index.__f__("error", "at pages/copyright/copyright.vue:47", "Image load error:", e);
       common_vendor.index.showToast({
         title: "图片加载失败",
         icon: "none"
       });
     },
     handleImageLoad() {
-      common_vendor.index.__f__("log", "at pages/copyright/copyright.vue:55", "Image loaded successfully");
+      common_vendor.index.__f__("log", "at pages/copyright/copyright.vue:54", "Image loaded successfully");
     },
     touchStart(e) {
       this.touchStartX = e.touches[0].clientX;

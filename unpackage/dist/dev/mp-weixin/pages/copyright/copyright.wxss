@@ -133,13 +133,15 @@
 .copyright-text {
 	margin-top: -5rpx;
 	margin-bottom: 20rpx;
-	text-align: center;
+	text-align: left;
+	width: 100%;
 }
 .copyright-text text {
 	font-size: 12rpx;
 	color: #757575;
 	display: block;
 	line-height: 1.6;
+	text-align: left;
 }
 .info-section.no-border {
 	background: none;
