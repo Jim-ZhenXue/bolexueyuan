@@ -91,16 +91,17 @@
     background: #000000;
     position: relative;
     overflow-y: auto;
+    padding: 0 1rem;
 }
 
 .top-space {
-    height: calc(100vh / 7);
-    min-height: 60px;
+    height: 60px;
+    min-height: auto;
 }
 
 .content-container {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding-bottom: 2rem;
 }
@@ -243,6 +244,85 @@
 .back-text {
     color: #ffffff;
     font-size: 16px;
+}
+
+/* 横屏适配 */
+@media screen and (orientation: landscape) {
+    .game-instructions {
+        height: 100vh;
+        padding: 0;
+    }
+    
+    .content-container {
+        padding: 1rem 2rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .instruction-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .progression-section {
+        margin-top: 1.5rem;
+        padding: 15px;
+    }
+    
+    .progression-steps {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .back-button {
+        top: 20px;
+    }
+}
+
+/* 较小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .instruction-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card {
+        padding: 10px;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-icon {
+        font-size: 1.3rem;
+    }
+    
+    .progression-steps {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 </style>
 

@@ -8,12 +8,12 @@
 	padding-bottom: 2rem;
 }
 .top-space.data-v-18b62e8f {
-	height: calc(100vh / 7);
-	min-height: 60px;
+	height: 60px;
+	min-height: auto;
 }
 .content.data-v-18b62e8f {
 	padding: 0 1rem;
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding-bottom: 2rem;
 }
@@ -117,4 +117,111 @@
 .back-text.data-v-18b62e8f {
 	color: #ffffff;
 	font-size: 16px;
+}
+
+/* 横屏适配 */
+@media screen and (orientation: landscape) {
+.game-description.data-v-18b62e8f {
+		height: 100vh;
+		padding-bottom: 0;
+}
+.content.data-v-18b62e8f {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		padding: 1rem 2rem;
+		height: calc(100vh - 80px);
+		overflow-y: auto;
+}
+.title.data-v-18b62e8f {
+		grid-column: 1 / -1;
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+}
+.intro-card.data-v-18b62e8f {
+		grid-column: 1 / -1;
+		margin-bottom: 1rem;
+}
+.levels-container.data-v-18b62e8f {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+}
+.level-card.data-v-18b62e8f {
+		margin-bottom: 0;
+		height: 100%;
+}
+.skills-summary.data-v-18b62e8f {
+		margin-top: 0;
+}
+.skills-grid.data-v-18b62e8f {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+}
+.back-button.data-v-18b62e8f {
+		top: 20px;
+}
+}
+
+/* 较小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+.content.data-v-18b62e8f {
+		gap: 1rem;
+		padding: 0.5rem 1.5rem;
+}
+.title.data-v-18b62e8f {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+}
+.intro-card.data-v-18b62e8f {
+		padding: 1rem;
+}
+.level-card.data-v-18b62e8f {
+		padding: 1rem;
+}
+.level-content li.data-v-18b62e8f {
+		margin-bottom: 0.3rem;
+		font-size: 0.9rem;
+}
+.skills-summary.data-v-18b62e8f {
+		padding: 1rem;
+}
+.skill-item.data-v-18b62e8f {
+		padding: 0.5rem;
+}
+.skill-item i.data-v-18b62e8f {
+		font-size: 1.5rem;
+}
+}
+
+/* 超小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 450px) {
+.content.data-v-18b62e8f {
+		grid-template-columns: 1fr;
+}
+.levels-container.data-v-18b62e8f {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+}
+.skills-grid.data-v-18b62e8f {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+}
+.level-card.data-v-18b62e8f {
+		padding: 0.8rem;
+}
+.level-content ul.data-v-18b62e8f {
+		padding-left: 1rem;
+}
+.level-content li.data-v-18b62e8f {
+		font-size: 0.85rem;
+		margin-bottom: 0.2rem;
+}
+.level-badge.data-v-18b62e8f {
+		padding: 0.3rem 0.8rem;
+		font-size: 0.9rem;
+}
+.level-header h3.data-v-18b62e8f {
+		font-size: 1rem;
+}
 }

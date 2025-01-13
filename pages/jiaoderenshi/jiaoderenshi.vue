@@ -117,12 +117,12 @@
 }
 
 .top-space {
-    height: calc(100vh / 7);
-    min-height: 60px;
+    height: 60px;
+    min-height: auto;
 }
 
 .content-wrapper {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
     padding-bottom: 2rem;
@@ -140,9 +140,10 @@
 }
 
 .level-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+    padding: 0 1rem;
 }
 
 .level-card {
@@ -249,6 +250,46 @@
 .back-text {
     color: #ffffff;
     font-size: 16px;
+}
+
+/* 横屏适配 */
+@media screen and (orientation: landscape) {
+    .instructions-container {
+        height: 100vh;
+        overflow-y: auto;
+        padding: 0;
+    }
+    
+    .level-cards {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 2rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin: 0.5rem 0 1.5rem;
+    }
+    
+    .back-button {
+        top: 20px;
+    }
+    
+    .level-card {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+    }
+}
+
+/* 较小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .level-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .title {
+        font-size: 1.4rem;
+        margin: 0.3rem 0 1rem;
+    }
 }
 </style>
 
