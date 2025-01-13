@@ -14,6 +14,7 @@
 		
 		<view class="content">
 			<view class="info-section no-border">
+				<image class="company-logo" src="/static/images/伯乐园商标.png" mode="aspectFit"></image>
 				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
 				<view class="contact-row">
 					<!-- <text class="contact-item">微信：xuezhenscript</text> -->
@@ -240,7 +241,7 @@ export default {
 .copyright-text {
 	margin-top: 15px;
 	margin-bottom: 20rpx;
-	margin-left: 70px;
+	margin-left: 100px;
 	text-align: left;
 	width: 100%;
 }
@@ -308,5 +309,21 @@ export default {
 	height: 150rpx;
 	margin: 30rpx 0;
 	margin-top: -10rpx;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10rpx;
+}
+
+.company-logo {
+	width: 32rpx;
+	height: 32rpx;
+	object-fit: contain;
+	vertical-align: middle;
+	margin-right: 10rpx;
+	transform: translate(7rpx, -8rpx);
 }
 </style> 
