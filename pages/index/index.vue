@@ -23,8 +23,8 @@
 					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
 					<view class="swiper-title">
 						<text>{{item.title}}</text>
-						<text class="heart-icon" @click.stop="toggleFavorite(index)">{{item.favorite ? '♥' : '♡'}}</text>
 						<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
+						<text class="heart-icon" @click.stop="toggleFavorite(index)">{{item.favorite ? '♥' : '♡'}}</text>
 					</view>
 				</view>
 			</swiper-item>

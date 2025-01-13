@@ -109,9 +109,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       return {
         a: item.image,
         b: common_vendor.t(item.title),
-        c: common_vendor.t(item.favorite ? "♥" : "♡"),
-        d: common_vendor.o(($event) => $options.toggleFavorite(index), index),
-        e: common_vendor.o(($event) => $options.showInfo(index), index),
+        c: common_vendor.o(($event) => $options.showInfo(index), index),
+        d: common_vendor.t(item.favorite ? "♥" : "♡"),
+        e: common_vendor.o(($event) => $options.toggleFavorite(index), index),
         f: common_vendor.o(($event) => $options.openWebView(item.url), index),
         g: index,
         h: common_vendor.n($data.currentIndex === index ? "swiper-item-active" : "")
