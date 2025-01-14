@@ -2,5 +2,7 @@
   "navigationStyle": "custom",
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#1a1a1a",
-  "usingComponents": {}
+  "usingComponents": {
+    "digital-rain": "../../components/DigitalRain"
+  }
 }
