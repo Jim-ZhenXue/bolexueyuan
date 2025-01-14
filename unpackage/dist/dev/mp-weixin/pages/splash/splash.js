@@ -4,7 +4,7 @@ const _sfc_main = {
   data() {
     return {
       splashImage: "",
-      images: ["/static/images/5.jpg"],
+      images: ["/static/images/1.jpg", "/static/images/2.jpg", "/static/images/3.jpg", "/static/images/4.jpg", "/static/images/5.jpg"],
       showMessage: false
     };
   },
