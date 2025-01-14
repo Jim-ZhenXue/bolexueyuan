@@ -77,7 +77,7 @@ export default {
 	font-weight: bold;
 	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 4px 4px 0 rgba(0, 0, 0, 0.6), 6px 6px 0 rgba(0, 0, 0, 0.4);
 	display: flex;
-	animation: fadeInOut 6s ease-in-out infinite;
+	animation: fadeInOut 9s ease-in-out infinite;
 }
 
 .char {
@@ -93,6 +93,6 @@ export default {
 	font-size: 24px;
 	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 	padding: 10px 0;
-	animation: fadeInOut 6s ease-in-out infinite;
+	animation: fadeInOut 9s ease-in-out infinite;
 }
 </style> 
