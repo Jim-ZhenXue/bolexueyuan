@@ -14,7 +14,7 @@
 		
 		<view class="content">
 			<view class="info-section no-border">
-				<image class="company-logo" src="/static/images/伯乐园商标.png" mode="aspectFit"></image>
+				<!-- <image class="company-logo" src="/static/images/伯乐园商标.png" mode="aspectFit"></image> -->
 				<text class="section-title">链接生涯教育科技有限公司伯乐学院 出品</text>
 				<view class="contact-row">
 					<!-- <text class="contact-item">微信：xuezhenscript</text> -->

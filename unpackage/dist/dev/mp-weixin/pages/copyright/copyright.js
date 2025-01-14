@@ -43,9 +43,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_assets._imports_0$1,
     b: common_vendor.o((...args) => $options.goBack && $options.goBack(...args)),
     c: $data.statusBarHeight + "px",
-    d: common_assets._imports_1,
-    e: common_vendor.o((...args) => $options.touchStart && $options.touchStart(...args)),
-    f: common_vendor.o((...args) => $options.touchEnd && $options.touchEnd(...args))
+    d: common_vendor.o((...args) => $options.touchStart && $options.touchStart(...args)),
+    e: common_vendor.o((...args) => $options.touchEnd && $options.touchEnd(...args))
   };
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
