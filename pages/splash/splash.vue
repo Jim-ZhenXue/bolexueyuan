@@ -1,12 +1,12 @@
 <template>
 	<view class="splash-container" @click="enterApp">
 		<view v-if="showMessage" class="top-left-text">
-			<text class="char" style="transform: rotate(-15deg);">多</text>
-			<text class="char" style="transform: rotate(-5deg);">元</text>
-			<text class="char" style="transform: rotate(5deg);">智</text>
-			<text class="char" style="transform: rotate(15deg);">能</text>
-			<text class="char" style="transform: rotate(25deg);">思</text>
-			<text class="char" style="transform: rotate(-5deg);">维</text>
+			<text class="char" style="transform: rotate(-15deg); color: #4B0082;">多</text>
+			<text class="char" style="transform: rotate(-5deg); color: #0000FF;">元</text>
+			<text class="char" style="transform: rotate(5deg); color: #00FF00;">智</text>
+			<text class="char" style="transform: rotate(15deg); color: #FFFF00;">能</text>
+			<text class="char" style="transform: rotate(25deg); color: #FF7F00;">思</text>
+			<text class="char" style="transform: rotate(-5deg); color: #FF0000;">维</text>
 		</view>
 		<image :src="splashImage" mode="aspectFill" class="splash-image"></image>
 		<view v-if="showMessage" class="enter-message">＞ 点击屏幕进入游戏 ＜</view>
@@ -56,9 +56,7 @@ export default {
 }
 
 .splash-container {
-	position: fixed;
-	top: 0;
-	left: 0;
+	position: relative;
 	width: 100%;
 	height: 100vh;
 }
@@ -69,18 +67,18 @@ export default {
 }
 
 .top-left-text {
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	left: 10px;
-	color: white;
-	font-size: 50px;
-	font-weight: bold;
-	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 4px 4px 0 rgba(0, 0, 0, 0.6), 6px 6px 0 rgba(0, 0, 0, 0.4);
 	display: flex;
+	gap: 5px;
 	animation: fadeInOut 9s ease-in-out infinite;
 }
 
 .char {
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), 4px 4px 0 rgba(0, 0, 0, 0.6), 6px 6px 0 rgba(0, 0, 0, 0.4);
 	margin: 0 2px;
 }
 
