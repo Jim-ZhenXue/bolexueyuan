@@ -14,7 +14,7 @@
 		<template v-else>
 			<image :src="splashImage" mode="aspectFill" class="splash-image"></image>
 		</template>
-		<view v-if="showMessage" class="enter-message">＞ 点击屏幕进入游戏 ＜</view>
+		<view v-if="showMessage" class="enter-message">＞ 点击屏幕进入 ＜</view>
 	</view>
 </template>
 
