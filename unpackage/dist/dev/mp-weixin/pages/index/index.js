@@ -5,6 +5,10 @@ const _sfc_main = {
   data() {
     return {
       currentIndex: 0,
+      hasUserInfo: false,
+      userInfo: null,
+      isAgreementChecked: false,
+      showLoginModal: false,
       items: [
         {
           url: "https://mobilejiaoderenshi.netlify.app",
@@ -59,6 +63,10 @@ const _sfc_main = {
   },
   methods: {
     openWebView(url) {
+      if (!this.hasUserInfo) {
+        this.showLoginModal = true;
+        return;
+      }
       common_vendor.index.navigateTo({
         url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
       });
@@ -97,11 +105,73 @@ const _sfc_main = {
     },
     handleChange(e) {
       this.currentIndex = e.detail.current;
+    },
+    handleAgreementChange(e) {
+      this.isAgreementChecked = e.detail.value.length > 0;
+    },
+    openAgreement() {
+      common_vendor.index.navigateTo({
+        url: "/pages/agreement/agreement"
+      });
+    },
+    openPrivacyPolicy() {
+      common_vendor.index.navigateTo({
+        url: "/pages/privacy/privacy"
+      });
+    },
+    handleLogin() {
+      if (!this.isAgreementChecked) {
+        common_vendor.index.showToast({
+          title: "请先阅读并同意用户协议",
+          icon: "none"
+        });
+        return;
+      }
+      common_vendor.index.getUserProfile({
+        desc: "用于完善用户资料",
+        success: (res) => {
+          this.userInfo = res.userInfo;
+          this.hasUserInfo = true;
+          this.showLoginModal = false;
+          common_vendor.index.login({
+            provider: "weixin",
+            success: (loginRes) => {
+              common_vendor.index.__f__("log", "at pages/index/index.vue:199", "登录成功", loginRes.code);
+              common_vendor.index.showToast({
+                title: "登录成功",
+                icon: "success"
+              });
+            },
+            fail: (err) => {
+              common_vendor.index.__f__("error", "at pages/index/index.vue:207", "登录失败", err);
+              common_vendor.index.showToast({
+                title: "登录失败",
+                icon: "none"
+              });
+            }
+          });
+        },
+        fail: (err) => {
+          common_vendor.index.__f__("error", "at pages/index/index.vue:216", "获取用户信息失败", err);
+          common_vendor.index.showToast({
+            title: "获取用户信息失败",
+            icon: "none"
+          });
+        }
+      });
+    },
+    closeLoginModal() {
+      this.showLoginModal = false;
+    },
+    handlePageClick() {
+      if (!this.hasUserInfo) {
+        this.showLoginModal = true;
+      }
     }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
+  return common_vendor.e({
     a: common_assets._imports_0,
     b: common_assets._imports_1,
     c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
@@ -117,8 +187,17 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         h: common_vendor.n($data.currentIndex === index ? "swiper-item-active" : "")
       };
     }),
-    e: common_vendor.o((...args) => $options.handleChange && $options.handleChange(...args))
-  };
+    e: common_vendor.o((...args) => $options.handleChange && $options.handleChange(...args)),
+    f: $data.showLoginModal
+  }, $data.showLoginModal ? {
+    g: $data.isAgreementChecked,
+    h: common_vendor.o((...args) => $options.openAgreement && $options.openAgreement(...args)),
+    i: common_vendor.o((...args) => $options.openPrivacyPolicy && $options.openPrivacyPolicy(...args)),
+    j: common_vendor.o((...args) => $options.handleAgreementChange && $options.handleAgreementChange(...args)),
+    k: common_vendor.o((...args) => $options.handleLogin && $options.handleLogin(...args))
+  } : {}, {
+    l: common_vendor.o((...args) => $options.handlePageClick && $options.handlePageClick(...args))
+  });
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render]]);
 wx.createPage(MiniProgramPage);

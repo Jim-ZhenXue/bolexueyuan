@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container" @click="handlePageClick">
 		<image class="background-image" src="/static/images/背景.jpg" mode="aspectFill"></image>
 		<view class="header">
 			<view class="title-container" @click="navigateToCopyright">
@@ -29,6 +29,22 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		<view class="login-modal" v-if="showLoginModal">
+			<view class="modal-content">
+				<view class="agreement-section">
+					<checkbox-group @change="handleAgreementChange">
+						<label class="agreement-label">
+							<checkbox :checked="isAgreementChecked" style="transform: scale(0.8);" color="#999999" />
+							<text class="agreement-text">我已阅读并同意</text>
+							<text class="agreement-link" @click="openAgreement">《用户协议》</text>
+							<text class="agreement-text">、</text>
+							<text class="agreement-link" @click="openPrivacyPolicy">《隐私政策》</text>
+						</label>
+					</checkbox-group>
+				</view>
+				<button class="login-btn" @click="handleLogin">微信快捷登录</button>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -37,6 +53,10 @@
 		data() {
 			return {
 				currentIndex: 0,
+				hasUserInfo: false,
+				userInfo: null,
+				isAgreementChecked: false,
+				showLoginModal: false,
 				items: [
 					{
 						url: 'https://mobilejiaoderenshi.netlify.app',
@@ -91,9 +111,14 @@
 		},
 		methods: {
 			openWebView(url) {
+				if (!this.hasUserInfo) {
+					this.showLoginModal = true;
+					return;
+				}
+				// 已登录用户才能打开网页
 				uni.navigateTo({
 					url: `/pages/webview/webview?url=${encodeURIComponent(url)}`
-				})
+				});
 			},
 			
 			navigateToCopyright() {
@@ -135,7 +160,77 @@
 			
 			handleChange(e) {
 				this.currentIndex = e.detail.current;
-			}
+			},
+			handleAgreementChange(e) {
+				this.isAgreementChecked = e.detail.value.length > 0;
+			},
+
+			openAgreement() {
+				uni.navigateTo({
+					url: '/pages/agreement/agreement'
+				});
+			},
+
+			openPrivacyPolicy() {
+				uni.navigateTo({
+					url: '/pages/privacy/privacy'
+				});
+			},
+			
+			handleLogin() {
+				if (!this.isAgreementChecked) {
+					uni.showToast({
+						title: '请先阅读并同意用户协议',
+						icon: 'none'
+					});
+					return;
+				}
+				uni.getUserProfile({
+					desc: '用于完善用户资料',
+					success: (res) => {
+						this.userInfo = res.userInfo;
+						this.hasUserInfo = true;
+						this.showLoginModal = false; // 登录成功后关闭模态框
+						
+						// 获取登录凭证
+						uni.login({
+							provider: 'weixin',
+							success: (loginRes) => {
+								console.log('登录成功', loginRes.code);
+								// 这里可以将code发送到后端进行进一步处理
+								uni.showToast({
+									title: '登录成功',
+									icon: 'success'
+								});
+							},
+							fail: (err) => {
+								console.error('登录失败', err);
+								uni.showToast({
+									title: '登录失败',
+									icon: 'none'
+								});
+							}
+						});
+					},
+					fail: (err) => {
+						console.error('获取用户信息失败', err);
+						uni.showToast({
+							title: '获取用户信息失败',
+							icon: 'none'
+						});
+					}
+				});
+			},
+
+			closeLoginModal() {
+				this.showLoginModal = false;
+			},
+			
+			handlePageClick() {
+				if (!this.hasUserInfo) {
+					this.showLoginModal = true;
+				}
+			},
 		}
 	}
 </script>
@@ -282,5 +377,61 @@
 	.swiper-item-active .swiper-image {
 		filter: brightness(1);
 		transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.login-modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 999;
+	}
+
+	.modal-content {
+		background-color: #fff;
+		border-radius: 12px;
+		width: 80%;
+		padding: 20px;
+	}
+
+	.agreement-section {
+		margin-bottom: 20px;
+	}
+
+	.agreement-label {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		color: #999999;
+	}
+
+	.agreement-text {
+		color: #999999;
+		margin: 0 2px;
+	}
+
+	.agreement-link {
+		color: #999999;
+	}
+
+	.login-btn {
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		background: linear-gradient(to right, #FFD8C3, #FFB088);
+		color: #fff;
+		font-size: 16px;
+		border-radius: 25px;
+		border: none;
+	}
+
+	.login-btn:active {
+		opacity: 0.8;
 	}
 </style>
