@@ -42,7 +42,7 @@
 						url: 'https://mobilejiaoderenshi.netlify.app',
 						image: '/static/images/角的认识.jpg',
 						title: '角的认识',
-						info: '通过互动方式学习角的基本概念和性质',
+						info: '通过互动方式学习角的基本概念与性质',
 						favorite: false,
 						showInfo: false
 					},
