@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/splash/splash",
+    "pages/agreement/agreement",
+    "pages/privacy/privacy",
     "pages/index/index",
     "pages/webview/webview",
     "pages/copyright/copyright",

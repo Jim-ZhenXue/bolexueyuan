@@ -7,6 +7,20 @@
 			"navigationBarBackgroundColor": "#1a1a1a"
 		}
 	}, {
+		"path": "pages/agreement/agreement",
+		"style": {
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a"
+		}
+	}, {
+		"path": "pages/privacy/privacy",
+		"style": {
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a"
+		}
+	}, {
 		"path": "pages/index/index",
 		"style": {
 			"navigationStyle": "custom",
