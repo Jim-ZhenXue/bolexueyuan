@@ -1,7 +1,12 @@
 <template>
 	<view class="container">
+		<view class="nav-bar">
+			<view class="back-btn" @click="goBack">
+				<text class="back-icon">&#xe8ca;</text>
+			</view>
+			<view class="nav-title">用户协议</view>
+		</view>
 		<view class="content">
-			<view class="title">用户协议</view>
 			<view class="section">
 				<view class="section-title">1. 服务条款</view>
 				<view class="text">
@@ -29,18 +34,51 @@ export default {
 	data() {
 		return {
 		}
+	},
+	methods: {
+		goBack() {
+			uni.navigateBack();
+		}
 	}
 }
 </script>
 
 <style>
 .container {
-	padding: 20px;
+	padding: 0;
+}
+
+.nav-bar {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 44px;
+	background-color: #fff;
+	padding: 0 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.back-btn {
+	position: absolute;
+	left: 10px;
+	padding: 5px 10px;
+}
+
+.back-icon {
+	font-family: "iconfont";
+	font-size: 20px;
+	color: #333;
+}
+
+.nav-title {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 .content {
 	background-color: #fff;
-	border-radius: 8px;
 	padding: 15px;
 }
 

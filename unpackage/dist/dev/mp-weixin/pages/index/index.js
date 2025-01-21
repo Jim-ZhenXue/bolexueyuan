@@ -136,14 +136,14 @@ const _sfc_main = {
           common_vendor.index.login({
             provider: "weixin",
             success: (loginRes) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:199", "登录成功", loginRes.code);
+              common_vendor.index.__f__("log", "at pages/index/index.vue:201", "登录成功", loginRes.code);
               common_vendor.index.showToast({
                 title: "登录成功",
                 icon: "success"
               });
             },
             fail: (err) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:207", "登录失败", err);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:209", "登录失败", err);
               common_vendor.index.showToast({
                 title: "登录失败",
                 icon: "none"
@@ -152,7 +152,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:216", "获取用户信息失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:218", "获取用户信息失败", err);
           common_vendor.index.showToast({
             title: "获取用户信息失败",
             icon: "none"

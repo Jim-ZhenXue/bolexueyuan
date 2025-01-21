@@ -32,14 +32,16 @@
 		<view class="login-modal" v-if="showLoginModal">
 			<view class="modal-content">
 				<view class="agreement-section">
-					<checkbox-group @change="handleAgreementChange">
+					<checkbox-group @change="handleAgreementChange" class="checkbox-group">
 						<label class="agreement-label">
 							<checkbox :checked="isAgreementChecked" style="transform: scale(0.8);" color="#999999" />
 							<text class="agreement-text">我已阅读并同意</text>
+						</label>
+						<view class="agreement-links">
 							<text class="agreement-link" @click="openAgreement">《用户协议》</text>
 							<text class="agreement-text">、</text>
 							<text class="agreement-link" @click="openPrivacyPolicy">《隐私政策》</text>
-						</label>
+						</view>
 					</checkbox-group>
 				</view>
 				<button class="login-btn" @click="handleLogin">微信快捷登录</button>
@@ -403,16 +405,24 @@
 		margin-bottom: 20px;
 	}
 
+	.checkbox-group {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+
 	.agreement-label {
 		display: flex;
 		align-items: center;
-		font-size: 14px;
-		color: #999999;
+	}
+
+	.agreement-links {
+		display: flex;
+		align-items: center;
 	}
 
 	.agreement-text {
 		color: #999999;
-		margin: 0 2px;
 	}
 
 	.agreement-link {
