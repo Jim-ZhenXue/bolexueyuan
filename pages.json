@@ -96,7 +96,7 @@
 		"app-plus": {
 			"background": "#FFFFFF"
 		},
-		"disableScroll": true,
+		"disableScroll": false,
 		"enablePullDownRefresh": false,
 		"pageOrientation": "landscape"
 	}

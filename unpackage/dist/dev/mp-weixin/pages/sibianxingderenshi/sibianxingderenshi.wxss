@@ -2,7 +2,7 @@
 .game-guide.data-v-e3b339e7 {
     width: 100%;
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     position: relative;
     overflow-y: auto;
 }
@@ -18,7 +18,7 @@
 }
 .title.data-v-e3b339e7 {
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -99,6 +99,6 @@ p.data-v-e3b339e7 {
     border-radius: 20px;
 }
 .back-text.data-v-e3b339e7 {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }

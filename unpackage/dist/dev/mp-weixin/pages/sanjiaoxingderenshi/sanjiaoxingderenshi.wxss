@@ -2,7 +2,7 @@
 .game-description.data-v-2bc8081a {
     width: 100%;
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     position: relative;
     overflow-y: auto;
 }
@@ -18,7 +18,7 @@
 }
 .title.data-v-2bc8081a {
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -102,6 +102,6 @@ p.data-v-2bc8081a {
     border-radius: 20px;
 }
 .back-text.data-v-2bc8081a {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="game-instructions" style="background: #000000;">
+    <div class="game-instructions" style="background: #FFFFFF;">
         <!-- 返回按钮 -->
         <div class="back-button" @click="handleBack">
             <text class="back-text">返回</text>
@@ -88,7 +88,7 @@
 .game-instructions {
     width: 100%;
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     position: relative;
     overflow-y: auto;
     padding: 0 1rem;
@@ -109,7 +109,7 @@
 .title {
     text-align: center;
     font-size: 2rem;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 2rem;
     font-weight: bold;
 }
@@ -242,7 +242,7 @@
 }
 
 .back-text {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }
 

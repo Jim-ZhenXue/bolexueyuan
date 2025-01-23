@@ -1,5 +1,5 @@
 <template>
-    <div class="instructions-container" style="background: #000000;">
+    <div class="instructions-container" style="background: #FFFFFF;">
         <!-- 返回按钮 -->
         <div class="back-button" @click="handleBack">
             <text class="back-text">返回</text>
@@ -110,7 +110,7 @@
 <style scoped>
 .instructions-container {
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     padding: 0 1rem;
     position: relative;
     overflow-y: auto;
@@ -133,7 +133,7 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: #000000;
     background: linear-gradient(45deg, #9d6eff, #66a3ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -248,7 +248,7 @@
 }
 
 .back-text {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }
 

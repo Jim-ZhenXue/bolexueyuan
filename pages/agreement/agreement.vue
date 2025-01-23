@@ -10,7 +10,7 @@
 			<view class="section">
 				<view class="section-title">1. 服务条款</view>
 				<view class="text">
-					欢迎使用伯乐园教育平台。通过访问或使用本平台，即表示您同意接受本协议的所有条款和条件。
+					欢迎使用多元智能思维。通过访问或使用本小程序，即表示您同意接受本协议的所有条款和条件。
 				</view>
 			</view>
 			<view class="section">
@@ -22,7 +22,7 @@
 			<view class="section">
 				<view class="section-title">3. 知识产权</view>
 				<view class="text">
-					本平台的所有内容，包括但不限于文字、图片、音频、视频等均受著作权法和国际著作权条约以及其他知识产权法律法规的保护。
+					本小程序的所有内容，包括但不限于文字、图片、音频、视频等均受著作权法和国际著作权条约以及其他知识产权法律法规的保护。
 				</view>
 			</view>
 		</view>

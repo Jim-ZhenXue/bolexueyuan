@@ -1,12 +1,12 @@
 <template>
-    <div class="game-description" style="background: #000000;">
+    <div class="game-description" style="background: #FFFFFF;">
         <!-- 返回按钮 -->
         <div class="back-button" @click="handleBack">
             <text class="back-text">返回</text>
         </div>
 
         <!-- 顶部留空区域 - 1/7高度 -->
-        <div class="top-space" style="background: #000000;"></div>
+        <div class="top-space" style="background: #FFFFFF;"></div>
         
         <!-- 主要内容区域 -->
         <div class="content-container">
@@ -65,7 +65,7 @@
 .game-description {
     width: 100%;
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     position: relative;
     overflow-y: auto;
 }
@@ -84,7 +84,7 @@
 
 .title {
     font-size: 2.5rem;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -181,7 +181,7 @@ p {
 }
 
 .back-text {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }
 </style>

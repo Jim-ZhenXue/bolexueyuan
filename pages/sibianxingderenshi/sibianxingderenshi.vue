@@ -1,12 +1,12 @@
 <template>
-    <div class="game-guide" style="background: #000000;">
+    <div class="game-guide" style="background: #FFFFFF;">
         <!-- 返回按钮 -->
         <div class="back-button" @click="handleBack">
             <text class="back-text">返回</text>
         </div>
 
         <!-- 顶部留空区域 -->
-        <div class="top-space" style="background: #000000;"></div>
+        <div class="top-space" style="background: #FFFFFF;"></div>
         
         <!-- 主要内容区域 -->
         <div class="content">
@@ -76,7 +76,7 @@ export default {
 .game-guide {
     width: 100%;
     min-height: 100vh;
-    background: #000000;
+    background: #FFFFFF;
     position: relative;
     overflow-y: auto;
 }
@@ -95,7 +95,7 @@ export default {
 
 .title {
     text-align: center;
-    color: #ffffff;
+    color: #000000;
     font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -190,7 +190,7 @@ p {
 }
 
 .back-text {
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
 }
 </style>
