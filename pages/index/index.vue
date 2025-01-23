@@ -199,10 +199,41 @@
 							provider: 'weixin',
 							success: (loginRes) => {
 								console.log('登录成功', loginRes.code);
-								// 这里可以将code发送到后端进行进一步处理
-								uni.showToast({
-									title: '登录成功',
-									icon: 'success'
+								
+								// 发送用户信息到后端服务器
+								uni.request({
+									url: 'https://iZuf64hnri6ebghs9yp0c5Z.aliyuncs.com:8443/login',
+									method: 'POST',
+									data: {
+										nickname: res.userInfo.nickName,
+										login_time: new Date().toISOString().slice(0, 19).replace('T', ' ')
+									},
+									success: (response) => {
+										console.log('用户信息已保存到服务器', response.data);
+										uni.showToast({
+											title: '登录成功',
+											icon: 'success'
+										});
+									},
+									fail: (error) => {
+										console.error('保存用户信息失败', error);
+										let errorMessage = '登录成功，但用户信息保存失败';
+										
+										// 处理不同类型的错误
+										if (error.errno === 600002 || error.errMsg.includes('domain list')) {
+											errorMessage = '请联系管理员配置服务器域名';
+										} else if (error.errMsg.includes('ERR_NAME_NOT_RESOLVED')) {
+											errorMessage = '服务器域名无法访问，请检查服务器配置';
+										} else if (error.errMsg.includes('ERR_CONNECTION_REFUSED')) {
+											errorMessage = '无法连接到服务器，请确认服务器是否正常运行';
+										}
+										
+										uni.showToast({
+											title: errorMessage,
+											icon: 'none',
+											duration: 3000
+										});
+									}
 								});
 							},
 							fail: (err) => {

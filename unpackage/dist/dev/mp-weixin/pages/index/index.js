@@ -137,13 +137,40 @@ const _sfc_main = {
             provider: "weixin",
             success: (loginRes) => {
               common_vendor.index.__f__("log", "at pages/index/index.vue:201", "登录成功", loginRes.code);
-              common_vendor.index.showToast({
-                title: "登录成功",
-                icon: "success"
+              common_vendor.index.request({
+                url: "https://iZuf64hnri6ebghs9yp0c5Z.aliyuncs.com:8443/login",
+                method: "POST",
+                data: {
+                  nickname: res.userInfo.nickName,
+                  login_time: (/* @__PURE__ */ new Date()).toISOString().slice(0, 19).replace("T", " ")
+                },
+                success: (response) => {
+                  common_vendor.index.__f__("log", "at pages/index/index.vue:212", "用户信息已保存到服务器", response.data);
+                  common_vendor.index.showToast({
+                    title: "登录成功",
+                    icon: "success"
+                  });
+                },
+                fail: (error) => {
+                  common_vendor.index.__f__("error", "at pages/index/index.vue:219", "保存用户信息失败", error);
+                  let errorMessage = "登录成功，但用户信息保存失败";
+                  if (error.errno === 600002 || error.errMsg.includes("domain list")) {
+                    errorMessage = "请联系管理员配置服务器域名";
+                  } else if (error.errMsg.includes("ERR_NAME_NOT_RESOLVED")) {
+                    errorMessage = "服务器域名无法访问，请检查服务器配置";
+                  } else if (error.errMsg.includes("ERR_CONNECTION_REFUSED")) {
+                    errorMessage = "无法连接到服务器，请确认服务器是否正常运行";
+                  }
+                  common_vendor.index.showToast({
+                    title: errorMessage,
+                    icon: "none",
+                    duration: 3e3
+                  });
+                }
               });
             },
             fail: (err) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:209", "登录失败", err);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:240", "登录失败", err);
               common_vendor.index.showToast({
                 title: "登录失败",
                 icon: "none"
@@ -152,7 +179,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:218", "获取用户信息失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:249", "获取用户信息失败", err);
           common_vendor.index.showToast({
             title: "获取用户信息失败",
             icon: "none"
