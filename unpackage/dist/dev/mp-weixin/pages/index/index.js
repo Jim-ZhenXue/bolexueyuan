@@ -11,15 +11,15 @@ const _sfc_main = {
       showLoginModal: false,
       items: [
         {
-          url: "https://mobilejiaoderenshi.netlify.app",
+          url: "https://mobilejiaoderenshi.pages.dev/",
           image: "/static/images/角的认识.jpg",
-          title: "角的认识",
+          title: "角1的认识",
           info: "通过互动方式学习角的基本概念与性质",
           favorite: false,
           showInfo: false
         },
         {
-          url: "https://sanjiaoxingderenshi.netlify.app",
+          url: "https://sanjiaoxingderenshi.pages.dev/",
           image: "/static/images/三角形的认识.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",
@@ -27,7 +27,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://minidianxiansiwei.netlify.app",
+          url: "https://minidianxiansiwei.pages.dev/",
           image: "/static/images/点线思维.jpg",
           title: "点线思维",
           info: "学习点和线的基本概念",
@@ -35,7 +35,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://minisibianxingderenshi.netlify.app",
+          url: "https://minisibianxingderenshi.pages.dev/",
           image: "/static/images/四边形的认识.jpg",
           title: "四边形的认识",
           info: "了解各种四边形的特征",
@@ -43,7 +43,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://minixianjiaomiansiwei.netlify.app",
+          url: "https://minixianjiaomiansiwei.pages.dev/",
           image: "/static/images/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
@@ -52,7 +52,15 @@ const _sfc_main = {
         },
         {
           url: "https://dengshi.netlify.app",
-          image: "/static/images/线角面思维.jpg",
+          image: "/static/images/等式.jpg",
+          title: "线角面思维",
+          info: "深入理解几何中的线、角、面概念",
+          favorite: false,
+          showInfo: false
+        },
+        {
+          url: "https://xiaoyudengyudayu.pages.dev/",
+          image: "/static/images/小于等于大于.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -136,23 +144,23 @@ const _sfc_main = {
           common_vendor.index.login({
             provider: "weixin",
             success: (loginRes) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:201", "登录成功", loginRes.code);
+              common_vendor.index.__f__("log", "at pages/index/index.vue:209", "登录成功", loginRes.code);
               common_vendor.index.request({
-                url: "https://iZuf64hnri6ebghs9yp0c5Z.aliyuncs.com:8443/login",
+                url: "https://47.103.66.73:8443/login",
                 method: "POST",
                 data: {
                   nickname: res.userInfo.nickName,
                   login_time: (/* @__PURE__ */ new Date()).toISOString().slice(0, 19).replace("T", " ")
                 },
                 success: (response) => {
-                  common_vendor.index.__f__("log", "at pages/index/index.vue:212", "用户信息已保存到服务器", response.data);
+                  common_vendor.index.__f__("log", "at pages/index/index.vue:220", "用户信息已保存到服务器", response.data);
                   common_vendor.index.showToast({
                     title: "登录成功",
                     icon: "success"
                   });
                 },
                 fail: (error) => {
-                  common_vendor.index.__f__("error", "at pages/index/index.vue:219", "保存用户信息失败", error);
+                  common_vendor.index.__f__("error", "at pages/index/index.vue:227", "保存用户信息失败", error);
                   let errorMessage = "登录成功，但用户信息保存失败";
                   if (error.errno === 600002 || error.errMsg.includes("domain list")) {
                     errorMessage = "请联系管理员配置服务器域名";
@@ -170,7 +178,7 @@ const _sfc_main = {
               });
             },
             fail: (err) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:240", "登录失败", err);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:248", "登录失败", err);
               common_vendor.index.showToast({
                 title: "登录失败",
                 icon: "none"
@@ -179,7 +187,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:249", "获取用户信息失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:257", "获取用户信息失败", err);
           common_vendor.index.showToast({
             title: "获取用户信息失败",
             icon: "none"
@@ -202,7 +210,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_assets._imports_0,
     b: common_assets._imports_1,
     c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
-    d: common_vendor.f($data.items.slice(0, 5), (item, index, i0) => {
+    d: common_vendor.f($data.items, (item, index, i0) => {
       return {
         a: item.image,
         b: common_vendor.t(item.title),

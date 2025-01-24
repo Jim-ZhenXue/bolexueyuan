@@ -17,7 +17,7 @@
 			next-margin="150rpx"
 			:display-multiple-items="1"
 			@change="handleChange">
-			<swiper-item v-for="(item, index) in items.slice(0, 5)" :key="index" 
+			<swiper-item v-for="(item, index) in items" :key="index" 
 				:class="['swiper-item', currentIndex === index ? 'swiper-item-active' : '']">
 				<view class="swiper-content" @click="openWebView(item.url)">
 					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
@@ -61,15 +61,15 @@
 				showLoginModal: false,
 				items: [
 					{
-						url: 'https://mobilejiaoderenshi.netlify.app',
+						url: 'https://mobilejiaoderenshi.pages.dev/',
 						image: '/static/images/角的认识.jpg',
-						title: '角的认识',
+						title: '角1的认识',
 						info: '通过互动方式学习角的基本概念与性质',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://sanjiaoxingderenshi.netlify.app',
+						url: 'https://sanjiaoxingderenshi.pages.dev/',
 						image: '/static/images/三角形的认识.jpg',
 						title: '三角形的认识',
 						info: '探索三角形的特性和分类',
@@ -77,7 +77,7 @@
 						showInfo: false
 					},
 					{
-						url: 'https://minidianxiansiwei.netlify.app',
+						url: 'https://minidianxiansiwei.pages.dev/',
 						image: '/static/images/点线思维.jpg',
 						title: '点线思维',
 						info: '学习点和线的基本概念',
@@ -85,7 +85,7 @@
 						showInfo: false
 					},
 					{
-						url: 'https://minisibianxingderenshi.netlify.app',
+						url: 'https://minisibianxingderenshi.pages.dev/',
 						image: '/static/images/四边形的认识.jpg',
 						title: '四边形的认识',
 						info: '了解各种四边形的特征',
@@ -93,7 +93,7 @@
 						showInfo: false
 					},
 					{
-						url: 'https://minixianjiaomiansiwei.netlify.app',
+						url: 'https://minixianjiaomiansiwei.pages.dev/',
 						image: '/static/images/线角面思维.jpg',
 						title: '线角面思维',
 						info: '深入理解几何中的线、角、面概念',
@@ -102,7 +102,15 @@
 					},
 					{
 						url: 'https://dengshi.netlify.app',
-						image: '/static/images/线角面思维.jpg',
+						image: '/static/images/等式.jpg',
+						title: '线角面思维',
+						info: '深入理解几何中的线、角、面概念',
+						favorite: false,
+						showInfo: false
+					},
+					{
+						url: 'https://xiaoyudengyudayu.pages.dev/',
+						image: '/static/images/小于等于大于.jpg',
 						title: '线角面思维',
 						info: '深入理解几何中的线、角、面概念',
 						favorite: false,
@@ -202,7 +210,7 @@
 								
 								// 发送用户信息到后端服务器
 								uni.request({
-									url: 'https://iZuf64hnri6ebghs9yp0c5Z.aliyuncs.com:8443/login',
+									url: 'https://47.103.66.73:8443/login',
 									method: 'POST',
 									data: {
 										nickname: res.userInfo.nickName,
