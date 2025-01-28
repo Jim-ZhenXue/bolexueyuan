@@ -52,7 +52,7 @@ const _sfc_main = {
         },
         {
           url: "https://dengshi.netlify.app",
-          image: "/static/images/等式.jpg",
+          image: "/static/images/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -60,7 +60,7 @@ const _sfc_main = {
         },
         {
           url: "https://xiaoyudengyudayu.pages.dev/",
-          image: "/static/images/小于等于大于.jpg",
+          image: "/static/images/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -146,7 +146,7 @@ const _sfc_main = {
             success: (loginRes) => {
               common_vendor.index.__f__("log", "at pages/index/index.vue:209", "登录成功", loginRes.code);
               common_vendor.index.request({
-                url: "https://47.103.66.73:8443/login",
+                url: "https://www.javascriptx.fun:8443/login",
                 method: "POST",
                 data: {
                   nickname: res.userInfo.nickName,

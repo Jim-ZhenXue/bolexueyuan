@@ -52,7 +52,7 @@
         /* 小程序特有相关 */
         "appid" : "wx1a8773a7ca763048",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : true
         },
         "usingComponents" : true
     },
