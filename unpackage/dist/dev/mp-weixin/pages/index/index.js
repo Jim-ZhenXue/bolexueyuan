@@ -135,61 +135,48 @@ const _sfc_main = {
         });
         return;
       }
-      common_vendor.index.getUserProfile({
-        desc: "用于完善用户资料",
-        success: (res) => {
-          this.userInfo = res.userInfo;
-          this.hasUserInfo = true;
-          this.showLoginModal = false;
-          common_vendor.index.login({
-            provider: "weixin",
-            success: (loginRes) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:209", "登录成功", loginRes.code);
-              common_vendor.index.request({
-                url: "https://www.javascriptx.fun:8443/login",
-                method: "POST",
-                data: {
-                  nickname: res.userInfo.nickName,
-                  login_time: (/* @__PURE__ */ new Date()).toISOString().slice(0, 19).replace("T", " ")
-                },
-                success: (response) => {
-                  common_vendor.index.__f__("log", "at pages/index/index.vue:220", "用户信息已保存到服务器", response.data);
-                  common_vendor.index.showToast({
-                    title: "登录成功",
-                    icon: "success"
-                  });
-                },
-                fail: (error) => {
-                  common_vendor.index.__f__("error", "at pages/index/index.vue:227", "保存用户信息失败", error);
-                  let errorMessage = "登录成功，但用户信息保存失败";
-                  if (error.errno === 600002 || error.errMsg.includes("domain list")) {
-                    errorMessage = "请联系管理员配置服务器域名";
-                  } else if (error.errMsg.includes("ERR_NAME_NOT_RESOLVED")) {
-                    errorMessage = "服务器域名无法访问，请检查服务器配置";
-                  } else if (error.errMsg.includes("ERR_CONNECTION_REFUSED")) {
-                    errorMessage = "无法连接到服务器，请确认服务器是否正常运行";
-                  }
-                  common_vendor.index.showToast({
-                    title: errorMessage,
-                    icon: "none",
-                    duration: 3e3
-                  });
-                }
+      common_vendor.index.login({
+        provider: "weixin",
+        success: (loginRes) => {
+          common_vendor.index.__f__("log", "at pages/index/index.vue:203", "登录成功", loginRes.code);
+          common_vendor.index.request({
+            url: "https://www.javascriptx.fun:8443/login",
+            method: "POST",
+            data: {
+              code: loginRes.code,
+              login_time: (/* @__PURE__ */ new Date()).toISOString().slice(0, 19).replace("T", " ")
+            },
+            success: (response) => {
+              common_vendor.index.__f__("log", "at pages/index/index.vue:214", "登录信息已保存到服务器", response.data);
+              this.hasUserInfo = true;
+              this.showLoginModal = false;
+              common_vendor.index.showToast({
+                title: "登录成功",
+                icon: "success"
               });
             },
-            fail: (err) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:248", "登录失败", err);
+            fail: (error) => {
+              common_vendor.index.__f__("error", "at pages/index/index.vue:223", "登录信息保存失败", error);
+              let errorMessage = "登录失败，请稍后重试";
+              if (error.errno === 600002 || error.errMsg.includes("domain list")) {
+                errorMessage = "请联系管理员配置服务器域名";
+              } else if (error.errMsg.includes("ERR_NAME_NOT_RESOLVED")) {
+                errorMessage = "服务器域名无法访问，请检查服务器配置";
+              } else if (error.errMsg.includes("ERR_CONNECTION_REFUSED")) {
+                errorMessage = "无法连接到服务器，请确认服务器是否正常运行";
+              }
               common_vendor.index.showToast({
-                title: "登录失败",
-                icon: "none"
+                title: errorMessage,
+                icon: "none",
+                duration: 3e3
               });
             }
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:257", "获取用户信息失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:244", "登录失败", err);
           common_vendor.index.showToast({
-            title: "获取用户信息失败",
+            title: "登录失败",
             icon: "none"
           });
         }

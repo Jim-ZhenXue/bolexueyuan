@@ -195,68 +195,55 @@
 					});
 					return;
 				}
-				uni.getUserProfile({
-					desc: '用于完善用户资料',
-					success: (res) => {
-						this.userInfo = res.userInfo;
-						this.hasUserInfo = true;
-						this.showLoginModal = false; // 登录成功后关闭模态框
+				
+				// 直接获取登录凭证
+				uni.login({
+					provider: 'weixin',
+					success: (loginRes) => {
+						console.log('登录成功', loginRes.code);
 						
-						// 获取登录凭证
-						uni.login({
-							provider: 'weixin',
-							success: (loginRes) => {
-								console.log('登录成功', loginRes.code);
-								
-								// 发送用户信息到后端服务器
-								uni.request({
-									url: 'https://www.javascriptx.fun:8443/login',
-									method: 'POST',
-									data: {
-										nickname: res.userInfo.nickName,
-										login_time: new Date().toISOString().slice(0, 19).replace('T', ' ')
-									},
-									success: (response) => {
-										console.log('用户信息已保存到服务器', response.data);
-										uni.showToast({
-											title: '登录成功',
-											icon: 'success'
-										});
-									},
-									fail: (error) => {
-										console.error('保存用户信息失败', error);
-										let errorMessage = '登录成功，但用户信息保存失败';
-										
-										// 处理不同类型的错误
-										if (error.errno === 600002 || error.errMsg.includes('domain list')) {
-											errorMessage = '请联系管理员配置服务器域名';
-										} else if (error.errMsg.includes('ERR_NAME_NOT_RESOLVED')) {
-											errorMessage = '服务器域名无法访问，请检查服务器配置';
-										} else if (error.errMsg.includes('ERR_CONNECTION_REFUSED')) {
-											errorMessage = '无法连接到服务器，请确认服务器是否正常运行';
-										}
-										
-										uni.showToast({
-											title: errorMessage,
-											icon: 'none',
-											duration: 3000
-										});
-									}
+						// 发送code到后端服务器获取OpenID并保存
+						uni.request({
+							url: 'https://www.javascriptx.fun:8443/login',
+							method: 'POST',
+							data: {
+								code: loginRes.code,
+								login_time: new Date().toISOString().slice(0, 19).replace('T', ' ')
+							},
+							success: (response) => {
+								console.log('登录信息已保存到服务器', response.data);
+								this.hasUserInfo = true;
+								this.showLoginModal = false;
+								uni.showToast({
+									title: '登录成功',
+									icon: 'success'
 								});
 							},
-							fail: (err) => {
-								console.error('登录失败', err);
+							fail: (error) => {
+								console.error('登录信息保存失败', error);
+								let errorMessage = '登录失败，请稍后重试';
+								
+								// 处理不同类型的错误
+								if (error.errno === 600002 || error.errMsg.includes('domain list')) {
+									errorMessage = '请联系管理员配置服务器域名';
+								} else if (error.errMsg.includes('ERR_NAME_NOT_RESOLVED')) {
+									errorMessage = '服务器域名无法访问，请检查服务器配置';
+								} else if (error.errMsg.includes('ERR_CONNECTION_REFUSED')) {
+									errorMessage = '无法连接到服务器，请确认服务器是否正常运行';
+								}
+								
 								uni.showToast({
-									title: '登录失败',
-									icon: 'none'
+									title: errorMessage,
+									icon: 'none',
+									duration: 3000
 								});
 							}
 						});
 					},
 					fail: (err) => {
-						console.error('获取用户信息失败', err);
+						console.error('登录失败', err);
 						uni.showToast({
-							title: '获取用户信息失败',
+							title: '登录失败',
 							icon: 'none'
 						});
 					}
