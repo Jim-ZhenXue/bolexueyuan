@@ -62,7 +62,7 @@
                 </div>
             </div>
         
-            <!-- 游戏进阶说明 -->
+            <!-- 进阶说明 -->
             <div class="progression-section">
                 <h2>能力进阶</h2>
                 <div class="progression-steps">

@@ -13,8 +13,8 @@
             <h1 class="title">三角形的认识</h1>
             
             <div class="section">
-                <h2>游戏简介</h2>
-                <p>这是一个充满趣味的几何思维训练游戏，通过探索三角形的性质来提升你的多元智能！</p>
+                <h2>简介</h2>
+                <p>这是一个充满趣味的几何思维训练，通过探索三角形的性质来提升你的多元智能！</p>
             </div>
   
             <div class="learning-path">
@@ -38,7 +38,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>反思学习能力</h3>
-                        <p>在游戏过程中总结经验，建立系统的几何思维方法</p>
+                        <p>在训练过程中总结经验，建立系统的几何思维方法</p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
             <div class="features">
                 <div class="feature-card">
                     <h3>趣味关卡</h3>
-                    <p>循序渐进的关卡设计，让你在游戏中轻松掌握知识</p>
+                    <p>循序渐进的关卡设计，让你在其中轻松掌握知识</p>
                 </div>
                 <div class="feature-card">
                     <h3>即时反馈</h3>
