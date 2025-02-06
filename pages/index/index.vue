@@ -119,6 +119,41 @@
 				]
 			}
 		},
+		onLoad() {
+			// 页面加载时检查JWT token
+			const token = uni.getStorageSync('jwt_token');
+			const tokenExpireTime = uni.getStorageSync('token_expire_time');
+			
+			// 检查token是否存在且未过期
+			if (token && tokenExpireTime) {
+				const now = new Date().getTime();
+				if (now < tokenExpireTime) {
+					// token未过期，验证有效性
+					uni.request({
+						url: 'https://www.javascriptx.fun:8443/verify_token',
+						method: 'POST',
+						header: {
+							'Authorization': `Bearer ${token}`
+						},
+						success: (res) => {
+							if (res.data.valid) {
+								this.hasUserInfo = true;
+							} else {
+								// token无效，清除存储
+								this.clearLoginStatus();
+							}
+						},
+						fail: () => {
+							// 验证失败，清除token
+							this.clearLoginStatus();
+						}
+					});
+				} else {
+					// token已过期，清除存储
+					this.clearLoginStatus();
+				}
+			}
+		},
 		methods: {
 			openWebView(url) {
 				if (!this.hasUserInfo) {
@@ -208,16 +243,30 @@
 							method: 'POST',
 							data: {
 								code: loginRes.code,
-								login_time: new Date().toISOString().slice(0, 19).replace('T', ' ')
+								login_time: new Date().toLocaleString('zh-CN', { hour12: false }).replace(/\//g, '-')
 							},
 							success: (response) => {
 								console.log('登录信息已保存到服务器', response.data);
-								this.hasUserInfo = true;
-								this.showLoginModal = false;
-								uni.showToast({
-									title: '登录成功',
-									icon: 'success'
-								});
+								if (response.data.token) {
+									// 计算token过期时间（例如30天后）
+									const expireTime = new Date().getTime() + 30 * 24 * 60 * 60 * 1000;
+									
+									// 保存JWT token和过期时间到本地存储
+									uni.setStorageSync('jwt_token', response.data.token);
+									uni.setStorageSync('token_expire_time', expireTime);
+									
+									this.hasUserInfo = true;
+									this.showLoginModal = false;
+									uni.showToast({
+										title: '登录成功',
+										icon: 'success'
+									});
+								} else {
+									uni.showToast({
+										title: '登录失败，服务器未返回token',
+										icon: 'none'
+									});
+								}
 							},
 							fail: (error) => {
 								console.error('登录信息保存失败', error);
@@ -258,6 +307,13 @@
 				if (!this.hasUserInfo) {
 					this.showLoginModal = true;
 				}
+			},
+
+			// 清除登录状态
+			clearLoginStatus() {
+				uni.removeStorageSync('jwt_token');
+				uni.removeStorageSync('token_expire_time');
+				this.hasUserInfo = false;
 			},
 		}
 	}
@@ -423,7 +479,7 @@
 	.modal-content {
 		background-color: #fff;
 		border-radius: 12px;
-		width: 80%;
+		width: 40%;
 		padding: 20px;
 	}
 

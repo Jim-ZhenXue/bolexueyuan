@@ -69,6 +69,34 @@ const _sfc_main = {
       ]
     };
   },
+  onLoad() {
+    const token = common_vendor.index.getStorageSync("jwt_token");
+    const tokenExpireTime = common_vendor.index.getStorageSync("token_expire_time");
+    if (token && tokenExpireTime) {
+      const now = (/* @__PURE__ */ new Date()).getTime();
+      if (now < tokenExpireTime) {
+        common_vendor.index.request({
+          url: "https://www.javascriptx.fun:8443/verify_token",
+          method: "POST",
+          header: {
+            "Authorization": `Bearer ${token}`
+          },
+          success: (res) => {
+            if (res.data.valid) {
+              this.hasUserInfo = true;
+            } else {
+              this.clearLoginStatus();
+            }
+          },
+          fail: () => {
+            this.clearLoginStatus();
+          }
+        });
+      } else {
+        this.clearLoginStatus();
+      }
+    }
+  },
   methods: {
     openWebView(url) {
       if (!this.hasUserInfo) {
@@ -138,25 +166,35 @@ const _sfc_main = {
       common_vendor.index.login({
         provider: "weixin",
         success: (loginRes) => {
-          common_vendor.index.__f__("log", "at pages/index/index.vue:203", "登录成功", loginRes.code);
+          common_vendor.index.__f__("log", "at pages/index/index.vue:238", "登录成功", loginRes.code);
           common_vendor.index.request({
             url: "https://www.javascriptx.fun:8443/login",
             method: "POST",
             data: {
               code: loginRes.code,
-              login_time: (/* @__PURE__ */ new Date()).toISOString().slice(0, 19).replace("T", " ")
+              login_time: (/* @__PURE__ */ new Date()).toLocaleString("zh-CN", { hour12: false }).replace(/\//g, "-")
             },
             success: (response) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:214", "登录信息已保存到服务器", response.data);
-              this.hasUserInfo = true;
-              this.showLoginModal = false;
-              common_vendor.index.showToast({
-                title: "登录成功",
-                icon: "success"
-              });
+              common_vendor.index.__f__("log", "at pages/index/index.vue:249", "登录信息已保存到服务器", response.data);
+              if (response.data.token) {
+                const expireTime = (/* @__PURE__ */ new Date()).getTime() + 30 * 24 * 60 * 60 * 1e3;
+                common_vendor.index.setStorageSync("jwt_token", response.data.token);
+                common_vendor.index.setStorageSync("token_expire_time", expireTime);
+                this.hasUserInfo = true;
+                this.showLoginModal = false;
+                common_vendor.index.showToast({
+                  title: "登录成功",
+                  icon: "success"
+                });
+              } else {
+                common_vendor.index.showToast({
+                  title: "登录失败，服务器未返回token",
+                  icon: "none"
+                });
+              }
             },
             fail: (error) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:223", "登录信息保存失败", error);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:272", "登录信息保存失败", error);
               let errorMessage = "登录失败，请稍后重试";
               if (error.errno === 600002 || error.errMsg.includes("domain list")) {
                 errorMessage = "请联系管理员配置服务器域名";
@@ -174,7 +212,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:244", "登录失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:293", "登录失败", err);
           common_vendor.index.showToast({
             title: "登录失败",
             icon: "none"
@@ -189,6 +227,12 @@ const _sfc_main = {
       if (!this.hasUserInfo) {
         this.showLoginModal = true;
       }
+    },
+    // 清除登录状态
+    clearLoginStatus() {
+      common_vendor.index.removeStorageSync("jwt_token");
+      common_vendor.index.removeStorageSync("token_expire_time");
+      this.hasUserInfo = false;
     }
   }
 };

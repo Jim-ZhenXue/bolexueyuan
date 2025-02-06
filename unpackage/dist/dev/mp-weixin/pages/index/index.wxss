@@ -144,7 +144,7 @@ page {
 .modal-content {
 		background-color: #fff;
 		border-radius: 12px;
-		width: 80%;
+		width: 40%;
 		padding: 20px;
 }
 .agreement-section {
