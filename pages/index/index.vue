@@ -63,7 +63,7 @@
 					{
 						url: 'https://mobilejiaoderenshi.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/jiaoderenshi.jpg',
-						title: '角1的认识',
+						title: '角的认识',
 						info: '通过互动方式学习角的基本概念与性质',
 						favorite: false,
 						showInfo: false
