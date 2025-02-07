@@ -12,7 +12,7 @@ const _sfc_main = {
       items: [
         {
           url: "https://mobilejiaoderenshi.pages.dev/",
-          image: "/static/images/角的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/角的认识.jpg",
           title: "角1的认识",
           info: "通过互动方式学习角的基本概念与性质",
           favorite: false,
@@ -20,7 +20,7 @@ const _sfc_main = {
         },
         {
           url: "https://sanjiaoxingderenshi.pages.dev/",
-          image: "/static/images/三角形的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/三角形的认识.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",
           favorite: false,
@@ -28,7 +28,7 @@ const _sfc_main = {
         },
         {
           url: "https://minidianxiansiwei.pages.dev/",
-          image: "/static/images/点线思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/点线思维.jpg",
           title: "点线思维",
           info: "学习点和线的基本概念",
           favorite: false,
@@ -36,7 +36,7 @@ const _sfc_main = {
         },
         {
           url: "https://minisibianxingderenshi.pages.dev/",
-          image: "/static/images/四边形的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/四边形的认识.jpg",
           title: "四边形的认识",
           info: "了解各种四边形的特征",
           favorite: false,
@@ -44,7 +44,7 @@ const _sfc_main = {
         },
         {
           url: "https://minixianjiaomiansiwei.pages.dev/",
-          image: "/static/images/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -52,7 +52,7 @@ const _sfc_main = {
         },
         {
           url: "https://dengshi.netlify.app",
-          image: "/static/images/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -60,14 +60,21 @@ const _sfc_main = {
         },
         {
           url: "https://xiaoyudengyudayu.pages.dev/",
-          image: "/static/images/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
           showInfo: false
         }
-      ]
+      ],
+      imageCache: /* @__PURE__ */ new Map()
     };
+  },
+  onMounted() {
+    this.items.forEach(async (item, index) => {
+      const imageUrl = await this.fetchImage(item.image);
+      this.$set(this.items[index], "imageUrl", imageUrl);
+    });
   },
   onLoad() {
     const token = common_vendor.index.getStorageSync("jwt_token");
@@ -166,7 +173,7 @@ const _sfc_main = {
       common_vendor.index.login({
         provider: "weixin",
         success: (loginRes) => {
-          common_vendor.index.__f__("log", "at pages/index/index.vue:238", "登录成功", loginRes.code);
+          common_vendor.index.__f__("log", "at pages/index/index.vue:246", "登录成功", loginRes.code);
           common_vendor.index.request({
             url: "https://www.javascriptx.fun:8443/login",
             method: "POST",
@@ -175,7 +182,7 @@ const _sfc_main = {
               login_time: (/* @__PURE__ */ new Date()).toLocaleString("zh-CN", { hour12: false }).replace(/\//g, "-")
             },
             success: (response) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:249", "登录信息已保存到服务器", response.data);
+              common_vendor.index.__f__("log", "at pages/index/index.vue:257", "登录信息已保存到服务器", response.data);
               if (response.data.token) {
                 const expireTime = (/* @__PURE__ */ new Date()).getTime() + 30 * 24 * 60 * 60 * 1e3;
                 common_vendor.index.setStorageSync("jwt_token", response.data.token);
@@ -194,7 +201,7 @@ const _sfc_main = {
               }
             },
             fail: (error) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:272", "登录信息保存失败", error);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:280", "登录信息保存失败", error);
               let errorMessage = "登录失败，请稍后重试";
               if (error.errno === 600002 || error.errMsg.includes("domain list")) {
                 errorMessage = "请联系管理员配置服务器域名";
@@ -212,7 +219,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:293", "登录失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:301", "登录失败", err);
           common_vendor.index.showToast({
             title: "登录失败",
             icon: "none"
@@ -233,6 +240,28 @@ const _sfc_main = {
       common_vendor.index.removeStorageSync("jwt_token");
       common_vendor.index.removeStorageSync("token_expire_time");
       this.hasUserInfo = false;
+    },
+    // Add new method to fetch image
+    async fetchImage(imageUrl) {
+      if (this.imageCache.has(imageUrl)) {
+        return this.imageCache.get(imageUrl);
+      }
+      try {
+        const response = await common_vendor.index.request({
+          url: imageUrl,
+          responseType: "arraybuffer"
+        });
+        if (response[1].statusCode !== 200) {
+          throw new Error("Image not found");
+        }
+        const base64 = common_vendor.index.arrayBufferToBase64(response[1].data);
+        const finalUrl = `data:image/jpeg;base64,${base64}`;
+        this.imageCache.set(imageUrl, finalUrl);
+        return finalUrl;
+      } catch (error) {
+        common_vendor.index.__f__("error", "at pages/index/index.vue:348", "Error fetching image:", error);
+        return "";
+      }
     }
   }
 };
@@ -243,7 +272,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     c: common_vendor.o((...args) => $options.navigateToCopyright && $options.navigateToCopyright(...args)),
     d: common_vendor.f($data.items, (item, index, i0) => {
       return {
-        a: item.image,
+        a: item.imageUrl || item.image,
         b: common_vendor.t(item.title),
         c: common_vendor.o(($event) => $options.showInfo(index), index),
         d: common_vendor.t(item.favorite ? "♥" : "♡"),

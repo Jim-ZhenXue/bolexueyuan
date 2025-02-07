@@ -20,7 +20,7 @@
 			<swiper-item v-for="(item, index) in items" :key="index" 
 				:class="['swiper-item', currentIndex === index ? 'swiper-item-active' : '']">
 				<view class="swiper-content" @click="openWebView(item.url)">
-					<image :src="item.image" mode="aspectFit" class="swiper-image"></image>
+					<image :src="item.imageUrl || item.image" mode="aspectFit" class="swiper-image"></image>
 					<view class="swiper-title">
 						<text>{{item.title}}</text>
 						<text class="info-icon" @click.stop="showInfo(index)">ⓘ</text>
@@ -62,7 +62,7 @@
 				items: [
 					{
 						url: 'https://mobilejiaoderenshi.pages.dev/',
-						image: '/static/images/角的认识.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/角的认识.jpg',
 						title: '角1的认识',
 						info: '通过互动方式学习角的基本概念与性质',
 						favorite: false,
@@ -70,7 +70,7 @@
 					},
 					{
 						url: 'https://sanjiaoxingderenshi.pages.dev/',
-						image: '/static/images/三角形的认识.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/三角形的认识.jpg',
 						title: '三角形的认识',
 						info: '探索三角形的特性和分类',
 						favorite: false,
@@ -78,7 +78,7 @@
 					},
 					{
 						url: 'https://minidianxiansiwei.pages.dev/',
-						image: '/static/images/点线思维.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/点线思维.jpg',
 						title: '点线思维',
 						info: '学习点和线的基本概念',
 						favorite: false,
@@ -86,7 +86,7 @@
 					},
 					{
 						url: 'https://minisibianxingderenshi.pages.dev/',
-						image: '/static/images/四边形的认识.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/四边形的认识.jpg',
 						title: '四边形的认识',
 						info: '了解各种四边形的特征',
 						favorite: false,
@@ -94,7 +94,7 @@
 					},
 					{
 						url: 'https://minixianjiaomiansiwei.pages.dev/',
-						image: '/static/images/线角面思维.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/线角面思维.jpg',
 						title: '线角面思维',
 						info: '深入理解几何中的线、角、面概念',
 						favorite: false,
@@ -102,7 +102,7 @@
 					},
 					{
 						url: 'https://dengshi.netlify.app',
-						image: '/static/images/线角面思维.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/线角面思维.jpg',
 						title: '线角面思维',
 						info: '深入理解几何中的线、角、面概念',
 						favorite: false,
@@ -110,14 +110,22 @@
 					},
 					{
 						url: 'https://xiaoyudengyudayu.pages.dev/',
-						image: '/static/images/线角面思维.jpg',
+						image: 'https://www.javascriptx.fun:3000/api/image/线角面思维.jpg',
 						title: '线角面思维',
 						info: '深入理解几何中的线、角、面概念',
 						favorite: false,
 						showInfo: false
 					}
-				]
+				],
+				imageCache: new Map()
 			}
+		},
+		onMounted() {
+			// Preload all images
+			this.items.forEach(async (item, index) => {
+				const imageUrl = await this.fetchImage(item.image);
+				this.$set(this.items[index], 'imageUrl', imageUrl);
+			});
 		},
 		onLoad() {
 			// 页面加载时检查JWT token
@@ -314,6 +322,32 @@
 				uni.removeStorageSync('jwt_token');
 				uni.removeStorageSync('token_expire_time');
 				this.hasUserInfo = false;
+			},
+
+			// Add new method to fetch image
+			async fetchImage(imageUrl) {
+				if (this.imageCache.has(imageUrl)) {
+					return this.imageCache.get(imageUrl);
+				}
+				
+				try {
+					const response = await uni.request({
+						url: imageUrl,
+						responseType: 'arraybuffer'
+					});
+					
+					if (response[1].statusCode !== 200) {
+						throw new Error('Image not found');
+					}
+					
+					const base64 = uni.arrayBufferToBase64(response[1].data);
+					const finalUrl = `data:image/jpeg;base64,${base64}`;
+					this.imageCache.set(imageUrl, finalUrl);
+					return finalUrl;
+				} catch (error) {
+					console.error('Error fetching image:', error);
+					return ''; // Return empty string or default image URL
+				}
 			},
 		}
 	}
