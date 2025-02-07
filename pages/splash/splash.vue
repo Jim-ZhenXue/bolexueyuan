@@ -28,9 +28,16 @@ export default {
 	data() {
 		return {
 			splashImage: '',
-			images: ['/static/images/1.jpg', '/static/images/2.jpg', '/static/images/3.jpg', '/static/images/4.jpg', '/static/images/5.jpg'],
+			images: [
+				'https://www.javascriptx.fun:3000/api/image/1.jpg',
+				'https://www.javascriptx.fun:3000/api/image/2.jpg',
+				'https://www.javascriptx.fun:3000/api/image/3.jpg',
+				'https://www.javascriptx.fun:3000/api/image/4.jpg',
+				'https://www.javascriptx.fun:3000/api/image/5.jpg'
+			],
 			showMessage: false,
-			showDigitalRain: false
+			showDigitalRain: false,
+			imageCache: new Map()
 		}
 	},
 	onShow() {
@@ -41,7 +48,40 @@ export default {
 		}, 3000);
 	},
 	methods: {
-		selectRandomBackground() {
+		async fetchImage(imageUrl) {
+			if (this.imageCache.has(imageUrl)) {
+				return this.imageCache.get(imageUrl);
+			}
+			
+			try {
+				const response = await new Promise((resolve, reject) => {
+					uni.request({
+						url: imageUrl,
+						responseType: 'arraybuffer',
+						success: (res) => {
+							resolve(res);
+						},
+						fail: (err) => {
+							reject(err);
+						}
+					});
+				});
+				
+				if (!response || response.statusCode !== 200) {
+					throw new Error('Image not found');
+				}
+				
+				const base64 = uni.arrayBufferToBase64(response.data);
+				const finalUrl = `data:image/jpeg;base64,${base64}`;
+				this.imageCache.set(imageUrl, finalUrl);
+				return finalUrl;
+			} catch (error) {
+				console.error('Error fetching image:', error);
+				this.showDigitalRain = true;
+				return '';
+			}
+		},
+		async selectRandomBackground() {
 			// 增加一个数字雨的概率
 			const useDigitalRain = Math.random() < 0.5; // 20%的概率显示数字雨
 			
@@ -52,7 +92,11 @@ export default {
 				this.showDigitalRain = false;
 				const randomIndex = Math.floor(Math.random() * this.images.length);
 				console.log('Selected image index:', randomIndex);
-				this.splashImage = this.images[randomIndex];
+				const imageUrl = this.images[randomIndex];
+				const fetchedImage = await this.fetchImage(imageUrl);
+				if (fetchedImage) {
+					this.splashImage = fetchedImage;
+				}
 			}
 		},
 		preloadIndexResources() {

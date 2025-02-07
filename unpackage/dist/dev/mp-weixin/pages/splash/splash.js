@@ -8,9 +8,16 @@ const _sfc_main = {
   data() {
     return {
       splashImage: "",
-      images: ["/static/images/1.jpg", "/static/images/2.jpg", "/static/images/3.jpg", "/static/images/4.jpg", "/static/images/5.jpg"],
+      images: [
+        "https://www.javascriptx.fun:3000/api/image/1.jpg",
+        "https://www.javascriptx.fun:3000/api/image/2.jpg",
+        "https://www.javascriptx.fun:3000/api/image/3.jpg",
+        "https://www.javascriptx.fun:3000/api/image/4.jpg",
+        "https://www.javascriptx.fun:3000/api/image/5.jpg"
+      ],
       showMessage: false,
-      showDigitalRain: false
+      showDigitalRain: false,
+      imageCache: /* @__PURE__ */ new Map()
     };
   },
   onShow() {
@@ -21,7 +28,37 @@ const _sfc_main = {
     }, 3e3);
   },
   methods: {
-    selectRandomBackground() {
+    async fetchImage(imageUrl) {
+      if (this.imageCache.has(imageUrl)) {
+        return this.imageCache.get(imageUrl);
+      }
+      try {
+        const response = await new Promise((resolve, reject) => {
+          common_vendor.index.request({
+            url: imageUrl,
+            responseType: "arraybuffer",
+            success: (res) => {
+              resolve(res);
+            },
+            fail: (err) => {
+              reject(err);
+            }
+          });
+        });
+        if (!response || response.statusCode !== 200) {
+          throw new Error("Image not found");
+        }
+        const base64 = common_vendor.index.arrayBufferToBase64(response.data);
+        const finalUrl = `data:image/jpeg;base64,${base64}`;
+        this.imageCache.set(imageUrl, finalUrl);
+        return finalUrl;
+      } catch (error) {
+        common_vendor.index.__f__("error", "at pages/splash/splash.vue:79", "Error fetching image:", error);
+        this.showDigitalRain = true;
+        return "";
+      }
+    },
+    async selectRandomBackground() {
       const useDigitalRain = Math.random() < 0.5;
       if (useDigitalRain) {
         this.showDigitalRain = true;
@@ -29,12 +66,16 @@ const _sfc_main = {
       } else {
         this.showDigitalRain = false;
         const randomIndex = Math.floor(Math.random() * this.images.length);
-        common_vendor.index.__f__("log", "at pages/splash/splash.vue:54", "Selected image index:", randomIndex);
-        this.splashImage = this.images[randomIndex];
+        common_vendor.index.__f__("log", "at pages/splash/splash.vue:94", "Selected image index:", randomIndex);
+        const imageUrl = this.images[randomIndex];
+        const fetchedImage = await this.fetchImage(imageUrl);
+        if (fetchedImage) {
+          this.splashImage = fetchedImage;
+        }
       }
     },
     preloadIndexResources() {
-      common_vendor.index.__f__("log", "at pages/splash/splash.vue:60", "Preloading index.vue resources...");
+      common_vendor.index.__f__("log", "at pages/splash/splash.vue:104", "Preloading index.vue resources...");
     },
     enterApp() {
       common_vendor.index.reLaunch({

@@ -12,7 +12,7 @@ const _sfc_main = {
       items: [
         {
           url: "https://mobilejiaoderenshi.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/角的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/jiaoderenshi.jpg",
           title: "角1的认识",
           info: "通过互动方式学习角的基本概念与性质",
           favorite: false,
@@ -20,7 +20,7 @@ const _sfc_main = {
         },
         {
           url: "https://sanjiaoxingderenshi.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/三角形的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/sanjiaoxingderenshi.jpg",
           title: "三角形的认识",
           info: "探索三角形的特性和分类",
           favorite: false,
@@ -28,7 +28,7 @@ const _sfc_main = {
         },
         {
           url: "https://minidianxiansiwei.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/点线思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/dianxiansiwei.jpg",
           title: "点线思维",
           info: "学习点和线的基本概念",
           favorite: false,
@@ -36,7 +36,7 @@ const _sfc_main = {
         },
         {
           url: "https://minisibianxingderenshi.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/四边形的认识.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/sibianxingderenshi.jpg",
           title: "四边形的认识",
           info: "了解各种四边形的特征",
           favorite: false,
@@ -44,7 +44,7 @@ const _sfc_main = {
         },
         {
           url: "https://minixianjiaomiansiwei.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -52,7 +52,7 @@ const _sfc_main = {
         },
         {
           url: "https://dengshi.netlify.app",
-          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -60,7 +60,7 @@ const _sfc_main = {
         },
         {
           url: "https://xiaoyudengyudayu.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/线角面思维.jpg",
+          image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
           title: "线角面思维",
           info: "深入理解几何中的线、角、面概念",
           favorite: false,
@@ -247,19 +247,27 @@ const _sfc_main = {
         return this.imageCache.get(imageUrl);
       }
       try {
-        const response = await common_vendor.index.request({
-          url: imageUrl,
-          responseType: "arraybuffer"
+        const response = await new Promise((resolve, reject) => {
+          common_vendor.index.request({
+            url: imageUrl,
+            responseType: "arraybuffer",
+            success: (res) => {
+              resolve(res);
+            },
+            fail: (err) => {
+              reject(err);
+            }
+          });
         });
-        if (response[1].statusCode !== 200) {
+        if (!response || response.statusCode !== 200) {
           throw new Error("Image not found");
         }
-        const base64 = common_vendor.index.arrayBufferToBase64(response[1].data);
+        const base64 = common_vendor.index.arrayBufferToBase64(response.data);
         const finalUrl = `data:image/jpeg;base64,${base64}`;
         this.imageCache.set(imageUrl, finalUrl);
         return finalUrl;
       } catch (error) {
-        common_vendor.index.__f__("error", "at pages/index/index.vue:348", "Error fetching image:", error);
+        common_vendor.index.__f__("error", "at pages/index/index.vue:356", "Error fetching image:", error);
         return "";
       }
     }
