@@ -87,6 +87,15 @@
 			"backgroundColor": "#FFFFFF",
 			"disableScroll": false
 		}
+	}, {
+		"path": "pages/xiaoyudengyudayu/xiaoyudengyudayu",
+		"style": {
+			"navigationStyle": "custom",
+			"navigationBarTextStyle": "white",
+			"navigationBarBackgroundColor": "#1a1a1a",
+			"backgroundColor": "#FFFFFF",
+			"disableScroll": false
+		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

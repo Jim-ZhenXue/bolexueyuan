@@ -1,0 +1,227 @@
+
+.game-description.data-v-29b9fe6f {
+	width: 100%;
+	min-height: 100vh;
+	background: #FFFFFF;
+	position: relative;
+	overflow-y: auto;
+	padding-bottom: 2rem;
+}
+.top-space.data-v-29b9fe6f {
+	height: 60px;
+	min-height: auto;
+}
+.content.data-v-29b9fe6f {
+	padding: 0 1rem;
+	max-width: 100%;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+}
+.title.data-v-29b9fe6f {
+	text-align: center;
+	color: #000000;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	font-weight: bold;
+}
+.intro-card.data-v-29b9fe6f {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.level-card.data-v-29b9fe6f {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+}
+.level-card.data-v-29b9fe6f:hover {
+	transform: translateY(-5px);
+}
+.level-header.data-v-29b9fe6f {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.level-badge.data-v-29b9fe6f {
+	background: #4CAF50;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	margin-right: 1rem;
+	font-weight: bold;
+}
+.level-content ul.data-v-29b9fe6f {
+	padding-left: 1.5rem;
+	margin-top: 0.5rem;
+}
+.level-content li.data-v-29b9fe6f {
+	margin-bottom: 0.5rem;
+	color: #1f2937;
+}
+.skills-summary.data-v-29b9fe6f {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+	padding: 1.5rem;
+	margin-top: 2rem;
+}
+.skills-grid.data-v-29b9fe6f {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+.skill-item.data-v-29b9fe6f {
+	text-align: center;
+	padding: 1rem;
+}
+.skill-item i.data-v-29b9fe6f {
+	font-size: 2rem;
+	color: #4CAF50;
+	margin-bottom: 0.5rem;
+}
+.skill-item h4.data-v-29b9fe6f {
+	color: #1a1a1a;
+	margin: 0.5rem 0;
+}
+.skill-item p.data-v-29b9fe6f {
+	color: #1f2937;
+	font-size: 0.9rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+.title.data-v-29b9fe6f {
+		font-size: 1.5rem;
+}
+.content.data-v-29b9fe6f {
+		padding: 0 1rem;
+}
+.skills-grid.data-v-29b9fe6f {
+		grid-template-columns: 1fr;
+}
+}
+.back-button.data-v-29b9fe6f {
+	position: fixed;
+	top: 44px;
+	left: 15px;
+	z-index: 999;
+	padding: 8px 15px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+}
+.back-text.data-v-29b9fe6f {
+	color: #000000;
+	font-size: 16px;
+}
+
+/* 横屏适配 */
+@media screen and (orientation: landscape) {
+.game-description.data-v-29b9fe6f {
+		height: 100vh;
+		padding-bottom: 0;
+}
+.content.data-v-29b9fe6f {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		padding: 1rem 2rem;
+		height: calc(100vh - 80px);
+		overflow-y: auto;
+}
+.title.data-v-29b9fe6f {
+		grid-column: 1 / -1;
+		font-size: 1.8rem;
+		margin-bottom: 1rem;
+}
+.intro-card.data-v-29b9fe6f {
+		grid-column: 1 / -1;
+		margin-bottom: 1rem;
+}
+.levels-container.data-v-29b9fe6f {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+}
+.level-card.data-v-29b9fe6f {
+		margin-bottom: 0;
+		height: 100%;
+}
+.skills-summary.data-v-29b9fe6f {
+		margin-top: 0;
+}
+.skills-grid.data-v-29b9fe6f {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+}
+.back-button.data-v-29b9fe6f {
+		top: 20px;
+}
+}
+
+/* 较小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+.content.data-v-29b9fe6f {
+		gap: 1rem;
+		padding: 0.5rem 1.5rem;
+}
+.title.data-v-29b9fe6f {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+}
+.intro-card.data-v-29b9fe6f {
+		padding: 1rem;
+}
+.level-card.data-v-29b9fe6f {
+		padding: 1rem;
+}
+.level-content li.data-v-29b9fe6f {
+		margin-bottom: 0.3rem;
+		font-size: 0.9rem;
+}
+.skills-summary.data-v-29b9fe6f {
+		padding: 1rem;
+}
+.skill-item.data-v-29b9fe6f {
+		padding: 0.5rem;
+}
+.skill-item i.data-v-29b9fe6f {
+		font-size: 1.5rem;
+}
+}
+
+/* 超小屏幕的横屏适配 */
+@media screen and (orientation: landscape) and (max-height: 450px) {
+.content.data-v-29b9fe6f {
+		grid-template-columns: 1fr;
+}
+.levels-container.data-v-29b9fe6f {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+}
+.skills-grid.data-v-29b9fe6f {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+}
+.level-card.data-v-29b9fe6f {
+		padding: 0.8rem;
+}
+.level-content ul.data-v-29b9fe6f {
+		padding-left: 1rem;
+}
+.level-content li.data-v-29b9fe6f {
+		font-size: 0.85rem;
+		margin-bottom: 0.2rem;
+}
+.level-badge.data-v-29b9fe6f {
+		padding: 0.3rem 0.8rem;
+		font-size: 0.9rem;
+}
+.level-header h3.data-v-29b9fe6f {
+		font-size: 1rem;
+}
+}

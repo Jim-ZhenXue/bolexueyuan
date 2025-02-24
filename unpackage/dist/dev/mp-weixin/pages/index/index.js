@@ -14,7 +14,6 @@ const _sfc_main = {
           url: "https://mobilejiaoderenshi.pages.dev/",
           image: "https://www.javascriptx.fun:3000/api/image/jiaoderenshi.jpg",
           title: "角的认识",
-          info: "通过互动方式学习角的基本概念与性质",
           favorite: false,
           showInfo: false
         },
@@ -22,7 +21,6 @@ const _sfc_main = {
           url: "https://sanjiaoxingderenshi.pages.dev/",
           image: "https://www.javascriptx.fun:3000/api/image/sanjiaoxingderenshi.jpg",
           title: "三角形的认识",
-          info: "探索三角形的特性和分类",
           favorite: false,
           showInfo: false
         },
@@ -30,7 +28,6 @@ const _sfc_main = {
           url: "https://minidianxiansiwei.pages.dev/",
           image: "https://www.javascriptx.fun:3000/api/image/dianxiansiwei.jpg",
           title: "点线思维",
-          info: "学习点和线的基本概念",
           favorite: false,
           showInfo: false
         },
@@ -38,7 +35,6 @@ const _sfc_main = {
           url: "https://minisibianxingderenshi.pages.dev/",
           image: "https://www.javascriptx.fun:3000/api/image/sibianxingderenshi.jpg",
           title: "四边形的认识",
-          info: "了解各种四边形的特征",
           favorite: false,
           showInfo: false
         },
@@ -46,23 +42,20 @@ const _sfc_main = {
           url: "https://minixianjiaomiansiwei.pages.dev/",
           image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
           title: "线角面思维",
-          info: "深入理解几何中的线、角、面概念",
-          favorite: false,
-          showInfo: false
-        },
-        {
-          url: "https://dengshi.netlify.app",
-          image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
-          title: "线角面思维",
-          info: "深入理解几何中的线、角、面概念",
           favorite: false,
           showInfo: false
         },
         {
           url: "https://xiaoyudengyudayu.pages.dev/",
-          image: "https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg",
-          title: "线角面思维",
-          info: "深入理解几何中的线、角、面概念",
+          image: "https://www.javascriptx.fun:3000/api/image/xiaoyudengyudayu.jpg",
+          title: "小于等于大于",
+          favorite: false,
+          showInfo: false
+        },
+        {
+          url: "https://fenshupeidui.pages.dev/",
+          image: "https://www.javascriptx.fun:3000/api/image/fenshupeidui.jpg",
+          title: "分数配对",
           favorite: false,
           showInfo: false
         }
@@ -141,6 +134,12 @@ const _sfc_main = {
         case "线角面思维":
           pagePath = "/pages/xianjiaomiansiwei/xianjiaomiansiwei";
           break;
+        case "小于等于大于":
+          pagePath = "/pages/xiaoyudengyudayu/xiaoyudengyudayu";
+          break;
+        case "分数配对":
+          pagePath = "/pages/fenshupeidui/fenshupeidui";
+          break;
       }
       common_vendor.index.navigateTo({
         url: pagePath
@@ -173,7 +172,7 @@ const _sfc_main = {
       common_vendor.index.login({
         provider: "weixin",
         success: (loginRes) => {
-          common_vendor.index.__f__("log", "at pages/index/index.vue:246", "登录成功", loginRes.code);
+          common_vendor.index.__f__("log", "at pages/index/index.vue:245", "登录成功", loginRes.code);
           common_vendor.index.request({
             url: "https://www.javascriptx.fun:8443/login",
             method: "POST",
@@ -182,7 +181,7 @@ const _sfc_main = {
               login_time: (/* @__PURE__ */ new Date()).toLocaleString("zh-CN", { hour12: false }).replace(/\//g, "-")
             },
             success: (response) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:257", "登录信息已保存到服务器", response.data);
+              common_vendor.index.__f__("log", "at pages/index/index.vue:256", "登录信息已保存到服务器", response.data);
               if (response.data.token) {
                 const expireTime = (/* @__PURE__ */ new Date()).getTime() + 30 * 24 * 60 * 60 * 1e3;
                 common_vendor.index.setStorageSync("jwt_token", response.data.token);
@@ -201,7 +200,7 @@ const _sfc_main = {
               }
             },
             fail: (error) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:280", "登录信息保存失败", error);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:279", "登录信息保存失败", error);
               let errorMessage = "登录失败，请稍后重试";
               if (error.errno === 600002 || error.errMsg.includes("domain list")) {
                 errorMessage = "请联系管理员配置服务器域名";
@@ -219,7 +218,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:301", "登录失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:300", "登录失败", err);
           common_vendor.index.showToast({
             title: "登录失败",
             icon: "none"
@@ -267,7 +266,7 @@ const _sfc_main = {
         this.imageCache.set(imageUrl, finalUrl);
         return finalUrl;
       } catch (error) {
-        common_vendor.index.__f__("error", "at pages/index/index.vue:356", "Error fetching image:", error);
+        common_vendor.index.__f__("error", "at pages/index/index.vue:355", "Error fetching image:", error);
         return "";
       }
     }

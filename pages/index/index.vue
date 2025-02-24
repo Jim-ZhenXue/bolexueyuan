@@ -64,7 +64,6 @@
 						url: 'https://mobilejiaoderenshi.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/jiaoderenshi.jpg',
 						title: '角的认识',
-						info: '通过互动方式学习角的基本概念与性质',
 						favorite: false,
 						showInfo: false
 					},
@@ -72,7 +71,6 @@
 						url: 'https://sanjiaoxingderenshi.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/sanjiaoxingderenshi.jpg',
 						title: '三角形的认识',
-						info: '探索三角形的特性和分类',
 						favorite: false,
 						showInfo: false
 					},
@@ -80,7 +78,6 @@
 						url: 'https://minidianxiansiwei.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/dianxiansiwei.jpg',
 						title: '点线思维',
-						info: '学习点和线的基本概念',
 						favorite: false,
 						showInfo: false
 					},
@@ -88,7 +85,6 @@
 						url: 'https://minisibianxingderenshi.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/sibianxingderenshi.jpg',
 						title: '四边形的认识',
-						info: '了解各种四边形的特征',
 						favorite: false,
 						showInfo: false
 					},
@@ -96,23 +92,20 @@
 						url: 'https://minixianjiaomiansiwei.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg',
 						title: '线角面思维',
-						info: '深入理解几何中的线、角、面概念',
-						favorite: false,
-						showInfo: false
-					},
-					{
-						url: 'https://dengshi.netlify.app',
-						image: 'https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg',
-						title: '线角面思维',
-						info: '深入理解几何中的线、角、面概念',
 						favorite: false,
 						showInfo: false
 					},
 					{
 						url: 'https://xiaoyudengyudayu.pages.dev/',
-						image: 'https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg',
-						title: '线角面思维',
-						info: '深入理解几何中的线、角、面概念',
+						image: 'https://www.javascriptx.fun:3000/api/image/xiaoyudengyudayu.jpg',
+						title: '小于等于大于',
+						favorite: false,
+						showInfo: false
+					},
+					{
+						url: 'https://fenshupeidui.pages.dev/',
+						image: 'https://www.javascriptx.fun:3000/api/image/fenshupeidui.jpg',
+						title: '分数配对',
 						favorite: false,
 						showInfo: false
 					}
@@ -203,6 +196,12 @@
 						break;
 					case '线角面思维':
 						pagePath = '/pages/xianjiaomiansiwei/xianjiaomiansiwei';
+						break;
+					case '小于等于大于':
+						pagePath = '/pages/xiaoyudengyudayu/xiaoyudengyudayu';
+						break;
+					case '分数配对':
+						pagePath = '/pages/fenshupeidui/fenshupeidui';
 						break;
 				}
 				

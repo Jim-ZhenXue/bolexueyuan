@@ -13,6 +13,7 @@ if (!Math) {
   "./pages/dianxiansiwei/dianxiansiwei.js";
   "./pages/sibianxingderenshi/sibianxingderenshi.js";
   "./pages/xianjiaomiansiwei/xianjiaomiansiwei.js";
+  "./pages/xiaoyudengyudayu/xiaoyudengyudayu.js";
 }
 const _sfc_main = {
   onLaunch: function() {

@@ -10,7 +10,8 @@
     "pages/sanjiaoxingderenshi/sanjiaoxingderenshi",
     "pages/dianxiansiwei/dianxiansiwei",
     "pages/sibianxingderenshi/sibianxingderenshi",
-    "pages/xianjiaomiansiwei/xianjiaomiansiwei"
+    "pages/xianjiaomiansiwei/xianjiaomiansiwei",
+    "pages/xiaoyudengyudayu/xiaoyudengyudayu"
   ],
   "window": {
     "navigationBarTextStyle": "white",
