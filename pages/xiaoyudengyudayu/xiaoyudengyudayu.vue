@@ -10,7 +10,7 @@
 		
 		<!-- 主要内容区域 -->
 		<div class="content">
-			<h1 class="title">数学思维训练</h1>
+			<h1 class="title">小于等于大于</h1>
 			
 			<!-- 介绍卡片 -->
 			<div class="intro-card">

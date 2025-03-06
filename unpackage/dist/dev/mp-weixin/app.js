@@ -14,6 +14,7 @@ if (!Math) {
   "./pages/sibianxingderenshi/sibianxingderenshi.js";
   "./pages/xianjiaomiansiwei/xianjiaomiansiwei.js";
   "./pages/xiaoyudengyudayu/xiaoyudengyudayu.js";
+  "./pages/fenshupeidui/fenshupeidui.js";
 }
 const _sfc_main = {
   onLaunch: function() {
