@@ -62,11 +62,19 @@ const _sfc_main = {
         }
       ]
     };
+  },
+  methods: {
+    handleBack() {
+      common_vendor.index.navigateBack({
+        delta: 1
+      });
+    }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.intelligences, (intel, index, i0) => {
+    a: common_vendor.o((...args) => $options.handleBack && $options.handleBack(...args)),
+    b: common_vendor.f($data.intelligences, (intel, index, i0) => {
       return {
         a: common_vendor.n(intel.icon),
         b: common_vendor.t(intel.title),
