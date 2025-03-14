@@ -108,6 +108,13 @@
 						title: '分数配对',
 						favorite: false,
 						showInfo: false
+					},
+					{
+						url: 'https://zhuijixiangyu.pages.dev/',
+						image: 'https://www.javascriptx.fun:3000/api/image/zhuijixiangyu.jpg',
+						title: '追及相遇',
+						favorite: false,
+						showInfo: false
 					}
 				],
 				imageCache: new Map()
