@@ -210,6 +210,9 @@
 					case '分数配对':
 						pagePath = '/pages/fenshupeidui/fenshupeidui';
 						break;
+					case '追及相遇':
+						pagePath = '/pages/zhuijixiangyu/zhuijixiangyu';
+						break;
 				}
 				
 				uni.navigateTo({

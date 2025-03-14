@@ -12,7 +12,8 @@
     "pages/sibianxingderenshi/sibianxingderenshi",
     "pages/xianjiaomiansiwei/xianjiaomiansiwei",
     "pages/xiaoyudengyudayu/xiaoyudengyudayu",
-    "pages/fenshupeidui/fenshupeidui"
+    "pages/fenshupeidui/fenshupeidui",
+    "pages/zhuijixiangyu/zhuijixiangyu"
   ],
   "window": {
     "navigationBarTextStyle": "white",
