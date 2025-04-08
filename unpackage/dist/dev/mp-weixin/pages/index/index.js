@@ -157,6 +157,9 @@ const _sfc_main = {
         case "追及相遇":
           pagePath = "/pages/zhuijixiangyu/zhuijixiangyu";
           break;
+        case "乘法与面积":
+          pagePath = "/pages/chengfayumianji/chengfayumianji";
+          break;
       }
       common_vendor.index.navigateTo({
         url: pagePath
@@ -189,7 +192,7 @@ const _sfc_main = {
       common_vendor.index.login({
         provider: "weixin",
         success: (loginRes) => {
-          common_vendor.index.__f__("log", "at pages/index/index.vue:262", "登录成功", loginRes.code);
+          common_vendor.index.__f__("log", "at pages/index/index.vue:265", "登录成功", loginRes.code);
           common_vendor.index.request({
             url: "https://www.javascriptx.fun:8443/login",
             method: "POST",
@@ -198,7 +201,7 @@ const _sfc_main = {
               login_time: (/* @__PURE__ */ new Date()).toLocaleString("zh-CN", { hour12: false }).replace(/\//g, "-")
             },
             success: (response) => {
-              common_vendor.index.__f__("log", "at pages/index/index.vue:273", "登录信息已保存到服务器", response.data);
+              common_vendor.index.__f__("log", "at pages/index/index.vue:276", "登录信息已保存到服务器", response.data);
               if (response.data.token) {
                 const expireTime = (/* @__PURE__ */ new Date()).getTime() + 30 * 24 * 60 * 60 * 1e3;
                 common_vendor.index.setStorageSync("jwt_token", response.data.token);
@@ -217,7 +220,7 @@ const _sfc_main = {
               }
             },
             fail: (error) => {
-              common_vendor.index.__f__("error", "at pages/index/index.vue:296", "登录信息保存失败", error);
+              common_vendor.index.__f__("error", "at pages/index/index.vue:299", "登录信息保存失败", error);
               let errorMessage = "登录失败，请稍后重试";
               if (error.errno === 600002 || error.errMsg.includes("domain list")) {
                 errorMessage = "请联系管理员配置服务器域名";
@@ -235,7 +238,7 @@ const _sfc_main = {
           });
         },
         fail: (err) => {
-          common_vendor.index.__f__("error", "at pages/index/index.vue:317", "登录失败", err);
+          common_vendor.index.__f__("error", "at pages/index/index.vue:320", "登录失败", err);
           common_vendor.index.showToast({
             title: "登录失败",
             icon: "none"
@@ -283,7 +286,7 @@ const _sfc_main = {
         this.imageCache.set(imageUrl, finalUrl);
         return finalUrl;
       } catch (error) {
-        common_vendor.index.__f__("error", "at pages/index/index.vue:372", "Error fetching image:", error);
+        common_vendor.index.__f__("error", "at pages/index/index.vue:375", "Error fetching image:", error);
         return "";
       }
     }

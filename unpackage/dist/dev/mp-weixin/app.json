@@ -13,7 +13,8 @@
     "pages/xianjiaomiansiwei/xianjiaomiansiwei",
     "pages/xiaoyudengyudayu/xiaoyudengyudayu",
     "pages/fenshupeidui/fenshupeidui",
-    "pages/zhuijixiangyu/zhuijixiangyu"
+    "pages/zhuijixiangyu/zhuijixiangyu",
+    "pages/chengfayumianji/chengfayumianji"
   ],
   "window": {
     "navigationBarTextStyle": "white",

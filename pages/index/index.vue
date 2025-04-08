@@ -220,6 +220,9 @@
 					case '追及相遇':
 						pagePath = '/pages/zhuijixiangyu/zhuijixiangyu';
 						break;
+					case '乘法与面积':
+						pagePath = '/pages/chengfayumianji/chengfayumianji';
+						break;
 				}
 				
 				uni.navigateTo({
