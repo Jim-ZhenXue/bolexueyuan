@@ -119,7 +119,7 @@
 					{
 						url: 'https://chengfayumianji.pages.dev/',
 						image: 'https://www.javascriptx.fun:3000/api/image/chengfayumianji.jpg',
-						title: '成法余面积',
+						title: '乘法与面积',
 						favorite: false,
 						showInfo: false
 					}
