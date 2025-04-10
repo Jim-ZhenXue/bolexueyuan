@@ -258,6 +258,7 @@ export default {
 	background: none;
 	border: none;
 	text-align: center;
+	margin-bottom: 50rpx;
 }
 
 .info-section.no-border .section-title,
