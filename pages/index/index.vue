@@ -434,7 +434,7 @@
 		height: 80rpx;
 		width: 80rpx;
 		margin-right: 10rpx;
-		margin-top: 10rpx;
+		margin-top: 30rpx;
 	}
 
 	.title {
