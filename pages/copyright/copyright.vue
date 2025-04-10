@@ -77,11 +77,11 @@ export default {
 }
 
 .container {
-	min-height: 100vh;
+	height: 100vh;
 	width: 100%;
-	height: 100%;
 	position: relative;
 	background-color: #000000;
+	overflow: hidden;
 }
 
 .bg-image {
