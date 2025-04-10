@@ -156,7 +156,8 @@ export default {
 }
 
 .content {
-	position: relative;
+	position: absolute;
+	bottom: 0rpx;
 	z-index: 1;
 	padding: 20rpx;
 	display: flex;
@@ -164,7 +165,6 @@ export default {
 	align-items: center;
 	background: transparent;
 	width: 100%;
-	margin-top: 140rpx;
 	justify-content: flex-end;
 	transform: translateX(-20rpx);
 }
@@ -239,11 +239,11 @@ export default {
 }
 
 .copyright-text {
-	margin-top: 15px;
-	margin-bottom: 20rpx;
-	margin-right: 100px;
+	position: fixed;
+	bottom: 2rpx;
+	right: 100px;
 	text-align: right;
-	width: 100%;
+	width: auto;
 }
 
 .copyright-text text {
