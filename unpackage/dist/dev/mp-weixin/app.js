@@ -17,6 +17,7 @@ if (!Math) {
   "./pages/fenshupeidui/fenshupeidui.js";
   "./pages/zhuijixiangyu/zhuijixiangyu.js";
   "./pages/chengfayumianji/chengfayumianji.js";
+  "./pages/zhishuwenti/zhishuwenti.js";
 }
 const _sfc_main = {
   onLaunch: function() {

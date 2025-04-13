@@ -122,6 +122,13 @@
 						title: '乘法与面积',
 						favorite: false,
 						showInfo: false
+					},
+					{
+						url: 'https://zhishuwenti.pages.dev/',
+						image: 'https://www.javascriptx.fun:3000/api/image/zhishuwenti.jpg',
+						title: '植树问题',
+						favorite: false,
+						showInfo: false
 					}
 				],
 				imageCache: new Map()
@@ -222,6 +229,9 @@
 						break;
 					case '乘法与面积':
 						pagePath = '/pages/chengfayumianji/chengfayumianji';
+						break;
+					case '植树问题':
+						pagePath = '/pages/zhishuwenti/zhishuwenti';
 						break;
 				}
 				
