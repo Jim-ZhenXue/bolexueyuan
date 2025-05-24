@@ -74,7 +74,7 @@ const _sfc_main = {
           showInfo: false
         },
         {
-          url: "https://zhishuwenti.pages.dev/",
+          url: "https://zhishuwenti.javascriptx.fun/",
           image: "https://www.javascriptx.fun:3000/api/image/zhishuwenti.jpg",
           title: "植树问题",
           favorite: false,
