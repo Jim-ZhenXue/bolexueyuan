@@ -16,7 +16,8 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "ignoreUploadUnusedFiles": false
+    "ignoreUploadUnusedFiles": false,
+    "condition": true
   },
   "compileType": "miniprogram",
   "libVersion": "3.2.1",
@@ -26,5 +27,9 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
+  },
+  "projectArchitecture": "multiPlatform",
+  "simulatorPluginLibVersion": {
+    "wxext14566970e7e9f62": "3.6.5-34"
   }
 }

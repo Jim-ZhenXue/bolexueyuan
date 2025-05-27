@@ -6370,7 +6370,7 @@ const objectKeys = [
   "version",
   "lanDebug",
   "cloud",
-  "serviceMarket", "miniapp",
+  "serviceMarket",
   "router",
   "worklet",
   "__webpack_require_UNI_MP_PLUGIN__"

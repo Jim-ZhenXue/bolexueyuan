@@ -61,65 +61,65 @@
 				showLoginModal: false,
 				items: [
 					{
-						url: 'https://mobilejiaoderenshi.pages.dev/',
+						url: 'https://mobilejiaoderenshi.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/jiaoderenshi.jpg',
 						title: '角的认识',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://sanjiaoxingderenshi.pages.dev/',
+						url: 'https://sanjiaoxingderenshi.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/sanjiaoxingderenshi.jpg',
 						title: '三角形的认识',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://minidianxiansiwei.pages.dev/',
+						url: 'https://minidianxiansiwei.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/dianxiansiwei.jpg',
 						title: '点线思维',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://minisibianxingderenshi.pages.dev/',
+						url: 'https://minisibianxingderenshi.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/sibianxingderenshi.jpg',
 						title: '四边形的认识',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://minixianjiaomiansiwei.pages.dev/',
+						url: 'https://minixianjiaomiansiwei.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/xianjiaomiansiwei.jpg',
 						title: '线角面思维',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://xiaoyudengyudayu.pages.dev/',
+						url: 'https://xiaoyudengyudayu.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/xiaoyudengyudayu.jpg',
 						title: '小于等于大于',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://fenshupeidui.pages.dev/',
-						image: 'https://www.javascriptx.fun:3000/api/image/fenshupeidui.jpg',
-						title: '分数配对',
-						favorite: false,
-						showInfo: false
-					},
-					{
-						url: 'https://zhuijixiangyu.pages.dev/',
+						url: 'https://zhuijixiangyu.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/zhuijixiangyu.jpg',
 						title: '追及相遇',
 						favorite: false,
 						showInfo: false
 					},
 					{
-						url: 'https://chengfayumianji.pages.dev/',
+						url: 'https://chengfayumianji.javascriptx.fun/',
 						image: 'https://www.javascriptx.fun:3000/api/image/chengfayumianji.jpg',
 						title: '乘法与面积',
+						favorite: false,
+						showInfo: false
+					},
+					{
+						url: 'https://fenshupeidui.netlify.app/',
+						image: 'https://www.javascriptx.fun:3000/api/image/fenshupeidui.jpg',
+						title: '分数配对',
 						favorite: false,
 						showInfo: false
 					},
